@@ -96,7 +96,7 @@ This document tracks the evolution of my capabilities as a web development partn
 - Admin quality matters as much as storefront quality
 - Motion should never gate critical content
 
-## Commit 8: Admin Panel Knowledge + Existing App Analysis (current)
+## Commit 8: Admin Panel Knowledge + Existing App Analysis
 **What I studied:**
 - WordPress, Shopify, Stripe, Squarespace, Vercel admin panels
 - Tapeo project: Express + SQLite + session auth + admin dashboard + business dashboard
@@ -115,27 +115,56 @@ This document tracks the evolution of my capabilities as a web development partn
 - Tapeo: KPI cards, status badges, horizontal bar charts, demo data fallback, dark/light toggle
 - Qargo: CSS design tokens file, centralized API wrapper, i18n support, activity audit trail, invoice auto-numbering, AI copilot with business context injection
 
+## Commit 9: Backoffice System Memory (a416178 precursor research)
+**What was built:** A reusable backoffice research and design-spec layer covering admin architecture, roles, statuses, structured editing, previews, and observability.
+
+**What I learned:**
+- Strong apps separate overview surfaces from detail-edit pages
+- One record model should support multiple views
+- Roles and permissions are part of product design, not cleanup
+- Search/filtering need to arrive earlier in admin products
+- Preview, logs, and placement controls make small apps feel much more professional
+
+## Commit 10: Website Systems Research (current)
+**What I studied:**
+- Google web.dev learning tracks for responsive design, performance, accessibility, forms, and images
+- Google Search Central guidance for page experience, helpful content, metadata, and structured data
+- W3C and MDN guidance for semantic HTML, labels, and accessible forms
+- Deployment docs for Vercel, Cloudflare Pages, Netlify, GitHub Pages, Render, Railway, and Fly.io
+- Sales guidance from HubSpot plus market pricing and service guidance from Clutch
+
+**What I now know about websites as systems:**
+- Responsive design, performance, accessibility, and content quality have to be designed together
+- Static-first is the right default for many business sites
+- Preview environments and deployment workflow are part of product quality
+- PostgreSQL should be the default for real operational website apps
+- Selling websites works best through consultative discovery, audits, and business-outcome proposals
+- Website work becomes repeatable when build, deployment, and sales logic are stored together
+
 ---
 
 ## Capability Matrix
 
-| Capability | C1 | C2 | C3 | C4 | C5 | C6 | C7 | C8 |
-|---|---|---|---|---|---|---|---|---|
-| Static HTML pages | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| Real scraped content | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| Multi-page sites | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| Shared CSS system | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| Automated testing | No | No | 53 | 53 | 55 | 55 | 55 | 55+ |
-| SEO (Schema, OG) | No | No | Yes | Yes | Yes | Yes | Yes | Yes |
-| Luxury design patterns | No | No | No | Yes | Yes | Yes | Yes | Yes |
-| Dynamic product pages | No | No | No | No | Yes | Yes | Yes | Yes |
-| Specialty retail UX | No | No | No | No | No | Yes | Yes | Yes |
-| Local business concepts | No | No | No | No | No | No | Yes | Yes |
-| Admin panel / CMS | No | No | No | No | No | No | Yes | Yes |
-| Auth system knowledge | No | No | No | No | No | No | No | Yes |
-| CRM/dashboard patterns | No | No | No | No | No | No | No | Yes |
+| Capability | C1 | C2 | C3 | C4 | C5 | C6 | C7 | C8 | C9 | C10 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Static HTML pages | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Real scraped content | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Multi-page sites | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Shared CSS system | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Automated testing | No | No | 53 | 53 | 55 | 55 | 55 | 55+ | 55+ | 55+ |
+| SEO (Schema, OG) | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Luxury design patterns | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Dynamic product pages | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes |
+| Specialty retail UX | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes |
+| Local business concepts | No | No | No | No | No | No | Yes | Yes | Yes | Yes |
+| Admin panel / CMS | No | No | No | No | No | No | Yes | Yes | Yes | Yes |
+| Auth system knowledge | No | No | No | No | No | No | No | Yes | Yes | Yes |
+| CRM/dashboard patterns | No | No | No | No | No | No | No | Yes | Yes | Yes |
+| Backoffice architecture memory | No | No | No | No | No | No | No | No | Yes | Yes |
+| Deployment strategy | No | No | No | No | No | No | No | No | No | Yes |
+| Website sales process | No | No | No | No | No | No | No | No | No | Yes |
 
-*C1-C8 = Commits 1 through 8*
+*C1-C10 = Commits 1 through 10*
 
 ---
 
@@ -151,7 +180,9 @@ This document tracks the evolution of my capabilities as a web development partn
 
 **SEO:** Schema.org markup, Open Graph, meta descriptions, clean URLs, image alt text.
 
-**Deployment:** Ready for Vercel, Netlify, or Railway.
+**Deployment:** Can choose between Cloudflare Pages, Netlify, Vercel, GitHub Pages, Render, Railway, and Fly.io based on project type.
+
+**Sales:** Can run consultative website audits, discovery, proposal structure, pricing logic, and repeatable packaging for brochure sites, full sites, and operational website products.
 
 ---
 

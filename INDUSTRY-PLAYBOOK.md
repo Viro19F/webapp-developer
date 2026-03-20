@@ -412,6 +412,22 @@ Homepage, Product Catalog, Product Detail pages, Cart, Checkout (3 steps max), A
 - Social proof near CTAs
 - Fast response commitment ("We'll call you within 24 hours")
 
+### Build quality (every site)
+- Mobile-first is the baseline, not an enhancement
+- Prefer semantic HTML before adding ARIA
+- Keep forms clearly labeled; placeholder text is not enough
+- Use real content and real proof whenever possible
+- Performance decisions start at architecture level, especially images and scripts
+- Static-first is the best default for most business websites
+
+### Deployment (every site)
+- Choose hosting based on site type, not trend or hype
+- Use preview environments before production changes
+- Plan custom domain, HTTPS, and DNS ownership as part of the project
+- If the site becomes operational, move to real backend and database decisions
+- Do not treat SQLite like a default production database for multi-user website apps
+- Document what is editable, where the site is hosted, and who controls access
+
 ### Internal tools (when a site includes admin)
 - The dashboard is part of the product quality, not an afterthought
 - Separate content areas clearly: products, homepage, settings/access

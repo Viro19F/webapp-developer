@@ -171,6 +171,48 @@ See `docs/BACKOFFICE-APP-RESEARCH.md` and `backoffice/DESIGN-SPEC.md` for the re
 
 ---
 
+## Research #2: Website Systems (Build, Deploy, Sell)
+
+This research matters because a better website process is not only about design taste. It is also about build quality, deployment decisions, and how the work is sold.
+
+### What Repeats In Strong Websites
+1. **Responsive quality is component-level, not a late breakpoint patch.** Good responsive systems handle layout, typography, imagery, and interaction together.
+
+2. **Performance is a structural decision.** Strong sites protect Core Web Vitals early, especially image handling, script weight, and LCP behavior.
+
+3. **Semantic HTML beats decorative complexity.** Native elements, visible labels, and clear structure still outperform clever custom UI that is harder to use and maintain.
+
+4. **Helpful content beats SEO-shaped filler.** Strong search performance comes from useful, page-specific content with good metadata and structure.
+
+5. **Deployment has to match the product honestly.** Static hosting is great for static sites, but operational apps need real backend and persistence decisions.
+
+6. **Preview workflows are part of product quality.** Strong deployment platforms all treat previews, environments, and roll-forward safety as first-class concerns.
+
+7. **Selling websites works better when the pitch is diagnostic.** The strongest sales model is consultative: research first, identify the business issue, then propose the site as the solution path.
+
+### What I Learned For Our Builds
+1. **Static-first should stay our default.** Many websites do not need backend complexity, and adding it too early creates cost without value.
+
+2. **When a site becomes operational, the architecture should change clearly.** Admin-backed websites should move to real backend thinking, not pretend to remain static.
+
+3. **Forms need stronger UX discipline.** Labels, instructions, autofill, and success states are part of conversion quality, not small details.
+
+4. **Deployment choice is part of design quality.** A premium-looking site deployed on the wrong platform will still create a weak client experience later.
+
+5. **Sales, deployment, and build logic should live in memory together.** If those stay separate, the AI can make a nice page but still miss the business system around it.
+
+### What We Should Reuse Next
+1. **Business-first homepage structure**
+2. **Semantic HTML and visible labels**
+3. **Static-first architecture**
+4. **Preview deployment workflows**
+5. **Postgres over SQLite for real operational apps**
+6. **Consultative audit + proposal sales process**
+
+See `docs/WEBSITE-SYSTEMS-RESEARCH.md`, `website/BUILD-SPEC.md`, `website/DEPLOYMENT-PLAYBOOK.md`, and `website/SALES-PLAYBOOK.md`.
+
+---
+
 ## Universal Learnings (Apply to Every Client)
 
 ### Design Rules That Always Work
@@ -202,6 +244,15 @@ See `docs/BACKOFFICE-APP-RESEARCH.md` and `backoffice/DESIGN-SPEC.md` for the re
 7. **Preview of result** when content affects a public page
 8. **Permissions model** appropriate to risk level
 9. **Action feedback** for saves, imports, publishes, and failures
+
+### Features Every Professional Website Needs Beyond Design
+1. **A clear deployment path** before launch
+2. **A real domain and HTTPS plan**
+3. **An editing strategy** even if the answer is "no CMS needed"
+4. **Performance-aware media handling**
+5. **Accessible forms and interactions**
+6. **Metadata and structured data** where relevant
+7. **A proposal and handoff model** if the site is being sold as a service
 
 ### Testing Checklist (Playwright)
 Run these for EVERY client site before delivery:
@@ -277,21 +328,25 @@ clients/<name>/
 7. **Search-first admin patterns** — global search, recent items, saved filters where the data model justifies it
 8. **Draft/live publishing model** — make editable websites feel safer and more production-ready
 9. **Role-aware admin routing** — viewer/editor/admin permissions instead of one flat admin surface
+10. **Deployment decision tree** — static, serverless, or backend-backed from the start of each build
+11. **Proposal templates tied to business outcome** — stronger sales repeatability
 
 ### Medium Priority
-10. **Cookie consent banner** — required for EU clients (GDPR)
-11. **Newsletter popup** — elegant, "exclusive access" language, 10% off incentive
-12. **Skeleton loading states** — gray placeholders while images load
-13. **Product image zoom** — click/hover to see detail
-14. **"Complete the Look" section** — cross-sell on product pages
-15. **Audit/event feed for admin actions** — especially for uploads, imports, and publishing
+12. **Cookie consent banner** — required for EU clients (GDPR)
+13. **Newsletter popup** — elegant, "exclusive access" language, 10% off incentive
+14. **Skeleton loading states** — gray placeholders while images load
+15. **Product image zoom** — click/hover to see detail
+16. **"Complete the Look" section** — cross-sell on product pages
+17. **Audit/event feed for admin actions** — especially for uploads, imports, and publishing
+18. **Default launch checklist** — DNS, HTTPS, preview, forms, analytics, metadata
 
 ### Nice to Have
-16. **Dark mode toggle**
-17. **3D/AR product views** (94% conversion lift per research)
-18. **Tiered loyalty program**
-19. **Virtual consultation booking**
-20. **Keyboard-first admin shortcuts** for power users
+19. **Dark mode toggle**
+20. **3D/AR product views** (94% conversion lift per research)
+21. **Tiered loyalty program**
+22. **Virtual consultation booking**
+23. **Keyboard-first admin shortcuts** for power users
+24. **Reusable outreach + proposal pack** for local business pitches
 
 ## Key Insight from Luxury Research
 > "Spacing is the #1 signal of luxury. Double your margins. Then double them again."
@@ -321,4 +376,4 @@ See `docs/ADMIN-PANEL-GUIDE.md` and `docs/PROGRESSION.md` for full details.
 
 ---
 
-*Last updated: March 20, 2026 — after Le Tavole, Mori Matcha, Floristería Calero, admin panel research, Tapeo/Qargo analysis, and backoffice app research*
+*Last updated: March 20, 2026 — after Le Tavole, Mori Matcha, Floristería Calero, admin panel research, Tapeo/Qargo analysis, backoffice app research, and website systems research*

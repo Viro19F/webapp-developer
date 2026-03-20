@@ -13,12 +13,16 @@ Before starting a new client build, read in this order:
 1. `CLIENT-BRIEF.md` or `clients/<name>/BRIEF.md`
 2. `INDUSTRY-PLAYBOOK.md`
 3. `docs/LEARNINGS.md`
-4. The most similar design-spec or experiment folder
+4. `website/BUILD-SPEC.md`
+5. The most similar design-spec or experiment folder
    - Example: `matcha/DESIGN-SPEC.md`
-5. The closest existing client folder in `clients/`
-6. If the project includes admin, CMS, dashboard, or internal operations work:
+6. The closest existing client folder in `clients/`
+7. If the project includes admin, CMS, dashboard, or internal operations work:
    - `docs/BACKOFFICE-APP-RESEARCH.md`
    - `backoffice/DESIGN-SPEC.md`
+8. If the project is being launched or sold:
+   - `website/DEPLOYMENT-PLAYBOOK.md`
+   - `website/SALES-PLAYBOOK.md`
 
 ### Why this order
 - The brief tells you what this business is
@@ -46,6 +50,7 @@ Every serious client build should create or update all relevant artifacts below.
 - `docs/LEARNINGS.md` updated with client-specific lessons
 - `INDUSTRY-PLAYBOOK.md` updated only if the lesson generalizes beyond one client
 - `backoffice/DESIGN-SPEC.md` consulted or updated when the project includes admin, CMS, dashboard, or staff workflows
+- `website/BUILD-SPEC.md` consulted for every new website build
 
 ### Optional artifacts
 - `products.js` or structured local data file
@@ -53,6 +58,8 @@ Every serious client build should create or update all relevant artifacts below.
 - deployment notes if the site has unusual constraints
 - admin/backoffice prototype notes when the business needs editable products or services
 - research doc for successful product patterns in comparable apps
+- deployment recommendation doc or notes when hosting/platform choice matters
+- proposal or outreach notes when the build is also a sales artifact
 
 ---
 
@@ -105,6 +112,7 @@ Examples of what belongs there:
 - small physical stores benefit from visit/tasting CTAs
 - certain industries need product guidance before checkout
 - successful admin apps separate overview, search, and detail editing clearly
+- deployment and sales rules that repeat across many website projects
 
 Keep client-specific tone, visual nuance, and one-off brand ideas in a dedicated design-spec doc instead.
 
@@ -137,6 +145,15 @@ When a new request comes in, match it to the closest prior system memory:
 - start with `INDUSTRY-PLAYBOOK.md`
 - use `docs/LEARNINGS.md` for universal patterns
 
+### If the project is a general website build
+- read `website/BUILD-SPEC.md`
+
+### If the project is about launch, hosting, or infrastructure
+- read `website/DEPLOYMENT-PLAYBOOK.md`
+
+### If the project is a pitch, redesign offer, or sales workflow
+- read `website/SALES-PLAYBOOK.md`
+
 ---
 
 ## 7. Quality Standard
@@ -162,5 +179,6 @@ At the time of writing, the repo has these reference points:
 - Mori Matcha = curated specialty retail with a physical-first conversion path
 - Floristería Calero concept = occasion-driven local florist / gifting retail
 - Backoffice memory = reusable admin, CMS, dashboard, and operational app rules
+- Website systems memory = reusable build, deployment, and sales rules
 
 Future projects should add to this library instead of replacing it.
