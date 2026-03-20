@@ -38,7 +38,7 @@ Every serious client build should create or update all relevant artifacts below.
 - `tests/<name>.spec.js`
 
 ### Required memory artifacts
-- `docs/<CLIENT-NAME>-DESIGN-SPEC.md`
+- design-spec doc or reusable folder in `docs/` or a top-level category folder
 - `docs/QA-REPORT-<CLIENT-NAME>.md` when testing is actually run
 - `docs/LEARNINGS.md` updated with client-specific lessons
 - `INDUSTRY-PLAYBOOK.md` updated only if the lesson generalizes beyond one client
@@ -47,6 +47,7 @@ Every serious client build should create or update all relevant artifacts below.
 - `products.js` or structured local data file
 - research doc for niche market patterns
 - deployment notes if the site has unusual constraints
+- admin/backoffice prototype notes when the business needs editable products or services
 
 ---
 
@@ -61,6 +62,8 @@ Every completed build should answer these questions in writing:
 5. What component patterns should be reused?
 6. What mistakes happened during the build?
 7. What should the next similar client inherit automatically?
+8. What operational/admin flow was necessary to make the prototype credible?
+9. What still felt rough even after the upgrade?
 
 If those answers are not saved, the repo does not actually improve.
 
@@ -80,6 +83,7 @@ Each design-spec doc should capture:
 - layout rules
 - component rules
 - content strategy
+- operational layer (forms, admin, editable data)
 - reusable lessons
 - what not to reuse blindly
 
@@ -113,6 +117,11 @@ When a new request comes in, match it to the closest prior system memory:
 - read `matcha/THOUGHT-PROCESS.md`
 - read Mori Matcha files
 
+### If the client is a florist or occasion-driven local retailer
+- read `florist/DESIGN-SPEC.md`
+- read `florist/THOUGHT-PROCESS.md`
+- read Floristería Calero concept files
+
 ### If the client is unclear
 - start with `INDUSTRY-PLAYBOOK.md`
 - use `docs/LEARNINGS.md` for universal patterns
@@ -128,6 +137,9 @@ A build is complete when:
 - the file structure is reusable
 - testing exists or is planned clearly
 - learnings are written down
+- the copy reads like the target business, not like a redesign critique
+- operational requirements are either built or explicitly documented
+- remaining weaknesses are named clearly so the next iteration starts from truth, not from wishful thinking
 - the next similar site can be built faster because of this one
 
 ---
@@ -137,5 +149,6 @@ A build is complete when:
 At the time of writing, the repo has these reference points:
 - Le Tavole = luxury home-goods e-commerce
 - Mori Matcha = curated specialty retail with a physical-first conversion path
+- Floristería Calero concept = occasion-driven local florist / gifting retail
 
 Future projects should add to this library instead of replacing it.

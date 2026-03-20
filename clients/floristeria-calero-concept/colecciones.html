@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colecciones | Floristería Calero</title>
+    <meta
+      name="description"
+      content="Catálogo de Floristería Calero con filtros por ocasión, fotografías reales y una ruta clara para encargar flores en Madrid."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="site-shell">
+      <div class="announcement">Colecciones con filtros por ocasión · entrega en el día · reparto propio</div>
+
+      <header class="site-header">
+        <div class="container nav">
+          <a class="brandmark" href="index.html">
+            <img class="brand-logo" src="https://floristeriacalero.madrid/wp-content/uploads/2020/09/Logo-Florister%C3%ADa-Calero.jpg" alt="Floristería Calero">
+            <span class="brand-name">
+              <strong>Floristería Calero</strong>
+              <span>Madrid · catálogo premium</span>
+            </span>
+          </a>
+          <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="navLinks" aria-label="Abrir menú">Menú</button>
+          <nav>
+            <ul id="navLinks" class="nav-links">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a class="active" href="colecciones.html">Colecciones</a></li>
+              <li><a href="bodas-eventos.html">Bodas y eventos</a></li>
+              <li><a href="funerario.html">Funerario</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+          </nav>
+          <a class="nav-cta" href="tel:+34915641846">Llamar ahora</a>
+        </div>
+      </header>
+
+      <main>
+        <section class="section">
+          <div class="container page-grid">
+            <div class="page-copy reveal">
+              <span class="eyebrow">Colecciones</span>
+              <h1>Ramos, rosas y arreglos listos para regalar.</h1>
+              <p>
+                Filtra por ocasión, encuentra rápido la referencia adecuada y encarga con la tranquilidad de una floristería local con atención directa y reparto propio.
+              </p>
+              <div class="chip-row">
+                <span>Entrega en el día</span>
+                <span>Reparto propio</span>
+                <span>Atención desde tienda</span>
+              </div>
+            </div>
+            <div class="hero-card reveal">
+              <img src="https://floristeriacalero.madrid/wp-content/uploads/2021/12/ramo-trabajo-calero.jpg" alt="Colecciones florales">
+              <div class="hero-overlay"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section-dark">
+          <div class="container">
+            <div class="shop-toolbar">
+              <div>
+                <span class="eyebrow">Compra por momento</span>
+                <h2>Encuentra antes lo que necesitas regalar.</h2>
+              </div>
+              <strong id="catalogCount">0 productos</strong>
+            </div>
+            <div id="filterRow" class="filter-row"></div>
+            <div id="catalogGrid" class="product-grid" style="margin-top: 1.5rem;"></div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container footer-grid">
+          <div>
+            <a class="brandmark-text" href="index.html">
+              <span class="brand-name">
+                <strong>Floristería Calero</strong>
+                <span>Colecciones por ocasión</span>
+              </span>
+            </a>
+          </div>
+          <div class="footer-links">
+            <a href="bodas-eventos.html">Bodas y eventos</a>
+            <a href="funerario.html">Funerario</a>
+            <a href="contacto.html">Contacto</a>
+          </div>
+          <div class="footer-links">
+            <a href="admin.html">Admin</a>
+            <span class="footer-note">Copyright <span id="footerYear"></span> Floristería Calero</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="catalogo.js"></script>
+    <script src="site.js"></script>
+  </body>
+</html>

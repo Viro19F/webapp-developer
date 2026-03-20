@@ -69,6 +69,61 @@ This document evolves. Every client teaches something new. I update it after eac
 
 ---
 
+## Client #3: Floristería Calero (Local Florist Concept, Madrid)
+
+### What Worked
+1. **Real business photography immediately raised the credibility of the redesign.** For a local florist, using the shop's own imagery works far better than invented art or generic placeholders.
+
+2. **Occasion-led shopping is stronger than product-led navigation for florists.** Customers buy for birthdays, romance, thanks, or condolences. That framing is much clearer than generic bouquet categories.
+
+3. **Urgency and reassurance should appear before the catalog.** Same-day delivery, local address, phone number, and own delivery service are not secondary details. They are core conversion drivers.
+
+4. **Separate pages for weddings and funerary work create clearer service value.** These are not just extra categories. They are distinct, higher-stakes service lines with different user intent.
+
+5. **A florist can feel premium without looking luxury-fashion.** Warm neutrals, wine tones, olive accents, editorial spacing, and controlled surfaces gave the concept a stronger local-premium feel than a template store layout.
+
+6. **A lightweight admin panel makes the concept feel like a real app.** Being able to add, edit, delete, import, and export products turns a redesign from a static mockup into an operational prototype.
+
+7. **Placement controls make the homepage reusable.** Letting the admin decide whether a flower lives only in the catalog, in the main featured shelf, or in an editorial homepage section makes the site much easier to adapt without rebuilding layout code.
+
+8. **Photo upload is a meaningful threshold.** The moment the business can take a new photo and push it into the product flow, the site stops feeling like a concept and starts feeling usable.
+
+### What I Learned (Build-Level)
+1. **Local retail with emotional purchases should lead with trust.** This means phone, delivery promise, hours, and location need to appear early and often.
+
+2. **FAQ content often contains the best sales copy.** In Floristería Calero's case, details about reparto propio, Sundays/festivos, hospitals, and tanatorios are exactly the reasons people trust the business.
+
+3. **Product pages for florists should explain the moment, not just the SKU.** The customer wants to know when this bouquet fits and how quickly it can be delivered.
+
+4. **Customer-facing copy must sound like the business, not like a redesign note.** If the page keeps saying what the redesign fixed, it still feels like a mockup instead of the finished site.
+
+5. **Service-plus-store businesses need both catalog pages and service pages.** A florist is not only an online shop. It also sells event work, urgent fulfillment, and local expertise.
+
+6. **Operational forms beat decorative forms.** A simple mailto-prep flow is enough to make event, contact, and funerary forms function without a backend.
+
+7. **Motion should never gate content.** Scroll-reveal patterns are fine only if the page still reads correctly in screenshots, fast scans, and non-scroll contexts.
+
+8. **Backoffice quality matters almost as much as storefront quality.** If the admin panel feels rough, the overall app still feels unfinished even when the public pages look strong.
+
+9. **Text systems need constraints, not just textareas.** When every field is free-form and unbounded, copy can quickly become messy. Good CMS flows need guidance, previews, and eventually character limits or clearer content roles.
+
+10. **Prospect research can become reusable system memory.** Auditing a live Madrid business is useful not only for outreach, but also for improving future redesign strategy in the same category.
+
+### Technical Decisions
+- **Small local catalog in JS + localStorage admin.** The florist concept uses `catalogo.js` plus an admin panel so storefront and operations share the same lightweight data model.
+- **Real remote imagery from the live business.** The concept uses Floristería Calero's own photos to keep the redesign believable and premium.
+- **Operational lead forms without backend complexity.** Contact, event, and funerary forms prepare structured emails so the prototype is usable immediately.
+- **Service-page architecture.** Weddings/events and funerary work were given their own conversion paths instead of being buried inside general store navigation.
+
+### What Still Needs Work
+1. **Admin hierarchy can be cleaner.** The panel is now much more useful, but it still needs one more pass to feel truly polished as software rather than a strong prototype.
+
+2. **Text controls need better guardrails.** Some fields can still create awkward visual results if the entered copy is too long or too dense.
+
+3. **The access gate is only lightweight front-end protection.** It is fine for a static concept, but a production admin needs real server-side authentication and roles.
+
+---
+
 ## Universal Learnings (Apply to Every Client)
 
 ### Design Rules That Always Work
@@ -76,7 +131,7 @@ This document evolves. Every client teaches something new. I update it after eac
 2. **60-30-10 color rule.** 60% neutral bg, 30% secondary, 10% accent for CTAs.
 3. **Whitespace is luxury.** More padding = more premium feel. Cramped = cheap.
 4. **Consistent border-radius.** Pick one (4px for luxury, 12px for friendly) and stick to it.
-5. **Scroll animations.** IntersectionObserver + opacity/translateY. Subtle (20px, 0.6s). Never bouncy.
+5. **Scroll animations.** Subtle motion can help, but never hide essential content by default or depend on scroll to reveal critical sections.
 6. **Sticky nav.** Always. With backdrop-filter blur and subtle shadow on scroll.
 7. **Mobile hamburger below 768px.** Nav links become full-width stacked.
 
@@ -140,6 +195,16 @@ clients/<name>/
 - [x] Soft-conversion CTA for physical retail ("Book tasting")
 - [x] Educational copy embedded directly in the shopping flow
 
+### Already Implemented (Floristería Calero concept)
+- [x] Occasion-based local retail navigation
+- [x] Dedicated service pages for weddings/events and funerary work
+- [x] Trust-first florist homepage with phone and same-day delivery above the fold
+- [x] Prospect audit and outreach copy registered as repo memory
+- [x] Real-source business photography in the concept
+- [x] Lightweight admin panel for editable catalog management
+- [x] Homepage placement controls for products
+- [x] Image upload flow from the admin panel
+
 ### High Priority (Next Client)
 1. **Slide-out cart drawer** — opens from right with background blur (luxury standard)
 2. **Predictive search** — live results as you type with product images
@@ -168,4 +233,4 @@ See `docs/LUXURY-ECOMMERCE-RESEARCH.md` for full analysis of Christofle, Juliska
 
 ---
 
-*Last updated: March 20, 2026 — after Le Tavole and Mori Matcha experiments*
+*Last updated: March 20, 2026 — after Le Tavole, Mori Matcha, and Floristería Calero concept work*

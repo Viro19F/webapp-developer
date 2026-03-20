@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto | Floristería Calero</title>
+    <meta
+      name="description"
+      content="Ficha de producto de Floristería Calero con fotografía real, precio claro y acciones directas para encargar en Madrid."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="site-shell">
+      <div class="announcement">Ficha de producto clara · encargo por teléfono o email · entrega en Madrid</div>
+
+      <header class="site-header">
+        <div class="container nav">
+          <a class="brandmark" href="index.html">
+            <img class="brand-logo" src="https://floristeriacalero.madrid/wp-content/uploads/2020/09/Logo-Florister%C3%ADa-Calero.jpg" alt="Floristería Calero">
+            <span class="brand-name">
+              <strong>Floristería Calero</strong>
+              <span>Ficha de producto</span>
+            </span>
+          </a>
+          <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="navLinks" aria-label="Abrir menú">Menú</button>
+          <nav>
+            <ul id="navLinks" class="nav-links">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a class="active" href="colecciones.html">Colecciones</a></li>
+              <li><a href="bodas-eventos.html">Bodas y eventos</a></li>
+              <li><a href="funerario.html">Funerario</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+          </nav>
+          <a class="nav-cta" href="tel:+34915641846">Llamar ahora</a>
+        </div>
+      </header>
+
+      <main>
+        <section class="section">
+          <div class="container">
+            <div class="chip-row" style="margin-bottom: 1rem;">
+              <span><a href="index.html">Inicio</a></span>
+              <span><a href="colecciones.html">Colecciones</a></span>
+              <span id="crumbProduct">Producto</span>
+            </div>
+            <div class="detail-grid">
+              <div class="detail-media reveal">
+                <div class="detail-main">
+                  <img id="productMainImage" src="" alt="">
+                </div>
+                <div id="thumbGrid" class="thumb-grid"></div>
+              </div>
+
+              <div class="detail-copy reveal">
+                <span id="productSubtitle" class="section-kicker"></span>
+                <h1 id="productName">Producto</h1>
+                <span id="productPrice" class="detail-price"></span>
+                <p id="productIntro"></p>
+                <p id="productDescription"></p>
+                <div class="detail-actions button-row">
+                  <a id="productCallLink" class="btn" href="tel:+34915641846">Llamar para encargar</a>
+                  <a id="productEmailLink" class="btn-secondary" href="mailto:caleroflor2004@gmail.com">Enviar pedido por email</a>
+                </div>
+                <ul class="detail-list">
+                  <li>
+                    <strong>Ideal para</strong>
+                    <span id="productDetail"></span>
+                  </li>
+                  <li>
+                    <strong>Qué incluye</strong>
+                    <span id="productIncludes"></span>
+                  </li>
+                  <li>
+                    <strong>Entrega</strong>
+                    <span id="productDelivery"></span>
+                  </li>
+                  <li>
+                    <strong>Cuidado</strong>
+                    <span id="productCare"></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section-dark">
+          <div class="container">
+            <div class="section-head reveal">
+              <span class="eyebrow">Relacionados</span>
+              <h2>Otros arreglos que también pueden encajar.</h2>
+            </div>
+            <div id="relatedGrid" class="related-grid"></div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container footer-grid">
+          <div>
+            <a class="brandmark-text" href="index.html">
+              <span class="brand-name">
+                <strong>Floristería Calero</strong>
+                <span>Detalle de producto</span>
+              </span>
+            </a>
+          </div>
+          <div class="footer-links">
+            <a href="colecciones.html">Colecciones</a>
+            <a href="contacto.html">Contacto</a>
+          </div>
+          <div class="footer-links">
+            <a href="admin.html">Admin</a>
+            <span class="footer-note">Copyright <span id="footerYear"></span> Floristería Calero</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="catalogo.js"></script>
+    <script src="site.js"></script>
+  </body>
+</html>

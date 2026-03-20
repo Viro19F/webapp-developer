@@ -363,6 +363,17 @@ Homepage, Product Catalog, Product Detail pages, Cart, Checkout (3 steps max), A
 - Starter bundles are high-conversion because they remove the "what else do I need?" question
 - If the store is physical-first, "Book tasting" or "Visit the counter" can outperform a hard-sell CTA on the first page
 
+### Occasion-driven local retail notes (florists, gifting, bakery gifts)
+- Customers often buy by moment: birthday, romance, thank you, condolence, urgent delivery
+- Put same-day delivery, phone, location, and hours above the fold
+- FAQ material often contains the strongest trust copy: delivery quality, what happens if the recipient is not there, timing, coverage area
+- If the business also sells higher-value services, create dedicated pages for them (events, funerary work, installations, corporate gifting)
+- In emotional or urgent categories, reassuring the user early matters more than showing a large quantity of products immediately
+- For redesign pitches, use real business imagery whenever possible. Fake concept art makes local businesses feel cheaper fast.
+- Write the storefront like the actual business site, not like a design explanation of what changed.
+- If the catalog changes often, include a lightweight admin or editable data layer so the concept feels operational.
+- If there is an admin, the admin needs product-level placement control and image upload, not just a JSON textarea.
+
 ---
 
 ## UNIVERSAL RULES (ALL INDUSTRIES)
@@ -401,9 +412,16 @@ Homepage, Product Catalog, Product Detail pages, Cart, Checkout (3 steps max), A
 - Social proof near CTAs
 - Fast response commitment ("We'll call you within 24 hours")
 
+### Internal tools (when a site includes admin)
+- The dashboard is part of the product quality, not an afterthought
+- Separate content areas clearly: products, homepage, settings/access
+- Add previews and guidance so non-technical users know how their edits will land
+- Lightweight front-end gates are acceptable for concepts, but production apps need real authentication
+
 ### What NOT to do (any site)
 - Auto-playing audio/video with sound
 - Stock photos of generic people
+- Animations that hide critical content until scroll
 - "Submit" as a button label
 - Hidden contact info
 - Slow loading (>3 seconds)

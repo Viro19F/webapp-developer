@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Floristería Calero</title>
+    <meta
+      name="description"
+      content="Contacto de Floristería Calero con teléfono, dirección, horario y formulario operativo para pedidos y consultas."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="site-shell">
+      <div class="announcement">Tienda local · reparto propio · atención directa para pedidos y consultas</div>
+
+      <header class="site-header">
+        <div class="container nav">
+          <a class="brandmark" href="index.html">
+            <img class="brand-logo" src="https://floristeriacalero.madrid/wp-content/uploads/2020/09/Logo-Florister%C3%ADa-Calero.jpg" alt="Floristería Calero">
+            <span class="brand-name">
+              <strong>Floristería Calero</strong>
+              <span>Contacto</span>
+            </span>
+          </a>
+          <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="navLinks" aria-label="Abrir menú">Menú</button>
+          <nav>
+            <ul id="navLinks" class="nav-links">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="colecciones.html">Colecciones</a></li>
+              <li><a href="bodas-eventos.html">Bodas y eventos</a></li>
+              <li><a href="funerario.html">Funerario</a></li>
+              <li><a class="active" href="contacto.html">Contacto</a></li>
+            </ul>
+          </nav>
+          <a class="nav-cta" href="tel:+34915641846">Llamar ahora</a>
+        </div>
+      </header>
+
+      <main>
+        <section class="section">
+          <div class="container page-grid">
+            <div class="page-copy reveal">
+              <span class="eyebrow">Contacto</span>
+              <h1>Contacta con la tienda y resolvemos tu pedido.</h1>
+              <p>
+                Si necesitas enviar flores hoy, pedir un arreglo funerario o hablar sobre una boda o evento, aquí tienes los datos clave y un formulario listo para preparar la consulta.
+              </p>
+              <div class="chip-row">
+                <span>915 641 846</span>
+                <span>L-V 10:00 - 20:00</span>
+                <span>Domingos y festivos con horario reducido</span>
+              </div>
+            </div>
+            <div class="hero-card reveal">
+              <img src="https://floristeriacalero.madrid/wp-content/uploads/2020/05/FLORISTERIAS-GARANTIA.jpg" alt="Garantía Calero">
+              <div class="hero-overlay"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section-dark">
+          <div class="container contact-grid">
+            <div class="contact-card reveal">
+              <span class="eyebrow">Tienda</span>
+              <h2 style="font-size: clamp(2.2rem, 4vw, 3.2rem);">Calle de Cartagena, 119</h2>
+              <p>28002, Madrid</p>
+              <div class="chip-row" style="margin-top: 1rem;">
+                <span>915 641 846</span>
+                <span>caleroflor2004@gmail.com</span>
+                <span>L-V 10:00 - 20:00</span>
+              </div>
+              <div class="button-row" style="margin-top: 1rem;">
+                <a class="btn" href="tel:+34915641846">Llamar</a>
+                <a class="btn-secondary" href="https://maps.google.com/?q=Calle+de+Cartagena+119+Madrid" target="_blank" rel="noreferrer">Abrir en Maps</a>
+              </div>
+            </div>
+            <form class="form-card reveal" data-mail-form data-subject="Consulta Floristería Calero">
+              <div class="form-grid">
+                <div class="field-grid two">
+                  <div class="field">
+                    <label for="contacto-nombre">Nombre</label>
+                    <input id="contacto-nombre" type="text" name="nombre">
+                  </div>
+                  <div class="field">
+                    <label for="contacto-email">Email</label>
+                    <input id="contacto-email" type="email" name="email">
+                  </div>
+                </div>
+                <div class="field-grid two">
+                  <div class="field">
+                    <label for="contacto-motivo">Motivo</label>
+                    <select id="contacto-motivo" name="motivo">
+                      <option>Pedido de flores</option>
+                      <option>Boda o evento</option>
+                      <option>Servicio funerario</option>
+                      <option>Consulta general</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label for="contacto-telefono">Teléfono</label>
+                    <input id="contacto-telefono" type="tel" name="telefono">
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="contacto-mensaje">Mensaje</label>
+                  <textarea id="contacto-mensaje" name="mensaje" placeholder="Cuéntanos para cuándo necesitas el pedido y si es para domicilio, tanatorio, hospital o evento."></textarea>
+                </div>
+                <button class="btn" type="submit">Preparar email</button>
+                <p class="footer-note" data-form-feedback></p>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <div class="section-head reveal">
+              <span class="eyebrow">Preguntas frecuentes</span>
+              <h2>Las dudas más habituales, resueltas desde el principio.</h2>
+            </div>
+            <div class="faq-grid">
+              <article class="faq-card reveal">
+                <h3>¿Llegará bien mi pedido?</h3>
+                <p>El reparto es propio y los arreglos se gestionan desde la tienda, algo especialmente importante en flores delicadas y entregas del día.</p>
+              </article>
+              <article class="faq-card reveal">
+                <h3>¿Hacéis domingos y festivos?</h3>
+                <p>Sí, con horario más reducido. Tenerlo visible evita dudas y facilita decidir si el encargo se puede resolver hoy.</p>
+              </article>
+              <article class="faq-card reveal">
+                <h3>¿Enviáis a hospitales y tanatorios?</h3>
+                <p>Sí. Floristería Calero trabaja este tipo de entregas con prioridad y por eso tienen un recorrido específico dentro de la web.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container footer-grid">
+          <div><span class="footer-note">Contacto planteado como herramienta real de captación y coordinación de pedidos.</span></div>
+          <div class="footer-links">
+            <a href="colecciones.html">Colecciones</a>
+            <a href="bodas-eventos.html">Bodas y eventos</a>
+          </div>
+          <div class="footer-links">
+            <a href="admin.html">Admin</a>
+            <span class="footer-note">Copyright <span id="footerYear"></span> Floristería Calero</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="catalogo.js"></script>
+    <script src="site.js"></script>
+  </body>
+</html>
