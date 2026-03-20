@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda — Le Tavole | Vajillas, Cristalería y Decoración de Lujo</title>
+    <meta name="description" content="Explora nuestra colección completa de vajillas, cristalería, cubertería y decoración del hogar. Christofle, Juliska, Herend, La Double J, Alessi y más.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .filter-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border: 1px solid var(--border);
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all var(--transition);
+            margin: 0 6px 8px 0;
+        }
+        .filter-tag:hover, .filter-tag.active {
+            border-color: var(--gold);
+            color: var(--gold);
+            background: var(--gold-pale);
+        }
+        .brand-filter-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-light);
+            margin-bottom: 40px;
+        }
+        .load-more {
+            text-align: center;
+            padding: 40px 0 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="announcement">
+        Envío gratis en pedidos superiores a <strong>$150 USD</strong> &nbsp;·&nbsp; Listas de regalos disponibles
+    </div>
+
+    <nav class="nav" id="nav">
+        <div class="nav-top">
+            <a href="index.html" class="nav-logo">Le <em>Tavole</em></a>
+            <div class="nav-actions">
+                <a href="#" aria-label="Buscar"><i class="ph ph-magnifying-glass"></i></a>
+                <a href="#" aria-label="Mi cuenta"><i class="ph ph-user"></i></a>
+                <a href="#" aria-label="Favoritos"><i class="ph ph-heart"></i></a>
+                <a href="#" aria-label="Carrito"><i class="ph ph-bag"></i></a>
+                <button class="nav-toggle" id="navToggle" aria-label="Menú"><i class="ph ph-list"></i></button>
+            </div>
+        </div>
+        <div class="nav-links-bar" id="navLinksBar">
+            <ul class="nav-links">
+                <li><a href="tienda.html" class="active">Tabletop</a></li>
+                <li><a href="tienda.html">Home Décor</a></li>
+                <li><a href="tienda.html">Cocina</a></li>
+                <li><a href="tienda.html">Novedades</a></li>
+                <li><a href="tienda.html">Listas de Regalos</a></li>
+                <li><a href="tienda.html">Marcas</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="breadcrumb"><a href="index.html">Inicio</a> / <span>Tienda</span></div>
+            <h1>Nuestra <em>Colección</em></h1>
+            <p>Más de 1,500 piezas seleccionadas de las mejores marcas del mundo</p>
+        </div>
+    </section>
+
+    <!-- CATEGORY TILES -->
+    <section style="padding: 60px 0 0;">
+        <div class="container">
+            <div class="cat-grid" style="grid-template-columns: repeat(6, 1fr);">
+                <a href="#" class="cat-card" style="height: 200px;"><img src="https://images.unsplash.com/photo-1530018607912-eff2daa1bac4?w=400&q=80" alt="Vajillas"><div class="cat-card-overlay"><h3 style="font-size:1.1rem;">Vajillas</h3><span>168 productos</span></div></a>
+                <a href="#" class="cat-card" style="height: 200px;"><img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=400&q=80" alt="Cristalería"><div class="cat-card-overlay"><h3 style="font-size:1.1rem;">Cristalería</h3><span>252 productos</span></div></a>
+                <a href="#" class="cat-card" style="height: 200px;"><img src="https://images.unsplash.com/photo-1592492135673-55966d3b541a?w=400&q=80" alt="Cubertería"><div class="cat-card-overlay"><h3 style="font-size:1.1rem;">Cubertería</h3><span>86 productos</span></div></a>
+                <a href="#" class="cat-card" style="height: 200px;"><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80" alt="Servir"><div class="cat-card-overlay"><h3 style="font-size:1.1rem;">Servir</h3><span>186 productos</span></div></a>
+                <a href="#" class="cat-card" style="height: 200px;"><img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=400&q=80" alt="Home"><div class="cat-card-overlay"><h3 style="font-size:1.1rem;">Home</h3><span>130 productos</span></div></a>
+                <a href="#" class="cat-card" style="height: 200px;"><img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=400&q=80" alt="Cocina"><div class="cat-card-overlay"><h3 style="font-size:1.1rem;">Cocina</h3><span>95 productos</span></div></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BRAND FILTER -->
+    <div class="container">
+        <div class="brand-filter-bar">
+            <span class="filter-tag active" onclick="filterBrand(this, 'all')">Todas</span>
+            <span class="filter-tag" onclick="filterBrand(this, 'christofle')">Christofle</span>
+            <span class="filter-tag" onclick="filterBrand(this, 'juliska')">Juliska</span>
+            <span class="filter-tag" onclick="filterBrand(this, 'alessi')">Alessi</span>
+            <span class="filter-tag" onclick="filterBrand(this, 'la-double-j')">La Double J</span>
+            <span class="filter-tag" onclick="filterBrand(this, 'herend')">Herend</span>
+            <span class="filter-tag" onclick="filterBrand(this, 'wedgwood')">Wedgwood</span>
+            <span class="filter-tag" onclick="filterBrand(this, 'sabre-paris')">Sabre Paris</span>
+            <span class="filter-tag" onclick="filterBrand(this, 'corkcicle')">Corkcicle</span>
+            <span class="filter-tag" onclick="filterBrand(this, 'joseph-joseph')">Joseph Joseph</span>
+            <span class="filter-tag" onclick="filterBrand(this, 'ichendorf')">Ichendorf</span>
+        </div>
+    </div>
+
+    <!-- SHOP -->
+    <div class="container">
+        <div class="shop-layout">
+            <!-- SIDEBAR -->
+            <aside class="shop-sidebar">
+                <div class="filter-group">
+                    <h4>Categorías</h4>
+                    <ul>
+                        <li><a href="#">Vajillas <span class="count">168</span></a></li>
+                        <li><a href="#">Cristalería <span class="count">252</span></a></li>
+                        <li><a href="#">Cubertería <span class="count">86</span></a></li>
+                        <li><a href="#">Piezas de Servir <span class="count">186</span></a></li>
+                        <li><a href="#">Café y Té <span class="count">178</span></a></li>
+                        <li><a href="#">Lencería <span class="count">65</span></a></li>
+                        <li><a href="#">Bar <span class="count">56</span></a></li>
+                        <li><a href="#">Home Décor <span class="count">130</span></a></li>
+                        <li><a href="#">Cocina <span class="count">95</span></a></li>
+                        <li><a href="#">Candelabros <span class="count">35</span></a></li>
+                        <li><a href="#">Floreros <span class="count">65</span></a></li>
+                    </ul>
+                </div>
+                <div class="filter-group">
+                    <h4>Precio</h4>
+                    <ul>
+                        <li><a href="#">Menos de $50</a></li>
+                        <li><a href="#">$50 – $150</a></li>
+                        <li><a href="#">$150 – $350</a></li>
+                        <li><a href="#">$350 – $700</a></li>
+                        <li><a href="#">$700 – $1,000</a></li>
+                        <li><a href="#">Más de $1,000</a></li>
+                    </ul>
+                </div>
+                <div class="filter-group">
+                    <h4>Material</h4>
+                    <ul>
+                        <li><a href="#">Porcelana</a></li>
+                        <li><a href="#">Cristal</a></li>
+                        <li><a href="#">Acero inoxidable</a></li>
+                        <li><a href="#">Cerámica</a></li>
+                        <li><a href="#">Plata</a></li>
+                        <li><a href="#">Vidrio de Murano</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- PRODUCTS -->
+            <div class="shop-products">
+                <div class="shop-toolbar">
+                    <span id="resultCount">Mostrando 36 productos</span>
+                    <select>
+                        <option>Ordenar por: Más recientes</option>
+                        <option>Precio: Menor a mayor</option>
+                        <option>Precio: Mayor a menor</option>
+                        <option>Marca: A-Z</option>
+                    </select>
+                </div>
+
+                <div class="products-grid" id="productGrid" style="grid-template-columns: repeat(3, 1fr);">
+
+                    <!-- ===== CHRISTOFLE ===== -->
+                    <a href="producto.html" class="product-card" data-brand="christofle">
+                        <div class="product-img">
+                            <img src="https://letavole.com/wp-content/uploads/2025/03/113803.jpg" alt="Graphik Florero Medium">
+                            <button class="product-wishlist"><i class="ph ph-heart"></i></button>
+                            <div class="product-quick">Vista Rápida</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">Christofle</div>
+                            <h3>Graphik Florero Medium</h3>
+                            <div class="product-price">US$2,090.00</div>
+                        </div>
+                    </a>
+
+                    <a href="producto.html" class="product-card" data-brand="christofle">
+                        <div class="product-img">
+                            <img src="https://letavole.com/wp-content/uploads/2024/11/113520.jpg" alt="Madison 6 Florero Medio">
+                            <button class="product-wishlist"><i class="ph ph-heart"></i></button>
+                            <div class="product-quick">Vista Rápida</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">Christofle</div>
+                            <h3>Madison 6 Florero Medio</h3>
+                            <div class="product-price">US$1,650.00</div>
+                        </div>
+                    </a>
+
+                    <a href="producto.html" class="product-card" data-brand="christofle">
+                        <div class="product-img">
+                            <img src="https://letavole.com/wp-content/uploads/2026/01/114039.jpg" alt="Entremesera 3 Bandejas Vertigo">
+                            <div class="product-badge">Bestseller</div>
+                            <button class="product-wishlist"><i class="ph ph-heart"></i></button>
+                            <div class="product-quick">Vista Rápida</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">Christofle</div>
+                            <h3>Entremesera 3 Bandejas Vertigo</h3>
+                            <div class="product-price">US$1,450.00</div>
+                        </div>
+                    </a>
+
+                    <a href="producto.html" class="product-card" data-brand="christofle">
+                        <div class="product-img">
+                            <img src="https://letavole.com/wp-content/uploads/2025/07/114653-00.jpg" alt="Candelabro 2 Luces Perspectives">
+                            <button class="product-wishlist"><i class="ph ph-heart"></i></button>
+                            <div class="product-quick">Vista Rápida</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">Christofle</div>
+                            <h3>Candelabro 2 Luces Cromo Perspectives</h3>
+                            <div class="product-price">US$1,420.00</div>
+                        </div>
+                    </a>
+
+                    <a href="producto.html" class="product-card" data-brand="christofle">
+                        <div class="product-img">
+                            <img src="https://letavole.com/wp-content/uploads/2019/03/104382-01.jpg" alt="Vinagrera Vertigo">
+                            <button class="product-wishlist"><i class="ph ph-heart"></i></button>
+                            <div class="product-quick">Vista Rápida</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">Christofle</div>
+                            <h3>Vinagrera Vertigo</h3>
+                            <div class="product-price">US$1,060.00</div>
+                        </div>
+                    </a>
+
+                    <a href="producto.html" class="product-card" data-brand="christofle">
+                        <div class="product-img">
+                            <img src="https://letavole.com/wp-content/uploads/2025/04/114047.jpg" alt="Ensaladera Malmaison Imperiale">
+                            <button class="product-wishlist"><i class="ph ph-heart"></i></button>
+                            <div class="product-quick">Vista Rápida</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">Christofle</div>
+                            <h3>Ensaladera Malmaison Imperiale</h3>
+                            <div class="product-price">US$545.00</div>
+                        </div>
+                    </a>
+
+                    <!-- ===== JULISKA ===== -->
+                    <a href="producto.html" class="product-card" data-brand="juliska">
+                        <div class="product-img">
+                            <img src="https://letavole.com/wp-content/uploads/2025/11/115178.jpg" alt="Willa Charger Platter Amber">
+                            <div class="product-badge">Nuevo</div>
+                            <button class="product-wishlist"><i class="ph ph-heart"></i></button>
+                            <div class="product-quick">Vista Rápida</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">Juliska</div>
+                            <h3>Willa Charger / Platter Amber</h3>
+                            <div class="product-price">US$125.00</div>
+                        </div>
+                    </a>
+
+                    <a href="producto.html" class="product-card" data-brand="juliska">
+                        <div class="product-img">
+                            <img src="https://letavole.com/wp-content/uploads/2025/09/114815.jpg" alt="Le Panier Mystic Knot Charger">
+                            <button class="product-wishlist"><i class="ph ph-heart"></i></button>
+                            <div class="product-quick">Vista Rápida</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">Juliska</div>
+                            <h3>Le Panier Mystic Knot Charger Plate</h3>
+                            <div class="product-price">US$111.00</div>
+                        </div>
+                    </a>
+
+                    <a href="producto.html" class="product-card" data-brand="juliska">
+                        <div class="product-img">
+                            <img src="https://letavole.com/wp-content/uploads/2021/11/108492-00.jpg" alt="Tea Cup Saucer B&T">
+                            <button class="product-wishlist"><i class="ph ph-heart"></i></button>
+                            <div class="product-quick">Vista Rápida</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">Juliska</div>
+                            <h3>Tea Cup & Saucer Berry & Thread</h3>
+                            <div class="product-price">US$72.00</div>
+                        </div>
+                    </a>
+
+                    <!-- ===== LA DOUBLE J ===== -->
+                    <a href="producto.html" class="product-card" data-brand="la-double-j">
+                        <div class="product-img">
+                            <img src="https://letavole.com/wp-content/uploads/2025/01/113875.jpg" alt="Bubble Candle Stick S/4">
+                            <button class="product-wishlist"><i class="ph ph-heart"></i></button>
+                            <div class="product-quick">Vista Rápida</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">La Double J</div>
+                            <h3>Bubble Candle Stick S/4 Mixed</h3>
+                            <div class="product-price">US$980.00</div>
+                        </div>
+                    </a>
+
+                    <a href="producto.html" class="product-card" data-brand="la-double-j">
+                        <div class="product-img">
+                            <img src="https://letavole.com/wp-content/uploads/2023/01/110637.jpg" alt="Carafe in Murano Glass">
+                            <button class="product-wishlist"><i class="ph ph-heart"></i></button>
+                            <div class="product-quick">Vista Rápida</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">La Double J</div>
+                            <h3>Carafe in Murano Glass</h3>
+                            <div class="product-price">US$612.00</div>
+                        </div>
+                    </a>
+
+                    <a href="producto.html" class="product-card" data-brand="la-double-j">
+                        <div class="product-img">
+                            <img src="https://letavole.com/wp-content/uploads/2025/12/115375-6.jpg" alt="Leaftrail Incense Holder Blue">
+                            <div class="product-badge">Nuevo</div>
+                            <button class="product-wishlist"><i class="ph ph-heart"></i></button>
+                            <div class="product-quick">Vista Rápida</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">La Double J</div>
+                            <h3>Leaftrail Incense Holder Blue</h3>
+                            <div class="product-price">US$347.00</div>
+                        </div>
+                    </a>
+
+                    <a href="producto.html" class="product-card" data-brand="la-double-j">
+                        <div class="product-img">
+                            <img src="https://letavole.com/wp-content/uploads/2025/12/115362.jpg" alt="Bamboo Highball S/2">
+                            <button class="product-wishlist"><i class="ph ph-heart"></i></button>
+                            <div class="product-quick">Vista Rápida</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">La Double J</div>
+                            <h3>Bamboo Highball S/2</h3>
+                            <div class="product-price">US$347.00</div>
+                        </div>
+                    </a>
+
+                    <a href="producto.html" class="product-card" data-brand="la-double-j">
+                        <div class="product-img">
+                            <img src="https://letavole.com/wp-content/uploads/2025/12/115374.jpg" alt="Parrotstem Trinket Tray Green">
+                            <div class="product-badge">Nuevo</div>
+                            <button class="product-wishlist"><i class="ph ph-heart"></i></button>
+                            <div class="product-quick">Vista Rápida</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">La Double J</div>
+                            <h3>Parrotstem Trinket Tray Green</h3>
+                            <div class="product-price">US$318.00</div>
+                        </div>
+                    </a>
+
+                    <a href="producto.html" class="product-card" data-brand="la-double-j">
+                        <div class="product-img">
+                            <img src="https://letavole.com/wp-content/uploads/2025/05/114292.jpg" alt="Odysseus Pink Tea Cup S/2">
+                            <button class="product-wishlist"><i class="ph ph-heart"></i></button>
+                            <div class="product-quick">Vista Rápida</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">La Double J</div>
+                            <h3>Odysseus Pink Tea Cup S/2</h3>
+                            <div class="product-price">US$346.00</div>
+                        </div>
+                    </a>
+
+                    <!-- ===== ALESSI ===== -->
+                    <a href="producto.html" class="product-card" data-brand="alessi">
+                        <div class="product-img">
+                            <img src="https://letavole.com/wp-content/uploads/2026/01/115430.jpg" alt="Cafetera Espresso 6">
+                            <div class="product-badge">Nuevo</div>
+                            <button class="product-wishlist"><i class="ph ph-heart"></i></button>
+                            <div class="product-quick">Vista Rápida</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">Alessi</div>
+                            <h3>Cafetera Espresso 6 Tazas</h3>
+                            <div class="product-price">US$371.00</div>
+                        </div>
+                    </a>
+
+                    <a href="producto.html" class="product-card" data-brand="alessi">
+                        <div class="product-img">
+                            <img src="https://letavole.com/wp-content/uploads/2024/01/112353.jpg" alt="Frutero Pierre Charpin">
+                            <button class="product-wishlist"><i class="ph ph-heart"></i></button>
+                            <div class="product-quick">Vista Rápida</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">Alessi</div>
+                            <h3>Frutero Pierre Charpin Mediano</h3>
+                            <div class="product-price">US$257.00</div>
+                        </div>
+                    </a>
+
+                    <a href="producto.html" class="product-card" data-brand="alessi">
+                        <div class="product-img">
+                            <img src="https://letavole.com/wp-content/uploads/2026/01/115422.jpg" alt="Veneer Centro de Mesa">
+                            <button class="product-wishlist"><i class="ph ph-heart"></i></button>
+                            <div class="product-quick">Vista Rápida</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">Alessi</div>
+                            <h3>Veneer Centro de Mesa</h3>
+                            <div class="product-price">US$219.00</div>
+                        </div>
+                    </a>
+
+                    <a href="producto.html" class="product-card" data-brand="alessi">
+                        <div class="product-img">
+                            <img src="https://letavole.com/wp-content/uploads/2026/01/115416.jpg" alt="Alessandro M. Sacacorchos">
+                            <div class="product-badge">Bestseller</div>
+                            <button class="product-wishlist"><i class="ph ph-heart"></i></button>
+                            <div class="product-quick">Vista Rápida</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">Alessi</div>
+                            <h3>Alessandro M. Sacacorchos</h3>
+                            <div class="product-price">US$181.00</div>
+                        </div>
+                    </a>
+
+                    <a href="producto.html" class="product-card" data-brand="alessi">
+                        <div class="product-img">
+                            <img src="https://letavole.com/wp-content/uploads/2026/01/115426.jpg" alt="Moledor de Pimienta">
+                            <button class="product-wishlist"><i class="ph ph-heart"></i></button>
+                            <div class="product-quick">Vista Rápida</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">Alessi</div>
+                            <h3>Moledor de Pimienta Negro</h3>
+                            <div class="product-price">US$186.00</div>
+                        </div>
+                    </a>
+
+                    <!-- ===== HEREND ===== -->
+                    <a href="producto.html" class="product-card" data-brand="herend">
+                        <div class="product-img">
+                            <img src="https://letavole.com/wp-content/uploads/2023/09/110929.jpg" alt="Tray with Ribbon">
+                            <button class="product-wishlist"><i class="ph ph-heart"></i></button>
+                            <div class="product-quick">Vista Rápida</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">Herend</div>
+                            <h3>Tray with Ribbon</h3>
+                            <div class="product-price">US$684.00</div>
+                        </div>
+                    </a>
+
+                    <a href="producto.html" class="product-card" data-brand="herend">
+                        <div class="product-img">
+                            <img src="https://letavole.com/wp-content/uploads/2023/09/110930.jpg" alt="Coffee Pot Rose Knob">
+                            <button class="product-wishlist"><i class="ph ph-heart"></i></button>
+                            <div class="product-quick">Vista Rápida</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">Herend</div>
+                            <h3>Coffee Pot Rose Knob</h3>
+                            <div class="product-price">US$616.00</div>
+                        </div>
+                    </a>
+
+                    <a href="producto.html" class="product-card" data-brand="herend">
+                        <div class="product-img">
+                            <img src="https://letavole.com/wp-content/uploads/2023/09/110925.jpg" alt="Sugar Basin Rose Knob">
+                            <button class="product-wishlist"><i class="ph ph-heart"></i></button>
+                            <div class="product-quick">Vista Rápida</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">Herend</div>
+                            <h3>Sugar Basin Rose Knob</h3>
+                            <div class="product-price">US$275.00</div>
+                        </div>
+                    </a>
+
+                    <!-- ===== WEDGWOOD ===== -->
+                    <a href="producto.html" class="product-card" data-brand="wedgwood">
+                        <div class="product-img">
+                            <img src="https://letavole.com/wp-content/uploads/2019/06/102528.jpg" alt="Arris Charger Octagonal">
+                            <button class="product-wishlist"><i class="ph ph-heart"></i></button>
+                            <div class="product-quick">Vista Rápida</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">Wedgwood</div>
+                            <h3>Arris Charger Octagonal 33cm</h3>
+                            <div class="product-price">US$244.00</div>
+                        </div>
+                    </a>
+
+                    <a href="producto.html" class="product-card" data-brand="wedgwood">
+                        <div class="product-img">
+                            <img src="https://letavole.com/wp-content/uploads/2022/12/110566.jpg" alt="Renaissance Gold Dinner Plate">
+                            <button class="product-wishlist"><i class="ph ph-heart"></i></button>
+                            <div class="product-quick">Vista Rápida</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">Wedgwood</div>
+                            <h3>Renaissance Gold Dinner Plate</h3>
+                            <div class="product-price">US$72.00</div>
+                        </div>
+                    </a>
+
+                    <a href="producto.html" class="product-card" data-brand="wedgwood">
+                        <div class="product-img">
+                            <img src="https://letavole.com/wp-content/uploads/2022/04/109309-01.jpg" alt="Wonderlust Plate">
+                            <button class="product-wishlist"><i class="ph ph-heart"></i></button>
+                            <div class="product-quick">Vista Rápida</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">Wedgwood</div>
+                            <h3>Wonderlust Plate</h3>
+                            <div class="product-price">US$68.00</div>
+                        </div>
+                    </a>
+
+                    <!-- ===== SABRE PARIS ===== -->
+                    <a href="producto.html" class="product-card" data-brand="sabre-paris">
+                        <div class="product-img">
+                            <img src="https://letavole.com/wp-content/uploads/2025/09/114710.jpg" alt="Icone Set 5pcs Steel Blue">
+                            <div class="product-badge">Bestseller</div>
+                            <button class="product-wishlist"><i class="ph ph-heart"></i></button>
+                            <div class="product-quick">Vista Rápida</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">Sabre Paris</div>
+                            <h3>Icône Set 5 Piezas Steel Blue</h3>
+                            <div class="product-price">US$127.00</div>
+                        </div>
+                    </a>
+
+                    <a href="producto.html" class="product-card" data-brand="sabre-paris">
+                        <div class="product-img">
+                            <img src="https://letavole.com/wp-content/uploads/2023/09/109194-04.jpg" alt="Icone Set Caramel">
+                            <button class="product-wishlist"><i class="ph ph-heart"></i></button>
+                            <div class="product-quick">Vista Rápida</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">Sabre Paris</div>
+                            <h3>Icône Set 5 Piezas Caramel</h3>
+                            <div class="product-price">US$127.00</div>
+                        </div>
+                    </a>
+
+                    <!-- ===== CORKCICLE ===== -->
+                    <a href="producto.html" class="product-card" data-brand="corkcicle">
+                        <div class="product-img">
+                            <img src="https://letavole.com/wp-content/uploads/2024/08/113141-03.webp" alt="Estelle Tote">
+                            <button class="product-wishlist"><i class="ph ph-heart"></i></button>
+                            <div class="product-quick">Vista Rápida</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">Corkcicle</div>
+                            <h3>Estelle Tote</h3>
+                            <div class="product-price">US$180.00</div>
+                        </div>
+                    </a>
+
+                    <a href="producto.html" class="product-card" data-brand="corkcicle">
+                        <div class="product-img">
+                            <img src="https://letavole.com/wp-content/uploads/2023/08/111511.jpg" alt="Lunchpod">
+                            <button class="product-wishlist"><i class="ph ph-heart"></i></button>
+                            <div class="product-quick">Vista Rápida</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">Corkcicle</div>
+                            <h3>Lunchpod</h3>
+                            <div class="product-price">US$74.00</div>
+                        </div>
+                    </a>
+
+                    <!-- ===== JOSEPH JOSEPH ===== -->
+                    <a href="producto.html" class="product-card" data-brand="joseph-joseph">
+                        <div class="product-img">
+                            <img src="https://letavole.com/wp-content/uploads/2025/04/114021.jpg" alt="Space Saucepan Set">
+                            <div class="product-badge">Nuevo</div>
+                            <button class="product-wishlist"><i class="ph ph-heart"></i></button>
+                            <div class="product-quick">Vista Rápida</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">Joseph Joseph</div>
+                            <h3>Space 3pc Saucepan Set</h3>
+                            <div class="product-price">US$571.00</div>
+                        </div>
+                    </a>
+
+                    <a href="producto.html" class="product-card" data-brand="joseph-joseph">
+                        <div class="product-img">
+                            <img src="https://letavole.com/wp-content/uploads/2026/03/115579-05.jpg" alt="Blox Drawer Organiser">
+                            <div class="product-badge">Nuevo</div>
+                            <button class="product-wishlist"><i class="ph ph-heart"></i></button>
+                            <div class="product-quick">Vista Rápida</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">Joseph Joseph</div>
+                            <h3>Blox 10 Piece Drawer Organiser Set</h3>
+                            <div class="product-price">US$89.00</div>
+                        </div>
+                    </a>
+
+                    <!-- ===== ICHENDORF ===== -->
+                    <a href="producto.html" class="product-card" data-brand="ichendorf">
+                        <div class="product-img">
+                            <img src="https://letavole.com/wp-content/uploads/2025/12/115373-0.jpg" alt="Leafbug Trinket Tray">
+                            <div class="product-badge">Nuevo</div>
+                            <button class="product-wishlist"><i class="ph ph-heart"></i></button>
+                            <div class="product-quick">Vista Rápida</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">Ichendorf</div>
+                            <h3>Leafbug Trinket Tray Light Blue</h3>
+                            <div class="product-price">US$318.00</div>
+                        </div>
+                    </a>
+
+                    <a href="producto.html" class="product-card" data-brand="ichendorf">
+                        <div class="product-img">
+                            <img src="https://letavole.com/wp-content/uploads/2025/12/115372.jpg" alt="Leafflyer Trinket Tray Saffron">
+                            <button class="product-wishlist"><i class="ph ph-heart"></i></button>
+                            <div class="product-quick">Vista Rápida</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">Ichendorf</div>
+                            <h3>Leafflyer Trinket Tray Saffron</h3>
+                            <div class="product-price">US$401.00</div>
+                        </div>
+                    </a>
+
+                    <a href="producto.html" class="product-card" data-brand="ichendorf">
+                        <div class="product-img">
+                            <img src="https://letavole.com/wp-content/uploads/2025/01/113359.jpg" alt="Trinket Tray Libellula">
+                            <div class="product-badge sold-out">Agotado</div>
+                            <button class="product-wishlist"><i class="ph ph-heart"></i></button>
+                            <div class="product-quick">Vista Rápida</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">Ichendorf</div>
+                            <h3>Trinket Tray Libellula</h3>
+                            <div class="product-price">US$215.00</div>
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="load-more">
+                    <button class="btn btn-outline-dark">Cargar Más Productos <i class="ph ph-arrow-down"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer" style="margin-top: 60px;">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="nav-logo">Le <em>Tavole</em></span>
+                    <p>El Arte de Servir. Vajillas de lujo, cristalería, cubertería y decoración del hogar. Santo Domingo, República Dominicana.</p>
+                </div>
+                <div><h4>Tienda</h4><ul><li><a href="#">Vajillas</a></li><li><a href="#">Cristalería</a></li><li><a href="#">Cubertería</a></li><li><a href="#">Home Décor</a></li><li><a href="#">Cocina</a></li></ul></div>
+                <div><h4>Servicios</h4><ul><li><a href="#">Listas de Regalos</a></li><li><a href="#">Envíos</a></li><li><a href="#">Devoluciones</a></li><li><a href="#">FAQ</a></li></ul></div>
+                <div><h4>Contacto</h4><ul><li><a href="tel:+18095655727">(809) 565-5727</a></li><li><a href="mailto:[email protected]">[email protected]</a></li><li><a href="contacto.html">Piantini, Santo Domingo</a></li></ul></div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 Le Tavole. Todos los derechos reservados.</span>
+                <div class="footer-payments">Visa · Mastercard · PayPal · Transferencia</div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/18099181810?text=Hola%20Le%20Tavole" class="whatsapp-float" target="_blank"><i class="ph ph-whatsapp-logo"></i></a>
+
+    <script>
+        // Nav
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20));
+        document.getElementById('navToggle').addEventListener('click', () => {
+            const bar = document.getElementById('navLinksBar');
+            bar.classList.toggle('open');
+            document.querySelector('#navToggle i').className = bar.classList.contains('open') ? 'ph ph-x' : 'ph ph-list';
+        });
+
+        // Brand filter
+        function filterBrand(el, brand) {
+            document.querySelectorAll('.filter-tag').forEach(t => t.classList.remove('active'));
+            el.classList.add('active');
+
+            const cards = document.querySelectorAll('.product-card');
+            let visible = 0;
+            cards.forEach(card => {
+                if (brand === 'all' || card.dataset.brand === brand) {
+                    card.style.display = '';
+                    visible++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            document.getElementById('resultCount').textContent = `Mostrando ${visible} productos`;
+        }
+    </script>
+
+</body>
+</html>
