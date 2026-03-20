@@ -327,6 +327,8 @@ Homepage, Product Catalog, Product Detail pages, Cart, Checkout (3 steps max), A
 - Multiple payment options (card, PayPal, Apple Pay)
 - For first-time-buyer categories (tea, coffee, skincare, specialty food), add product guidance: tasting notes, best-use case, and starter recommendations
 - For physical retail, include a soft-conversion CTA like tasting reservation, consultation, or in-store pickup
+- Search should support real buyer language, not only strict category labels
+- Shipping, returns, and delivery timing need to be visible before checkout feels risky
 
 ### Payment integration (no Shopify needed)
 - **Snipcart:** 2 lines of code, full cart/checkout, works with any HTML site, 2%/transaction
@@ -355,6 +357,14 @@ Homepage, Product Catalog, Product Detail pages, Cart, Checkout (3 steps max), A
 - Clean URLs: /products/leather-wallet not /products?id=47
 - Alt text on all product images
 - If there is a physical store, add local intent copy: neighborhood, city, store hours, pickup/tasting details
+
+### Service-business / lead-gen notes
+- One primary CTA usually converts better than several competing CTAs
+- Use specific action labels: call now, get quote, book visit, request proposal
+- Keep forms short and explain what happens after submission
+- For campaign landing pages, reduce navigation noise and focus on one offer
+- Trust often needs to appear before long explanatory copy: reviews, credentials, team, speed, service area
+- The website promise and the sales/discovery process should sound like the same business, not two different systems
 
 ### Specialty retail notes (matcha, tea, coffee, niche food)
 - Customers often buy by use case, not by brand: ceremonial, daily, latte, tools, gifts
@@ -453,6 +463,14 @@ Homepage, Product Catalog, Product Detail pages, Cart, Checkout (3 steps max), A
 - Observability should exist inside the app: recent activity, failed actions, publish status, sync status
 - Integrations should preserve source context rather than forcing users to retype outside information
 - Do not copy Stripe or Notion blindly. Copy the clarity of their models and workflows.
+
+### Production CMS / website-ops rules
+- Draft and published content should be distinct
+- Preview should be a first-class workflow for editable websites
+- Development, staging, and production content environments should be deliberate
+- Editors, publishers, and admins should not automatically share the same permissions
+- Webhooks and rebuild triggers are part of the architecture, not just integrations
+- Front-end gates are acceptable for concepts, but real editorial systems need server-side auth and authorization
 
 ### What NOT to do (any site)
 - Auto-playing audio/video with sound

@@ -23,6 +23,15 @@ Before starting a new client build, read in this order:
 8. If the project is being launched or sold:
    - `website/DEPLOYMENT-PLAYBOOK.md`
    - `website/SALES-PLAYBOOK.md`
+9. If the project is ecommerce:
+   - `docs/ECOMMERCE-CONVERSION-RESEARCH.md`
+   - `ecommerce/CONVERSION-SPEC.md`
+10. If the project is a service-business or landing-page lead-gen build:
+   - `docs/LEAD-GENERATION-RESEARCH.md`
+   - `leadgen/CONVERSION-SPEC.md`
+11. If the project needs a real production content system:
+   - `docs/CMS-BACKEND-ARCHITECTURE-RESEARCH.md`
+   - `cms/ARCHITECTURE-SPEC.md`
 
 ### Why this order
 - The brief tells you what this business is
@@ -51,6 +60,7 @@ Every serious client build should create or update all relevant artifacts below.
 - `INDUSTRY-PLAYBOOK.md` updated only if the lesson generalizes beyond one client
 - `backoffice/DESIGN-SPEC.md` consulted or updated when the project includes admin, CMS, dashboard, or staff workflows
 - `website/BUILD-SPEC.md` consulted for every new website build
+- the closest specialized memory folder consulted when the project clearly matches one: `ecommerce`, `leadgen`, `cms`, `matcha`, `florist`
 
 ### Optional artifacts
 - `products.js` or structured local data file
@@ -60,6 +70,7 @@ Every serious client build should create or update all relevant artifacts below.
 - research doc for successful product patterns in comparable apps
 - deployment recommendation doc or notes when hosting/platform choice matters
 - proposal or outreach notes when the build is also a sales artifact
+- specialized memory updates when the project teaches something reusable about conversion, CMS workflow, or sales
 
 ---
 
@@ -113,6 +124,7 @@ Examples of what belongs there:
 - certain industries need product guidance before checkout
 - successful admin apps separate overview, search, and detail editing clearly
 - deployment and sales rules that repeat across many website projects
+- ecommerce, lead-gen, and production CMS rules that clearly generalize
 
 Keep client-specific tone, visual nuance, and one-off brand ideas in a dedicated design-spec doc instead.
 
@@ -140,6 +152,19 @@ When a new request comes in, match it to the closest prior system memory:
 - read `docs/BACKOFFICE-APP-RESEARCH.md`
 - read `backoffice/DESIGN-SPEC.md`
 - read the closest existing client with an operational layer
+
+### If the project is ecommerce
+- read `docs/ECOMMERCE-CONVERSION-RESEARCH.md`
+- read `ecommerce/CONVERSION-SPEC.md`
+- read the closest store-like client files
+
+### If the project is a service-business or lead-generation build
+- read `docs/LEAD-GENERATION-RESEARCH.md`
+- read `leadgen/CONVERSION-SPEC.md`
+
+### If the project needs a real production content system
+- read `docs/CMS-BACKEND-ARCHITECTURE-RESEARCH.md`
+- read `cms/ARCHITECTURE-SPEC.md`
 
 ### If the client is unclear
 - start with `INDUSTRY-PLAYBOOK.md`
@@ -180,5 +205,8 @@ At the time of writing, the repo has these reference points:
 - Floristería Calero concept = occasion-driven local florist / gifting retail
 - Backoffice memory = reusable admin, CMS, dashboard, and operational app rules
 - Website systems memory = reusable build, deployment, and sales rules
+- Ecommerce memory = reusable store conversion logic
+- Lead-gen memory = reusable service-site conversion logic
+- CMS memory = reusable production content-system architecture
 
 Future projects should add to this library instead of replacing it.

@@ -125,7 +125,7 @@ This document tracks the evolution of my capabilities as a web development partn
 - Search/filtering need to arrive earlier in admin products
 - Preview, logs, and placement controls make small apps feel much more professional
 
-## Commit 10: Website Systems Research (current)
+## Commit 10: Website Systems Research
 **What I studied:**
 - Google web.dev learning tracks for responsive design, performance, accessibility, forms, and images
 - Google Search Central guidance for page experience, helpful content, metadata, and structured data
@@ -141,30 +141,46 @@ This document tracks the evolution of my capabilities as a web development partn
 - Selling websites works best through consultative discovery, audits, and business-outcome proposals
 - Website work becomes repeatable when build, deployment, and sales logic are stored together
 
+## Commit 11: Conversion + CMS Architecture Research (current)
+**What I studied:**
+- Baymard ecommerce research on checkout abandonment, guest checkout, and search behavior
+- Shopify material around checkout trust, conversion, product detail workflows, and abandoned checkouts
+- HubSpot research on landing pages, form conversion, CTA language, discovery, and consultative selling
+- Sanity, Contentful, and Supabase documentation for draft/publish, environments, permissions, webhooks, auth, and row-level security
+
+**What I now know beyond the earlier system docs:**
+- Ecommerce conversion depends heavily on search quality, product-page hesitation handling, guest checkout, and clear shipping/returns language
+- Service-business sites need one dominant CTA, shorter forms, and closer alignment between the site and the sales process
+- Production CMS systems need draft/live separation, preview workflows, environment discipline, granular roles, webhooks, and server-side auth/authorization
+- The AI can now distinguish much more clearly between brochure sites, lead-gen sites, stores, concept admins, and production content systems
+
 ---
 
 ## Capability Matrix
 
-| Capability | C1 | C2 | C3 | C4 | C5 | C6 | C7 | C8 | C9 | C10 |
-|---|---|---|---|---|---|---|---|---|---|---|
-| Static HTML pages | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| Real scraped content | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| Multi-page sites | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| Shared CSS system | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| Automated testing | No | No | 53 | 53 | 55 | 55 | 55 | 55+ | 55+ | 55+ |
-| SEO (Schema, OG) | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| Luxury design patterns | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| Dynamic product pages | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes |
-| Specialty retail UX | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes |
-| Local business concepts | No | No | No | No | No | No | Yes | Yes | Yes | Yes |
-| Admin panel / CMS | No | No | No | No | No | No | Yes | Yes | Yes | Yes |
-| Auth system knowledge | No | No | No | No | No | No | No | Yes | Yes | Yes |
-| CRM/dashboard patterns | No | No | No | No | No | No | No | Yes | Yes | Yes |
-| Backoffice architecture memory | No | No | No | No | No | No | No | No | Yes | Yes |
-| Deployment strategy | No | No | No | No | No | No | No | No | No | Yes |
-| Website sales process | No | No | No | No | No | No | No | No | No | Yes |
+| Capability | C1 | C2 | C3 | C4 | C5 | C6 | C7 | C8 | C9 | C10 | C11 |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| Static HTML pages | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Real scraped content | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Multi-page sites | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Shared CSS system | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Automated testing | No | No | 53 | 53 | 55 | 55 | 55 | 55+ | 55+ | 55+ | 55+ |
+| SEO (Schema, OG) | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Luxury design patterns | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Dynamic product pages | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Specialty retail UX | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes |
+| Local business concepts | No | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes |
+| Admin panel / CMS | No | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes |
+| Auth system knowledge | No | No | No | No | No | No | No | Yes | Yes | Yes | Yes |
+| CRM/dashboard patterns | No | No | No | No | No | No | No | Yes | Yes | Yes | Yes |
+| Backoffice architecture memory | No | No | No | No | No | No | No | No | Yes | Yes | Yes |
+| Deployment strategy | No | No | No | No | No | No | No | No | No | Yes | Yes |
+| Website sales process | No | No | No | No | No | No | No | No | No | Yes | Yes |
+| Ecommerce conversion systems | No | No | No | No | No | No | No | No | No | No | Yes |
+| Lead-gen conversion systems | No | No | No | No | No | No | No | No | No | No | Yes |
+| Production CMS architecture | No | No | No | No | No | No | No | No | No | No | Yes |
 
-*C1-C10 = Commits 1 through 10*
+*C1-C11 = Commits 1 through 11*
 
 ---
 
@@ -183,6 +199,10 @@ This document tracks the evolution of my capabilities as a web development partn
 **Deployment:** Can choose between Cloudflare Pages, Netlify, Vercel, GitHub Pages, Render, Railway, and Fly.io based on project type.
 
 **Sales:** Can run consultative website audits, discovery, proposal structure, pricing logic, and repeatable packaging for brochure sites, full sites, and operational website products.
+
+**Conversion:** Can distinguish and design for ecommerce conversion paths, service-site lead generation, and landing-page CTA/form behavior instead of applying one generic website pattern everywhere.
+
+**CMS architecture:** Can reason about draft/live flows, preview, roles, webhooks, environments, Postgres-backed auth, and the step up from concept admin to production content system.
 
 ---
 

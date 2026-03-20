@@ -213,6 +213,81 @@ See `docs/WEBSITE-SYSTEMS-RESEARCH.md`, `website/BUILD-SPEC.md`, `website/DEPLOY
 
 ---
 
+## Research #3: Ecommerce Conversion Systems
+
+This research matters because stores do not fail only on design. They often fail on discovery, trust, cart flow, and checkout friction.
+
+### What Repeats In Strong Ecommerce Sites
+1. **Checkout friction is still one of the biggest losses.** Cart abandonment remains extremely high, so checkout clarity is revenue-critical.
+
+2. **Guest checkout should be obvious.** If buying without an account feels hidden or discouraged, stores create avoidable drop-off.
+
+3. **Search has to reflect real buyer behavior.** People search by use case, symptom, occasion, and copied wording, not only by neat internal taxonomy.
+
+4. **Product pages need to resolve hesitation.** Price, imagery, trust, shipping, returns, and useful explanation belong close to the decision point.
+
+5. **Hidden costs and vague shipping language still kill conversion.** Uncertainty near purchase is one of the fastest ways to lose trust.
+
+### What I Learned For Our Builds
+1. **Search deserves more attention earlier in store builds.**
+2. **Guest checkout should be the default assumption.**
+3. **Product pages should answer "why buy this now?" not only "what is this?"**
+4. **Use-case navigation and bundles are especially valuable in specialty retail.**
+
+See `docs/ECOMMERCE-CONVERSION-RESEARCH.md` and `ecommerce/CONVERSION-SPEC.md`.
+
+---
+
+## Research #4: Lead-Generation Website Systems
+
+This research matters because service sites convert differently than stores. Their job is to create confidence and make contact feel easy.
+
+### What Repeats In Strong Lead-Gen Sites
+1. **Specific CTAs beat generic ones.** `Get a quote` or `Book inspection` is stronger than `Submit`.
+
+2. **Shorter forms reduce unnecessary friction.** Lead forms should collect only what the next step needs.
+
+3. **Landing pages work better when they focus on one offer and one action.** Too much navigation and mixed intent weakens campaigns.
+
+4. **Trust often matters before detail.** Reviews, credentials, local proof, and response expectations can matter more than long copy early in the page.
+
+5. **The website and the sales process should feel like one system.** Discovery, outreach, CTA language, and follow-up all need to align.
+
+### What I Learned For Our Builds
+1. **Button copy and next-step messaging need more deliberate design.**
+2. **Service homepages should usually be built around one dominant action.**
+3. **Campaign pages deserve their own structure, not just a homepage remix.**
+4. **The AI should think about site conversion and sales workflow together.**
+
+See `docs/LEAD-GENERATION-RESEARCH.md` and `leadgen/CONVERSION-SPEC.md`.
+
+---
+
+## Research #5: CMS / Backend Architecture For Production Websites
+
+This research matters because editable websites stop being simple frontend work once multiple editors, previews, roles, and publishing workflows enter the picture.
+
+### What Repeats In Production-Oriented Content Systems
+1. **Draft and published states should be separate.** Preview and live are different realities.
+
+2. **Environment discipline matters.** Development, staging, and production content should not blur together.
+
+3. **Permissions need granularity.** Editors, publishers, and admins should not all have the same power.
+
+4. **Webhooks are part of the system architecture.** Rebuilds, notifications, and sync flows depend on them.
+
+5. **Auth and authorization must live below the UI.** Front-end gates are fine for concepts, not for real editorial systems.
+
+### What I Learned For Our Builds
+1. **Production CMS work needs a stronger architectural baseline than our current concept admins.**
+2. **Preview should become a first-class feature in serious website systems.**
+3. **Postgres plus server-side auth is the safer default for real multi-user website apps.**
+4. **Content modeling should be treated as product design, not just database setup.**
+
+See `docs/CMS-BACKEND-ARCHITECTURE-RESEARCH.md` and `cms/ARCHITECTURE-SPEC.md`.
+
+---
+
 ## Universal Learnings (Apply to Every Client)
 
 ### Design Rules That Always Work
@@ -253,6 +328,20 @@ See `docs/WEBSITE-SYSTEMS-RESEARCH.md`, `website/BUILD-SPEC.md`, `website/DEPLOY
 5. **Accessible forms and interactions**
 6. **Metadata and structured data** where relevant
 7. **A proposal and handoff model** if the site is being sold as a service
+
+### Features Every Strong Ecommerce Site Needs
+1. **Search or strong product discovery**
+2. **Product pages that resolve hesitation**
+3. **Visible shipping and returns clarity**
+4. **Guest checkout**
+5. **Trust near the point of purchase**
+
+### Features Every Strong Lead-Gen Site Needs
+1. **One dominant CTA**
+2. **Short high-intent forms**
+3. **Trust above the fold or very early**
+4. **Specific next-step language**
+5. **Sales-process alignment**
 
 ### Testing Checklist (Playwright)
 Run these for EVERY client site before delivery:
@@ -330,23 +419,27 @@ clients/<name>/
 9. **Role-aware admin routing** — viewer/editor/admin permissions instead of one flat admin surface
 10. **Deployment decision tree** — static, serverless, or backend-backed from the start of each build
 11. **Proposal templates tied to business outcome** — stronger sales repeatability
+12. **Search and autocomplete patterns for stores** — especially use-case aware discovery
+13. **Preview-first CMS workflows** — drafts, preview links, publish logs, and safer editorial systems
 
 ### Medium Priority
-12. **Cookie consent banner** — required for EU clients (GDPR)
-13. **Newsletter popup** — elegant, "exclusive access" language, 10% off incentive
-14. **Skeleton loading states** — gray placeholders while images load
-15. **Product image zoom** — click/hover to see detail
-16. **"Complete the Look" section** — cross-sell on product pages
-17. **Audit/event feed for admin actions** — especially for uploads, imports, and publishing
-18. **Default launch checklist** — DNS, HTTPS, preview, forms, analytics, metadata
+14. **Cookie consent banner** — required for EU clients (GDPR)
+15. **Newsletter popup** — elegant, "exclusive access" language, 10% off incentive
+16. **Skeleton loading states** — gray placeholders while images load
+17. **Product image zoom** — click/hover to see detail
+18. **"Complete the Look" section** — cross-sell on product pages
+19. **Audit/event feed for admin actions** — especially for uploads, imports, and publishing
+20. **Default launch checklist** — DNS, HTTPS, preview, forms, analytics, metadata
+21. **Dedicated landing-page templates for ads and outreach campaigns**
 
 ### Nice to Have
-19. **Dark mode toggle**
-20. **3D/AR product views** (94% conversion lift per research)
-21. **Tiered loyalty program**
-22. **Virtual consultation booking**
-23. **Keyboard-first admin shortcuts** for power users
-24. **Reusable outreach + proposal pack** for local business pitches
+22. **Dark mode toggle**
+23. **3D/AR product views** (94% conversion lift per research)
+24. **Tiered loyalty program**
+25. **Virtual consultation booking**
+26. **Keyboard-first admin shortcuts** for power users
+27. **Reusable outreach + proposal pack** for local business pitches
+28. **Durable media storage templates** for operational websites
 
 ## Key Insight from Luxury Research
 > "Spacing is the #1 signal of luxury. Double your margins. Then double them again."
@@ -376,4 +469,4 @@ See `docs/ADMIN-PANEL-GUIDE.md` and `docs/PROGRESSION.md` for full details.
 
 ---
 
-*Last updated: March 20, 2026 — after Le Tavole, Mori Matcha, Floristería Calero, admin panel research, Tapeo/Qargo analysis, backoffice app research, and website systems research*
+*Last updated: March 20, 2026 — after Le Tavole, Mori Matcha, Floristería Calero, admin panel research, Tapeo/Qargo analysis, backoffice app research, website systems research, ecommerce conversion research, lead-gen research, and CMS/backend architecture research*
