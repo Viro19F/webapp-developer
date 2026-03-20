@@ -558,18 +558,53 @@
         </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta" id="contact">
-        <div class="container">
-            <h2>¿Listo para tu nueva web?</h2>
-            <p>Cuéntanos sobre tu negocio. Te enviamos una propuesta personalizada en 24 horas.</p>
-            <div class="cta-btns">
-                <a href="https://wa.me/34XXXXXXXXX?text=Hola%2C%20me%20interesa%20una%20web%20profesional%20para%20mi%20negocio" class="btn btn-black" target="_blank">
-                    <i class="ph ph-whatsapp-logo"></i> WhatsApp
-                </a>
-                <a href="mailto:hola@velka.co" class="btn btn-outline">
-                    <i class="ph ph-envelope"></i> hola@velka.co
-                </a>
+    <!-- CONTACT -->
+    <section id="contact" style="padding: 100px 0;">
+        <div class="container" style="max-width: 560px;">
+            <div class="section-header">
+                <div class="section-label">Contacto</div>
+                <div class="section-title">Cuéntanos sobre tu negocio</div>
+                <div class="section-desc">Rellena el formulario y te enviamos una propuesta personalizada en 24 horas.</div>
+            </div>
+            <form id="contactForm" style="display: flex; flex-direction: column; gap: 16px;">
+                <div>
+                    <label style="font-size: 0.78rem; font-weight: 600; display: block; margin-bottom: 6px; color: var(--gray-700);">Nombre</label>
+                    <input type="text" name="name" placeholder="Tu nombre" required style="width: 100%; padding: 12px 16px; border: 1px solid var(--gray-300); border-radius: 8px; font-family: var(--font); font-size: 0.9rem; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='#2563EB'" onblur="this.style.borderColor='#D4D4D4'">
+                </div>
+                <div>
+                    <label style="font-size: 0.78rem; font-weight: 600; display: block; margin-bottom: 6px; color: var(--gray-700);">Email</label>
+                    <input type="email" name="email" placeholder="tu@email.com" required style="width: 100%; padding: 12px 16px; border: 1px solid var(--gray-300); border-radius: 8px; font-family: var(--font); font-size: 0.9rem; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='#2563EB'" onblur="this.style.borderColor='#D4D4D4'">
+                </div>
+                <div>
+                    <label style="font-size: 0.78rem; font-weight: 600; display: block; margin-bottom: 6px; color: var(--gray-700);">Teléfono</label>
+                    <input type="tel" name="phone" placeholder="+34 600 000 000" style="width: 100%; padding: 12px 16px; border: 1px solid var(--gray-300); border-radius: 8px; font-family: var(--font); font-size: 0.9rem; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='#2563EB'" onblur="this.style.borderColor='#D4D4D4'">
+                </div>
+                <div>
+                    <label style="font-size: 0.78rem; font-weight: 600; display: block; margin-bottom: 6px; color: var(--gray-700);">Tipo de negocio</label>
+                    <select name="business" style="width: 100%; padding: 12px 16px; border: 1px solid var(--gray-300); border-radius: 8px; font-family: var(--font); font-size: 0.9rem; background: white; color: var(--gray-700); outline: none;" onfocus="this.style.borderColor='#2563EB'" onblur="this.style.borderColor='#D4D4D4'">
+                        <option value="">Selecciona...</option>
+                        <option>Restaurante / Bar</option>
+                        <option>Barbería / Peluquería</option>
+                        <option>Clínica / Salud</option>
+                        <option>Tienda / Retail</option>
+                        <option>Despacho / Consultoría</option>
+                        <option>Gimnasio / Fitness</option>
+                        <option>Otro</option>
+                    </select>
+                </div>
+                <div>
+                    <label style="font-size: 0.78rem; font-weight: 600; display: block; margin-bottom: 6px; color: var(--gray-700);">¿Qué necesitas?</label>
+                    <textarea name="message" placeholder="Cuéntanos brevemente sobre tu negocio y qué te gustaría..." rows="4" style="width: 100%; padding: 12px 16px; border: 1px solid var(--gray-300); border-radius: 8px; font-family: var(--font); font-size: 0.9rem; resize: vertical; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='#2563EB'" onblur="this.style.borderColor='#D4D4D4'"></textarea>
+                </div>
+                <button type="submit" class="btn btn-black btn-full" style="padding: 14px; margin-top: 4px;">
+                    Solicitar Presupuesto Gratis <i class="ph ph-arrow-right"></i>
+                </button>
+                <p style="text-align: center; font-size: 0.78rem; color: var(--gray-500);">Sin compromiso. Respondemos en menos de 24 horas.</p>
+            </form>
+            <div id="formSuccess" style="display: none; text-align: center; padding: 48px 0;">
+                <div style="font-size: 2.5rem; margin-bottom: 16px;">✓</div>
+                <div style="font-size: 1.3rem; font-weight: 700; margin-bottom: 8px;">¡Mensaje enviado!</div>
+                <p style="color: var(--gray-500);">Te responderemos en menos de 24 horas.</p>
             </div>
         </div>
     </section>
@@ -587,9 +622,30 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/34XXXXXXXXX" class="wa-float" target="_blank"><i class="ph ph-whatsapp-logo"></i></a>
+    <a href="https://wa.me/34TUNUMERO" class="wa-float" target="_blank"><i class="ph ph-whatsapp-logo"></i></a>
 
     <script>
+        // Contact form — sends to your email via mailto
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const d = Object.fromEntries(new FormData(this));
+            const subject = encodeURIComponent(`Velka Web — Nuevo lead: ${d.name} (${d.business || 'No especificado'})`);
+            const body = encodeURIComponent(
+                `NUEVO CONTACTO DESDE VELKA.CO\n` +
+                `━━━━━━━━━━━━━━━━━━━━━━━━━\n\n` +
+                `Nombre: ${d.name}\n` +
+                `Email: ${d.email}\n` +
+                `Teléfono: ${d.phone || 'No proporcionado'}\n` +
+                `Tipo de negocio: ${d.business || 'No especificado'}\n\n` +
+                `Mensaje:\n${d.message}\n\n` +
+                `━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
+                `Enviado desde velka.co`
+            );
+            window.location.href = `mailto:infovelkaweb@gmail.com?subject=${subject}&body=${body}`;
+            this.style.display = 'none';
+            document.getElementById('formSuccess').style.display = 'block';
+        });
+
         // Rotating text
         const phrases = [
             'una web profesional.',
