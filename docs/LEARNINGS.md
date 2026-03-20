@@ -183,11 +183,15 @@ clients/<name>/
 
 ## What to Improve Next (Priority Order)
 
-### Already Implemented (Le Tavole v2)
+### Already Implemented
 - [x] Schema.org markup (LocalBusiness + Product JSON-LD)
 - [x] Open Graph meta tags
-- [x] Playwright automated testing (53 tests)
+- [x] Playwright automated testing (55 tests)
 - [x] Brand filter with live JavaScript
+- [x] Dynamic product pages with URL params (?id=)
+- [x] Product database (products.js with 36 real products)
+- [x] Out-of-stock state handling
+- [x] Related products linking correctly
 
 ### Already Implemented (Mori Matcha experiment)
 - [x] Use-case based product filtering
@@ -231,6 +235,27 @@ clients/<name>/
 
 See `docs/LUXURY-ECOMMERCE-RESEARCH.md` for full analysis of Christofle, Juliska, Net-a-Porter patterns.
 
+## Admin Panel Knowledge (from Tapeo + Qargo + Industry Research)
+
+### What I Know Now
+- Left sidebar (5-7 items) + top bar + main content area is the universal pattern
+- Express + SQLite + session auth (proven in Tapeo & Qargo) is the right stack
+- Tabler template (40K stars, Bootstrap 5, free) as rapid admin base
+- htmx (16KB) for dynamic ops without React/Vue
+- Give clients CONTENT editing, not DESIGN editing
+
+### Reusable Code from Existing Apps
+- **Tapeo:** KPI cards, status badges, bar charts, demo data fallback, dark/light toggle
+- **Qargo:** CSS tokens file, API wrapper, audit trail, invoice numbering, i18n, AI copilot
+
+### What Clients Actually Need to Edit
+Business info, hero text, about section, menu/products, gallery, team bios, testimonials, social links, announcements
+
+### What Must Stay Fixed
+Layout, colors, fonts, nav structure, footer, forms, SEO, responsiveness
+
+See `docs/ADMIN-PANEL-GUIDE.md` and `docs/PROGRESSION.md` for full details.
+
 ---
 
-*Last updated: March 20, 2026 — after Le Tavole, Mori Matcha, and Floristería Calero concept work*
+*Last updated: March 20, 2026 — after Le Tavole, Mori Matcha, Floristería Calero, admin panel research + Tapeo/Qargo analysis*
