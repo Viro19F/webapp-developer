@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mori Matcha | Matcha for slow mornings and clear afternoons</title>
+    <meta
+      name="description"
+      content="Mori Matcha is a small Madrid matcha shop selling ceremonial tins, latte blends, ritual tools, and tasting counter reservations."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="site-shell">
+      <div class="announcement">Fresh tins landed this week. Walk-ins welcome in Madrid.</div>
+
+      <header class="site-header">
+        <div class="container nav">
+          <a class="brandmark" href="index.html">Mori <span>Matcha</span></a>
+          <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation">
+            Menu
+          </button>
+          <nav>
+            <ul id="navLinks" class="nav-links">
+              <li><a class="active" href="index.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="ritual.html">Ritual</a></li>
+              <li><a href="contact.html">Visit</a></li>
+            </ul>
+          </nav>
+          <a class="nav-cta" href="contact.html#reserve">Book tasting</a>
+        </div>
+      </header>
+
+      <main>
+        <section class="section hero">
+          <div class="container hero-grid">
+            <div class="hero-copy reveal">
+              <span class="eyebrow">Neighborhood matcha store</span>
+              <h1>A softer way to wake up.</h1>
+              <p>
+                Mori Matcha is a compact shop built around one idea: make matcha feel
+                grounded, clear, and easy to return to. We stock a short shelf of very
+                good tins, simple tools, and small sweets that make the ritual stick.
+              </p>
+              <div class="button-row">
+                <a class="btn" href="shop.html">Shop the shelf</a>
+                <a class="btn-secondary" href="ritual.html">Learn the ritual</a>
+              </div>
+              <div class="hero-notes">
+                <span>Stone-milled in Japan</span>
+                <span>Whisked in Madrid</span>
+                <span>Tasting counter for first-timers</span>
+              </div>
+            </div>
+
+            <div class="hero-visual reveal">
+              <div class="matcha-stage">
+                <div class="hero-tag">
+                  <strong>This week's pour</strong>
+                  Dawn Ceremonial with yuzu bites. Bright, creamy, and very hard to rush.
+                </div>
+                <div class="hero-whisk" aria-hidden="true"></div>
+                <div class="hero-tin" aria-hidden="true"></div>
+                <div class="hero-bowl" aria-hidden="true"></div>
+                <div class="hero-stats">
+                  <div class="mini-stat">
+                    <strong>6</strong>
+                    curated tins, no filler stock
+                  </div>
+                  <div class="mini-stat">
+                    <strong>15 min</strong>
+                    guided tasting for unsure buyers
+                  </div>
+                  <div class="mini-stat">
+                    <strong>1 ritual</strong>
+                    whisk, sip, repeat tomorrow
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <div class="section-head reveal">
+              <span class="eyebrow">Start here</span>
+              <h2>Three ways into the shelf.</h2>
+              <p>
+                The store is intentionally small. Instead of stacking every green powder
+                we can find, we organize the shelf by how people actually buy matcha.
+              </p>
+            </div>
+            <div class="grid-3">
+              <article class="category-card reveal">
+                <span>Ceremonial</span>
+                <h3>For your quiet bowl</h3>
+                <p>Bright, sweet, first-harvest tins for straight whisking and slow mornings.</p>
+                <a href="shop.html">See ceremonial picks</a>
+              </article>
+              <article class="category-card reveal">
+                <span>Everyday</span>
+                <h3>For weekday cups</h3>
+                <p>Easy blends that work with water, milk, hotel kettles, and office mugs.</p>
+                <a href="shop.html">See daily blends</a>
+              </article>
+              <article class="category-card reveal">
+                <span>Tools</span>
+                <h3>For better texture</h3>
+                <p>Whisks, sifters, and bowls that solve lumps and make the ritual feel real.</p>
+                <a href="ritual.html">See the guide</a>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section panel-soft">
+          <div class="container">
+            <div class="section-head reveal">
+              <span class="eyebrow">Featured shelf</span>
+              <h2>What people pick first.</h2>
+              <p>
+                A tight edit of the products that explain the store best: one beautiful ceremonial
+                tin, one easy daily pouch, one tool set, and one sweet that makes the first sip land.
+              </p>
+            </div>
+            <div id="featuredProducts" class="product-grid"></div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container split-grid">
+            <div class="story-panel reveal">
+              <span class="eyebrow">Why Mori works</span>
+              <h2>Small shelf. Strong point of view.</h2>
+              <p>
+                Mori Matcha is designed for people who want fewer decisions and better cups.
+                Everything on the shelf earns its place: one product for daily whisking, one for
+                gifting, one for getting started, one for late afternoons.
+              </p>
+              <p>
+                The idea is simple: if the products make sense together, the customer can move fast
+                and still feel looked after.
+              </p>
+            </div>
+            <div class="steps">
+              <article class="step-card reveal">
+                <div class="step-index">1</div>
+                <h3>Sift first</h3>
+                <p>Two grams through a fine sifter keeps the bowl smooth and removes clumps before they start.</p>
+              </article>
+              <article class="step-card reveal">
+                <div class="step-index">2</div>
+                <h3>Whisk short</h3>
+                <p>Fifteen seconds in a tight M motion is enough for a glossy top without turning the drink thin.</p>
+              </article>
+              <article class="step-card reveal">
+                <div class="step-index">3</div>
+                <h3>Pair lightly</h3>
+                <p>Something small and citrus-led helps first-time buyers read matcha as bright, not bitter.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section panel-soft">
+          <div class="container">
+            <div class="section-head reveal">
+              <span class="eyebrow">From the counter</span>
+              <h2>What customers say after the first bowl.</h2>
+            </div>
+            <div class="grid-3 testimonials">
+              <article class="quote-card reveal">
+                <blockquote>
+                  "This is the first matcha shop that made me feel like I knew what to buy in under five minutes."
+                </blockquote>
+                <strong>Lucia, first-time customer</strong>
+              </article>
+              <article class="quote-card reveal">
+                <blockquote>
+                  "The tasting counter is small, but that is exactly why it works. It feels personal instead of performative."
+                </blockquote>
+                <strong>Sergio, weekly regular</strong>
+              </article>
+              <article class="quote-card reveal">
+                <blockquote>
+                  "The daily blend actually survives oat milk. I stopped buying random tins online after one visit."
+                </blockquote>
+                <strong>Paula, creative director</strong>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <div class="section-head reveal">
+              <span class="eyebrow">Visit the store</span>
+              <h2>A small room built around one bowl at a time.</h2>
+              <p>
+                Come in for a quick tasting, pick up your next tin, or let us map a starter set in ten minutes.
+              </p>
+            </div>
+            <div class="visit-grid">
+              <article class="visit-card reveal">
+                <span>Address</span>
+                <h3>Calle del Pez 18</h3>
+                <p>Madrid, 28004. Two blocks from Noviciado. Easy walk, easy stop, no long menu to decode.</p>
+              </article>
+              <article class="visit-card reveal">
+                <span>Hours</span>
+                <h3>Tuesday to Sunday</h3>
+                <p>10:00 to 19:00 on weekdays. 11:00 to 18:00 on weekends. Mondays are for milling, sourcing, and reset.</p>
+              </article>
+              <article class="visit-card reveal">
+                <span>Reserve</span>
+                <h3>Guided tasting</h3>
+                <p>A 15-minute counter tasting for people who want to know the difference between ceremonial, daily, and latte blends.</p>
+                <a href="contact.html#reserve">Reserve a slot</a>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="page-footer">
+        <div class="container page-footer-grid">
+          <div>
+            <a class="brandmark" href="index.html">Mori <span>Matcha</span></a>
+            <p class="footer-note">
+              Matcha for slow mornings and clear afternoons. Small shelf, steady ritual, no wellness theater.
+            </p>
+          </div>
+          <div class="footer-links">
+            <a href="shop.html">Shop</a>
+            <a href="ritual.html">Ritual guide</a>
+            <a href="contact.html">Visit the store</a>
+          </div>
+          <div class="footer-links">
+            <a href="mailto:hello@morimatcha.com">hello@morimatcha.com</a>
+            <a href="tel:+34914102816">+34 91 410 28 16</a>
+            <span class="footer-note">Copyright <span id="footerYear"></span> Mori Matcha</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="products.js"></script>
+    <script src="site.js"></script>
+  </body>
+</html>

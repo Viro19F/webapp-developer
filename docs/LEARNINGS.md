@@ -38,6 +38,37 @@ This document evolves. Every client teaches something new. I update it after eac
 
 ---
 
+## Client #2: Mori Matcha (Specialty Matcha Retail, Madrid)
+
+### What Worked
+1. **Use-case navigation beats generic category language.** For matcha, customers think in outcomes: ceremonial bowl, weekday latte, first kit, sweet pairing. Organizing the page this way reduces hesitation quickly.
+
+2. **Education has to live inside the page.** Tasting notes, serving guidance, and a short ritual explanation are not optional extras for specialty tea. They are part of the product itself.
+
+3. **A strong mood line clarifies the whole brand.** "Matcha for slow mornings and clear afternoons" gave the page a clear emotional frame and made the product mix feel coherent.
+
+4. **Branded product art is better than placeholder photography.** When real product photos do not exist yet, custom SVG pack art keeps the prototype feeling intentional and premium instead of fake.
+
+5. **Physical-store retail needs a soft conversion path.** For a small neighborhood shop, "Book tasting" can be stronger than pushing checkout immediately. It matches how customers build trust in a niche product.
+
+### What I Learned (Build-Level)
+1. **Small retail pages should explain the shelf logic.** If the product mix is curated, the page must explain why each product exists and who it is for.
+
+2. **Product detail pages for food/drink retail need different fields than luxury home goods.** Origin, tasting notes, and best-use guidance matter more than long technical specs.
+
+3. **A one-page experiment can still generate reusable system knowledge.** Even when the first artifact is just a landing page or homepage, the copy structure, category model, CTA strategy, and visual system can all feed future builds.
+
+4. **Local JS product data is enough for early experiments.** A simple `products.js` file makes it easy to test filters, product detail pages, and starter bundles before adding a cart or backend.
+
+5. **Small-store premium does not mean luxury-cliche.** Soft neutrals, one green family, restrained motion, and calm spacing work better than overdone wellness visuals.
+
+### Technical Decisions
+- **Shared CSS + data-driven catalog.** The matcha experiment uses one `styles.css` file and local product data so new retail concepts can be swapped in quickly.
+- **Inline SVG product visuals.** Product artwork is generated locally so the page can feel branded before photography is ready.
+- **Expandable structure.** The homepage can act as the first experiment page, then grow into a fuller catalog and product detail flow without changing the visual language.
+
+---
+
 ## Universal Learnings (Apply to Every Client)
 
 ### Design Rules That Always Work
@@ -103,6 +134,12 @@ clients/<name>/
 - [x] Playwright automated testing (53 tests)
 - [x] Brand filter with live JavaScript
 
+### Already Implemented (Mori Matcha experiment)
+- [x] Use-case based product filtering
+- [x] Branded placeholder product art without stock images
+- [x] Soft-conversion CTA for physical retail ("Book tasting")
+- [x] Educational copy embedded directly in the shopping flow
+
 ### High Priority (Next Client)
 1. **Slide-out cart drawer** — opens from right with background blur (luxury standard)
 2. **Predictive search** — live results as you type with product images
@@ -131,4 +168,4 @@ See `docs/LUXURY-ECOMMERCE-RESEARCH.md` for full analysis of Christofle, Juliska
 
 ---
 
-*Last updated: March 20, 2026 — after Le Tavole project*
+*Last updated: March 20, 2026 — after Le Tavole and Mori Matcha experiments*

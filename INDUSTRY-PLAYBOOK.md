@@ -307,6 +307,7 @@ Homepage, Individual Service pages (1 per service for SEO), Emergency Services p
 
 ### Pages
 Homepage, Product Catalog, Product Detail pages, Cart, Checkout (3 steps max), About, Contact, Shipping & Delivery, Returns & Refunds, FAQ, Privacy/Terms
+- If the shop has a physical location: add Visit / Tasting / Store Hours page
 
 ### Design
 - Varies by brand — match the product aesthetic
@@ -314,6 +315,8 @@ Homepage, Product Catalog, Product Detail pages, Cart, Checkout (3 steps max), A
 - Grid layout: 3-4 columns desktop, 2 mobile
 - Large product images, minimal clutter
 - Trust badges near checkout buttons
+- For curated specialty retail, explain the shelf logic clearly ("for pure bowls", "for lattes", "for gifts")
+- If photography is not ready yet, use branded pack illustrations or clean vector mockups instead of generic stock images
 
 ### Must-have features
 - Product grid with filters (size, color, price, category) + sorting
@@ -322,6 +325,8 @@ Homepage, Product Catalog, Product Detail pages, Cart, Checkout (3 steps max), A
 - Reviews on product pages (88% trust online reviews)
 - Simple checkout: guest checkout, 3 steps max, progress indicator
 - Multiple payment options (card, PayPal, Apple Pay)
+- For first-time-buyer categories (tea, coffee, skincare, specialty food), add product guidance: tasting notes, best-use case, and starter recommendations
+- For physical retail, include a soft-conversion CTA like tasting reservation, consultation, or in-store pickup
 
 ### Payment integration (no Shopify needed)
 - **Snipcart:** 2 lines of code, full cart/checkout, works with any HTML site, 2%/transaction
@@ -349,6 +354,14 @@ Homepage, Product Catalog, Product Detail pages, Cart, Checkout (3 steps max), A
 - Unique product descriptions (never copy manufacturer text)
 - Clean URLs: /products/leather-wallet not /products?id=47
 - Alt text on all product images
+- If there is a physical store, add local intent copy: neighborhood, city, store hours, pickup/tasting details
+
+### Specialty retail notes (matcha, tea, coffee, niche food)
+- Customers often buy by use case, not by brand: ceremonial, daily, latte, tools, gifts
+- Education must live inside the product experience: tasting notes, caffeine feel, how to use it, who it is for
+- A small, opinionated catalog often converts better than a large, noisy one
+- Starter bundles are high-conversion because they remove the "what else do I need?" question
+- If the store is physical-first, "Book tasting" or "Visit the counter" can outperform a hard-sell CTA on the first page
 
 ---
 

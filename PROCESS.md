@@ -30,6 +30,34 @@
 
 ---
 
+## Required Memory Capture After Every Client
+
+Do not stop at the website files. Every client should improve the system.
+
+### Always save
+- `clients/<name>/BRIEF.md`
+- final site files in `clients/<name>/`
+- a Playwright test in `tests/<name>.spec.js`
+- a design-spec doc in `docs/`
+- updates to `docs/LEARNINGS.md`
+- updates to `INDUSTRY-PLAYBOOK.md` only when the lesson generalizes
+
+### Read before building
+1. Client brief
+2. `INDUSTRY-PLAYBOOK.md`
+3. `docs/LEARNINGS.md`
+4. closest matching design-spec doc in `docs/`
+
+### Write after building
+1. What worked
+2. What did not
+3. Why the design direction was chosen
+4. What should be reused on the next similar client
+
+See `docs/PROJECT-MEMORY-RUNBOOK.md` for the full rule set.
+
+---
+
 ## What Claude Needs From You (Minimum)
 1. Business name
 2. What they do (industry + services)

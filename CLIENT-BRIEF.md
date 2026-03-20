@@ -17,6 +17,8 @@ Then tell Claude: "New client: <name>" and paste or reference the brief.
 - **Brand colors:** (if they have them — otherwise I'll pick based on industry)
 - **Tone:** (professional, friendly, luxury, modern, traditional)
 - **Tagline/slogan:** (if any)
+- **What should the site feel like?** (calm, energetic, clinical, editorial, playful, etc.)
+- **What should it NOT feel like?** (generic, cheap, too corporate, too wellness, too loud, etc.)
 
 ## 3. Content
 - **Services/products offered:** (list them)
@@ -24,6 +26,8 @@ Then tell Claude: "New client: <name>" and paste or reference the brief.
 - **Contact info:** (phone, email, address)
 - **Social media links:** (Instagram, Facebook, etc.)
 - **Photos:** (folder path, or "use stock")
+- **Primary customer:** (who is the site really for?)
+- **Why do customers hesitate before buying/contacting?**
 
 ## 4. Pages Needed
 Check what applies:
@@ -48,6 +52,9 @@ Check what applies:
 - [ ] Multi-language (which languages?)
 - [ ] SEO optimization
 - [ ] Other: ___
+- **Primary CTA:** (buy now, book call, reserve table, visit store, get quote, etc.)
+- **Secondary CTA:** (learn more, browse work, see menu, read guide, etc.)
+- **Trust signals needed:** (reviews, certifications, years in business, press, before/after, case results)
 
 ## 6. Hosting & Domain
 - **Domain:** (already have one? or need to buy?)
@@ -61,3 +68,8 @@ Check what applies:
 
 ## Notes
 (Anything else relevant — competitor websites to reference, specific requests, etc.)
+
+### Optional Strategy Notes
+- **Closest competitors or reference sites:**
+- **What category logic makes sense?** (by service, by use case, by brand, by price, by collection)
+- **Should the site sell directly or guide the customer first?**
