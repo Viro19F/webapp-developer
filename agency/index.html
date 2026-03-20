@@ -224,9 +224,9 @@
             </div>
 
             <div class="showcase-tabs">
-                <button class="showcase-tab active" onclick="showProject('letavole')">Le Tavole</button>
-                <button class="showcase-tab" onclick="showProject('soko')">Soko Gastrobar</button>
-                <button class="showcase-tab" onclick="showProject('alma')">Clínica Alma</button>
+                <button class="showcase-tab active" onclick="showProject('letavole')">Tienda Online</button>
+                <button class="showcase-tab" onclick="showProject('restaurant')">Restaurante</button>
+                <button class="showcase-tab" onclick="showProject('barber')">Barbería</button>
             </div>
 
             <div class="showcase-browser">
@@ -283,114 +283,186 @@
                         </div>
                     </div>
 
-                    <!-- SOKO GASTROBAR MOCKUP -->
-                    <div class="showcase-item" id="proj-soko">
+                    <!-- RESTAURANT DEMO -->
+                    <div class="showcase-item" id="proj-restaurant">
                         <div style="background: #0C0C0C; color: rgba(255,255,255,0.85); text-align: center; padding: 8px; font-size: 0.7rem; letter-spacing: 1.5px;">RESERVA TU MESA · <strong style="color: #E8B86D;">ABIERTO DE MARTES A DOMINGO</strong></div>
-                        <div style="background: #0C0C0C; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.08);">
-                            <span style="font-family: Georgia; font-size: 1.5rem; color: white; letter-spacing: 2px;">SOKO</span>
-                            <span style="color: rgba(255,255,255,0.45); font-size: 0.78rem; letter-spacing: 1.5px;">CARTA · EXPERIENCIA · RESERVAR · CONTACTO</span>
+                        <div style="background: #0C0C0C; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.08);">
+                            <span style="font-family: Georgia; font-size: 1.4rem; color: white; letter-spacing: 2px;">LOGO</span>
+                            <span style="color: rgba(255,255,255,0.45); font-size: 0.75rem; letter-spacing: 1.5px;">CARTA · EXPERIENCIA · GALERÍA · RESERVAR</span>
                         </div>
-                        <div style="height: 380px; background: linear-gradient(to bottom, rgba(12,12,12,0.2), rgba(12,12,12,0.85)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80') center/cover; display: flex; align-items: flex-end; padding: 48px;">
-                            <div style="color: white; max-width: 500px;">
-                                <div style="font-size: 0.65rem; letter-spacing: 4px; color: #E8B86D; margin-bottom: 12px;">GASTROBAR · MALASAÑA · MADRID</div>
-                                <div style="font-family: Georgia; font-size: 2.8rem; line-height: 1.05; margin-bottom: 16px;">Cocina de autor en el corazón de Madrid</div>
-                                <p style="color: rgba(255,255,255,0.6); font-size: 0.88rem; margin-bottom: 24px;">Producto local, técnica internacional. Una experiencia gastronómica sin pretensiones.</p>
-                                <div style="display: flex; gap: 12px;">
-                                    <span style="background: #E8B86D; color: #0C0C0C; padding: 12px 24px; font-size: 0.75rem; letter-spacing: 1px; font-weight: 700;">RESERVAR MESA</span>
-                                    <span style="border: 1px solid rgba(255,255,255,0.3); color: white; padding: 12px 24px; font-size: 0.75rem; letter-spacing: 1px; font-weight: 600;">VER CARTA</span>
+                        <!-- Hero -->
+                        <div style="height: 360px; background: linear-gradient(to bottom, rgba(12,12,12,0.15), rgba(12,12,12,0.85)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80') center/cover; display: flex; align-items: flex-end; padding: 40px;">
+                            <div style="color: white; max-width: 480px;">
+                                <div style="font-size: 0.6rem; letter-spacing: 4px; color: #E8B86D; margin-bottom: 10px;">COCINA DE AUTOR · MADRID</div>
+                                <div style="font-family: Georgia; font-size: 2.6rem; line-height: 1.05; margin-bottom: 14px;">Producto local, técnica internacional</div>
+                                <p style="color: rgba(255,255,255,0.55); font-size: 0.85rem; margin-bottom: 20px;">Una experiencia gastronómica donde cada plato cuenta una historia.</p>
+                                <div style="display: flex; gap: 10px;">
+                                    <span style="background: #E8B86D; color: #0C0C0C; padding: 10px 22px; font-size: 0.72rem; letter-spacing: 1px; font-weight: 700;">RESERVAR MESA</span>
+                                    <span style="border: 1px solid rgba(255,255,255,0.25); color: white; padding: 10px 22px; font-size: 0.72rem; letter-spacing: 1px;">VER CARTA</span>
                                 </div>
                             </div>
                         </div>
-                        <div style="background: #0C0C0C; padding: 40px 24px;">
-                            <div style="text-align: center; margin-bottom: 28px;">
-                                <div style="font-size: 0.65rem; letter-spacing: 3px; color: #E8B86D;">NUESTRA CARTA</div>
-                                <div style="font-family: Georgia; font-size: 1.6rem; color: white; margin-top: 6px;">Platos de temporada</div>
+                        <!-- Menu -->
+                        <div style="background: #0C0C0C; padding: 36px 24px;">
+                            <div style="text-align: center; margin-bottom: 24px;">
+                                <div style="font-size: 0.6rem; letter-spacing: 3px; color: #E8B86D;">CARTA</div>
+                                <div style="font-family: Georgia; font-size: 1.5rem; color: white; margin-top: 4px;">Platos de temporada</div>
                             </div>
-                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0; max-width: 700px; margin: 0 auto;">
-                                <div style="padding: 16px 20px; border-bottom: 1px solid rgba(255,255,255,0.06);">
-                                    <div style="display: flex; justify-content: space-between; color: white; font-size: 0.9rem; font-weight: 600;">
-                                        <span>Tartar de atún rojo</span><span style="color: #E8B86D;">€18</span>
-                                    </div>
-                                    <div style="color: rgba(255,255,255,0.4); font-size: 0.78rem; margin-top: 2px;">Aguacate, sésamo, ponzu casero</div>
+                            <div style="max-width: 680px; margin: 0 auto;">
+                                <div style="padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between;"><div><div style="color: white; font-size: 0.88rem; font-weight: 600;">Tartar de atún rojo</div><div style="color: rgba(255,255,255,0.35); font-size: 0.75rem; margin-top: 2px;">Aguacate, sésamo, ponzu casero</div></div><span style="color: #E8B86D; font-weight: 600;">€18</span></div>
+                                <div style="padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between;"><div><div style="color: white; font-size: 0.88rem; font-weight: 600;">Croquetas de jamón ibérico</div><div style="color: rgba(255,255,255,0.35); font-size: 0.75rem; margin-top: 2px;">Bechamel artesanal 48h, 6 piezas</div></div><span style="color: #E8B86D; font-weight: 600;">€14</span></div>
+                                <div style="padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between;"><div><div style="color: white; font-size: 0.88rem; font-weight: 600;">Risotto de boletus</div><div style="color: rgba(255,255,255,0.35); font-size: 0.75rem; margin-top: 2px;">Parmigiano 24 meses, trufa negra</div></div><span style="color: #E8B86D; font-weight: 600;">€22</span></div>
+                                <div style="padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between;"><div><div style="color: white; font-size: 0.88rem; font-weight: 600;">Solomillo a la brasa</div><div style="color: rgba(255,255,255,0.35); font-size: 0.75rem; margin-top: 2px;">Vaca madurada 45 días, Pedro Ximénez</div></div><span style="color: #E8B86D; font-weight: 600;">€28</span></div>
+                                <div style="padding: 14px 0; display: flex; justify-content: space-between;"><div><div style="color: white; font-size: 0.88rem; font-weight: 600;">Coulant de chocolate</div><div style="color: rgba(255,255,255,0.35); font-size: 0.75rem; margin-top: 2px;">Helado de vainilla bourbon, sal Maldon</div></div><span style="color: #E8B86D; font-weight: 600;">€12</span></div>
+                            </div>
+                        </div>
+                        <!-- Gallery -->
+                        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px;">
+                            <div style="height: 120px; background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80') center/cover;"></div>
+                            <div style="height: 120px; background: url('https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=400&q=80') center/cover;"></div>
+                            <div style="height: 120px; background: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&q=80') center/cover;"></div>
+                            <div style="height: 120px; background: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=80') center/cover;"></div>
+                        </div>
+                        <!-- Reviews -->
+                        <div style="background: #0C0C0C; padding: 36px 24px;">
+                            <div style="text-align: center; margin-bottom: 20px;">
+                                <div style="font-size: 0.6rem; letter-spacing: 3px; color: #E8B86D;">OPINIONES</div>
+                                <div style="font-family: Georgia; font-size: 1.3rem; color: white; margin-top: 4px;">Lo que dicen nuestros clientes</div>
+                            </div>
+                            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; max-width: 700px; margin: 0 auto;">
+                                <div style="border: 1px solid rgba(255,255,255,0.06); padding: 20px; border-radius: 8px;">
+                                    <div style="color: #E8B86D; font-size: 0.75rem; margin-bottom: 10px;">★★★★★</div>
+                                    <div style="color: rgba(255,255,255,0.7); font-size: 0.8rem; font-style: italic; line-height: 1.6; margin-bottom: 12px;">"El mejor tartar de atún que he probado en Madrid. Ambiente increíble."</div>
+                                    <div style="color: rgba(255,255,255,0.35); font-size: 0.72rem;">— Google Reviews</div>
                                 </div>
-                                <div style="padding: 16px 20px; border-bottom: 1px solid rgba(255,255,255,0.06);">
-                                    <div style="display: flex; justify-content: space-between; color: white; font-size: 0.9rem; font-weight: 600;">
-                                        <span>Croquetas de jamón ibérico</span><span style="color: #E8B86D;">€14</span>
-                                    </div>
-                                    <div style="color: rgba(255,255,255,0.4); font-size: 0.78rem; margin-top: 2px;">Bechamel de 48 horas, 6 piezas</div>
+                                <div style="border: 1px solid rgba(255,255,255,0.06); padding: 20px; border-radius: 8px;">
+                                    <div style="color: #E8B86D; font-size: 0.75rem; margin-bottom: 10px;">★★★★★</div>
+                                    <div style="color: rgba(255,255,255,0.7); font-size: 0.8rem; font-style: italic; line-height: 1.6; margin-bottom: 12px;">"Servicio impecable. Las croquetas son para repetir cada semana."</div>
+                                    <div style="color: rgba(255,255,255,0.35); font-size: 0.72rem;">— TripAdvisor</div>
                                 </div>
-                                <div style="padding: 16px 20px; border-bottom: 1px solid rgba(255,255,255,0.06);">
-                                    <div style="display: flex; justify-content: space-between; color: white; font-size: 0.9rem; font-weight: 600;">
-                                        <span>Risotto de boletus</span><span style="color: #E8B86D;">€22</span>
-                                    </div>
-                                    <div style="color: rgba(255,255,255,0.4); font-size: 0.78rem; margin-top: 2px;">Parmigiano 24 meses, trufa negra</div>
-                                </div>
-                                <div style="padding: 16px 20px; border-bottom: 1px solid rgba(255,255,255,0.06);">
-                                    <div style="display: flex; justify-content: space-between; color: white; font-size: 0.9rem; font-weight: 600;">
-                                        <span>Solomillo a la brasa</span><span style="color: #E8B86D;">€28</span>
-                                    </div>
-                                    <div style="color: rgba(255,255,255,0.4); font-size: 0.78rem; margin-top: 2px;">Vaca madurada 45 días, salsa de Pedro Ximénez</div>
+                                <div style="border: 1px solid rgba(255,255,255,0.06); padding: 20px; border-radius: 8px;">
+                                    <div style="color: #E8B86D; font-size: 0.75rem; margin-bottom: 10px;">★★★★★</div>
+                                    <div style="color: rgba(255,255,255,0.7); font-size: 0.8rem; font-style: italic; line-height: 1.6; margin-bottom: 12px;">"Reservamos por la web y todo perfecto. Volveremos seguro."</div>
+                                    <div style="color: rgba(255,255,255,0.35); font-size: 0.72rem;">— Google Reviews</div>
                                 </div>
                             </div>
                         </div>
-                        <div style="background: #0C0C0C; padding: 32px 24px; text-align: center; border-top: 1px solid rgba(255,255,255,0.06);">
-                            <div style="color: rgba(255,255,255,0.3); font-size: 0.78rem; letter-spacing: 1px;">C/ SAN VICENTE FERRER, 28 · MALASAÑA · MAR-DOM 13:00–00:00 · 91 555 78 90</div>
+                        <!-- Reservation CTA -->
+                        <div style="background: #E8B86D; padding: 40px 24px; text-align: center;">
+                            <div style="font-family: Georgia; font-size: 1.6rem; color: #0C0C0C; margin-bottom: 8px;">¿Reservamos tu mesa?</div>
+                            <p style="color: rgba(12,12,12,0.6); font-size: 0.85rem; margin-bottom: 20px;">Escríbenos por WhatsApp o llama directamente.</p>
+                            <div style="display: flex; gap: 10px; justify-content: center;">
+                                <span style="background: #0C0C0C; color: white; padding: 10px 24px; font-size: 0.78rem; font-weight: 700; border-radius: 6px;">WhatsApp</span>
+                                <span style="background: transparent; color: #0C0C0C; border: 1px solid rgba(12,12,12,0.3); padding: 10px 24px; font-size: 0.78rem; font-weight: 700; border-radius: 6px;">Llamar</span>
+                            </div>
+                        </div>
+                        <!-- Footer -->
+                        <div style="background: #0C0C0C; padding: 24px; text-align: center;">
+                            <div style="color: rgba(255,255,255,0.25); font-size: 0.72rem; letter-spacing: 1px;">DIRECCIÓN DEL NEGOCIO · MAR-DOM 13:00–00:00 · TELÉFONO</div>
                         </div>
                     </div>
 
-                    <!-- CLÍNICA ALMA MOCKUP -->
-                    <div class="showcase-item" id="proj-alma">
-                        <div style="background: #FFFFFF; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #F0F0F0;">
-                            <span style="font-size: 1.3rem; font-weight: 700; color: #1A3A5C; letter-spacing: -0.5px;">Clínica <span style="color: #4EA8DE;">Alma</span></span>
-                            <span style="color: #8899AA; font-size: 0.82rem;">Servicios · Equipo · Pacientes · Contacto</span>
+                    <!-- BARBER SHOP DEMO -->
+                    <div class="showcase-item" id="proj-barber">
+                        <div style="background: #1A1714; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.06);">
+                            <span style="font-size: 1.3rem; font-weight: 700; color: #E8DDD0; letter-spacing: 1px;">LOGO</span>
+                            <span style="color: rgba(232,221,208,0.4); font-size: 0.75rem; letter-spacing: 1.5px;">SERVICIOS · EQUIPO · GALERÍA · RESERVAR</span>
                         </div>
-                        <div style="background: linear-gradient(135deg, #F8FBFF 0%, #EDF4FD 100%); padding: 64px 48px; display: flex; gap: 40px; align-items: center;">
-                            <div style="flex: 1;">
-                                <div style="font-size: 0.68rem; letter-spacing: 2px; color: #4EA8DE; text-transform: uppercase; font-weight: 700; margin-bottom: 12px;">Odontología Avanzada · Chamberí</div>
-                                <div style="font-size: 2.4rem; font-weight: 700; color: #1A3A5C; line-height: 1.1; margin-bottom: 16px;">Tu sonrisa en las mejores manos</div>
-                                <p style="color: #6B8299; font-size: 0.88rem; margin-bottom: 24px; line-height: 1.7;">Más de 15 años cuidando sonrisas en Madrid. Tecnología de última generación, trato cercano y resultados que se ven.</p>
-                                <div style="display: flex; gap: 12px;">
-                                    <span style="background: #4EA8DE; color: white; padding: 12px 24px; font-size: 0.82rem; font-weight: 600; border-radius: 8px;">Pedir Cita Online</span>
-                                    <span style="border: 1px solid #D0DEE8; color: #1A3A5C; padding: 12px 24px; font-size: 0.82rem; font-weight: 600; border-radius: 8px;">Llamar Ahora</span>
+                        <!-- Hero -->
+                        <div style="height: 340px; background: linear-gradient(to right, rgba(26,23,20,0.9) 0%, rgba(26,23,20,0.4) 100%), url('https://images.unsplash.com/photo-1585747860019-8873f484e387?w=1200&q=80') center/cover; display: flex; align-items: center; padding: 40px;">
+                            <div style="max-width: 420px;">
+                                <div style="font-size: 0.6rem; letter-spacing: 3px; color: #C8A882; margin-bottom: 10px;">BARBERÍA · EST. 2018</div>
+                                <div style="font-size: 2.4rem; font-weight: 700; color: #E8DDD0; line-height: 1.08; margin-bottom: 14px;">Donde el estilo se encuentra con la tradición</div>
+                                <p style="color: rgba(232,221,208,0.5); font-size: 0.85rem; margin-bottom: 24px; line-height: 1.7;">Cortes clásicos, técnicas modernas. Reserva tu cita online y ven a vivir la experiencia.</p>
+                                <div style="display: flex; gap: 10px;">
+                                    <span style="background: #C8A882; color: #1A1714; padding: 10px 22px; font-size: 0.75rem; font-weight: 700; letter-spacing: 1px;">RESERVAR CITA</span>
+                                    <span style="border: 1px solid rgba(232,221,208,0.2); color: #E8DDD0; padding: 10px 22px; font-size: 0.75rem; letter-spacing: 1px;">VER SERVICIOS</span>
                                 </div>
                             </div>
-                            <div style="width: 280px; height: 220px; background: url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&q=80') center/cover; border-radius: 12px; flex-shrink: 0;"></div>
                         </div>
-                        <div style="padding: 32px 24px; background: white;">
+                        <!-- Services -->
+                        <div style="background: #1A1714; padding: 36px 24px;">
                             <div style="text-align: center; margin-bottom: 24px;">
-                                <div style="font-size: 0.65rem; letter-spacing: 2px; color: #4EA8DE; text-transform: uppercase; font-weight: 700;">Nuestros Servicios</div>
-                                <div style="font-size: 1.5rem; font-weight: 700; color: #1A3A5C; margin-top: 6px;">Especialidades</div>
+                                <div style="font-size: 0.6rem; letter-spacing: 3px; color: #C8A882;">SERVICIOS</div>
+                                <div style="font-size: 1.4rem; font-weight: 700; color: #E8DDD0; margin-top: 4px;">Nuestros cortes y tratamientos</div>
                             </div>
-                            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;">
-                                <div style="text-align: center; padding: 24px 12px; border: 1px solid #F0F0F0; border-radius: 10px;">
-                                    <div style="width: 44px; height: 44px; background: #EDF4FD; border-radius: 10px; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; color: #4EA8DE; font-size: 1.2rem;">✦</div>
-                                    <div style="font-size: 0.88rem; font-weight: 700; color: #1A3A5C;">Implantes</div>
-                                    <div style="font-size: 0.75rem; color: #8899AA; margin-top: 4px;">Tecnología 3D guiada</div>
+                            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; max-width: 700px; margin: 0 auto;">
+                                <div style="border: 1px solid rgba(232,221,208,0.08); border-radius: 8px; padding: 24px; text-align: center;">
+                                    <div style="font-size: 1.6rem; margin-bottom: 10px;">✂️</div>
+                                    <div style="color: #E8DDD0; font-size: 0.9rem; font-weight: 700;">Corte Clásico</div>
+                                    <div style="color: rgba(232,221,208,0.35); font-size: 0.78rem; margin: 4px 0 10px;">Consulta + corte + styling</div>
+                                    <div style="color: #C8A882; font-weight: 700;">€25</div>
                                 </div>
-                                <div style="text-align: center; padding: 24px 12px; border: 1px solid #F0F0F0; border-radius: 10px;">
-                                    <div style="width: 44px; height: 44px; background: #EDF4FD; border-radius: 10px; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; color: #4EA8DE; font-size: 1.2rem;">◇</div>
-                                    <div style="font-size: 0.88rem; font-weight: 700; color: #1A3A5C;">Ortodoncia</div>
-                                    <div style="font-size: 0.75rem; color: #8899AA; margin-top: 4px;">Invisalign certificados</div>
+                                <div style="border: 1px solid rgba(232,221,208,0.08); border-radius: 8px; padding: 24px; text-align: center;">
+                                    <div style="font-size: 1.6rem; margin-bottom: 10px;">🪒</div>
+                                    <div style="color: #E8DDD0; font-size: 0.9rem; font-weight: 700;">Corte + Barba</div>
+                                    <div style="color: rgba(232,221,208,0.35); font-size: 0.78rem; margin: 4px 0 10px;">Corte completo + perfilado barba</div>
+                                    <div style="color: #C8A882; font-weight: 700;">€35</div>
                                 </div>
-                                <div style="text-align: center; padding: 24px 12px; border: 1px solid #F0F0F0; border-radius: 10px;">
-                                    <div style="width: 44px; height: 44px; background: #EDF4FD; border-radius: 10px; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; color: #4EA8DE; font-size: 1.2rem;">○</div>
-                                    <div style="font-size: 0.88rem; font-weight: 700; color: #1A3A5C;">Estética</div>
-                                    <div style="font-size: 0.75rem; color: #8899AA; margin-top: 4px;">Blanqueamiento láser</div>
-                                </div>
-                                <div style="text-align: center; padding: 24px 12px; border: 1px solid #F0F0F0; border-radius: 10px;">
-                                    <div style="width: 44px; height: 44px; background: #EDF4FD; border-radius: 10px; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; color: #4EA8DE; font-size: 1.2rem;">♡</div>
-                                    <div style="font-size: 0.88rem; font-weight: 700; color: #1A3A5C;">Infantil</div>
-                                    <div style="font-size: 0.75rem; color: #8899AA; margin-top: 4px;">Odontopediatría</div>
+                                <div style="border: 1px solid rgba(232,221,208,0.08); border-radius: 8px; padding: 24px; text-align: center;">
+                                    <div style="font-size: 1.6rem; margin-bottom: 10px;">👑</div>
+                                    <div style="color: #E8DDD0; font-size: 0.9rem; font-weight: 700;">Experiencia Premium</div>
+                                    <div style="color: rgba(232,221,208,0.35); font-size: 0.78rem; margin: 4px 0 10px;">Corte + barba + toalla caliente + masaje</div>
+                                    <div style="color: #C8A882; font-weight: 700;">€50</div>
                                 </div>
                             </div>
                         </div>
-                        <div style="background: #F8FBFF; padding: 32px 24px; display: flex; justify-content: center; gap: 40px; border-top: 1px solid #F0F0F0;">
-                            <div style="text-align: center;"><div style="font-size: 2rem; font-weight: 800; color: #4EA8DE;">15+</div><div style="font-size: 0.75rem; color: #8899AA;">Años de experiencia</div></div>
-                            <div style="text-align: center;"><div style="font-size: 2rem; font-weight: 800; color: #4EA8DE;">8.000+</div><div style="font-size: 0.75rem; color: #8899AA;">Pacientes atendidos</div></div>
-                            <div style="text-align: center;"><div style="font-size: 2rem; font-weight: 800; color: #4EA8DE;">4.9★</div><div style="font-size: 0.75rem; color: #8899AA;">Valoración Google</div></div>
+                        <!-- Team -->
+                        <div style="background: #141210; padding: 36px 24px;">
+                            <div style="text-align: center; margin-bottom: 24px;">
+                                <div style="font-size: 0.6rem; letter-spacing: 3px; color: #C8A882;">EQUIPO</div>
+                                <div style="font-size: 1.4rem; font-weight: 700; color: #E8DDD0; margin-top: 4px;">Nuestros barberos</div>
+                            </div>
+                            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 600px; margin: 0 auto;">
+                                <div style="text-align: center;">
+                                    <div style="width: 90px; height: 90px; border-radius: 50%; background: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80') center/cover; margin: 0 auto 10px; border: 2px solid rgba(200,168,130,0.3);"></div>
+                                    <div style="color: #E8DDD0; font-size: 0.88rem; font-weight: 700;">Barbero 1</div>
+                                    <div style="color: rgba(232,221,208,0.35); font-size: 0.72rem;">Especialista en fade</div>
+                                </div>
+                                <div style="text-align: center;">
+                                    <div style="width: 90px; height: 90px; border-radius: 50%; background: url('https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&q=80') center/cover; margin: 0 auto 10px; border: 2px solid rgba(200,168,130,0.3);"></div>
+                                    <div style="color: #E8DDD0; font-size: 0.88rem; font-weight: 700;">Barbero 2</div>
+                                    <div style="color: rgba(232,221,208,0.35); font-size: 0.72rem;">Corte clásico y barba</div>
+                                </div>
+                                <div style="text-align: center;">
+                                    <div style="width: 90px; height: 90px; border-radius: 50%; background: url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80') center/cover; margin: 0 auto 10px; border: 2px solid rgba(200,168,130,0.3);"></div>
+                                    <div style="color: #E8DDD0; font-size: 0.88rem; font-weight: 700;">Barbero 3</div>
+                                    <div style="color: rgba(232,221,208,0.35); font-size: 0.72rem;">Diseño y color</div>
+                                </div>
+                            </div>
                         </div>
-                        <div style="padding: 24px; background: white; text-align: center; border-top: 1px solid #F0F0F0;">
-                            <div style="font-size: 0.82rem; color: #8899AA;">📍 C/ Fuencarral 92, Chamberí · ☎ 91 444 56 78 · Lun-Vie 9:00-20:00</div>
+                        <!-- Gallery -->
+                        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px;">
+                            <div style="height: 110px; background: url('https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=400&q=80') center/cover;"></div>
+                            <div style="height: 110px; background: url('https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=400&q=80') center/cover;"></div>
+                            <div style="height: 110px; background: url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=400&q=80') center/cover;"></div>
+                            <div style="height: 110px; background: url('https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80') center/cover;"></div>
+                        </div>
+                        <!-- Reviews -->
+                        <div style="background: #1A1714; padding: 36px 24px;">
+                            <div style="display: flex; justify-content: center; gap: 32px; margin-bottom: 20px;">
+                                <div style="text-align: center;"><div style="font-size: 1.8rem; font-weight: 800; color: #C8A882;">4.9★</div><div style="font-size: 0.7rem; color: rgba(232,221,208,0.35);">Google Reviews</div></div>
+                                <div style="text-align: center;"><div style="font-size: 1.8rem; font-weight: 800; color: #C8A882;">500+</div><div style="font-size: 0.7rem; color: rgba(232,221,208,0.35);">Clientes al mes</div></div>
+                                <div style="text-align: center;"><div style="font-size: 1.8rem; font-weight: 800; color: #C8A882;">6</div><div style="font-size: 0.7rem; color: rgba(232,221,208,0.35);">Años en el barrio</div></div>
+                            </div>
+                            <div style="max-width: 500px; margin: 0 auto; text-align: center;">
+                                <div style="color: #C8A882; font-size: 0.8rem; margin-bottom: 8px;">★★★★★</div>
+                                <div style="color: rgba(232,221,208,0.65); font-size: 0.88rem; font-style: italic; line-height: 1.6;">"Mi barbería de confianza desde que abrieron. Siempre salgo perfecto. La reserva online es super cómoda."</div>
+                            </div>
+                        </div>
+                        <!-- Booking CTA -->
+                        <div style="background: #C8A882; padding: 36px 24px; text-align: center;">
+                            <div style="font-size: 1.4rem; font-weight: 700; color: #1A1714; margin-bottom: 6px;">¿Reservamos tu cita?</div>
+                            <p style="color: rgba(26,23,20,0.6); font-size: 0.82rem; margin-bottom: 16px;">Elige barbero, día y hora. Sin esperas.</p>
+                            <div style="display: flex; gap: 10px; justify-content: center;">
+                                <span style="background: #1A1714; color: #E8DDD0; padding: 10px 22px; font-size: 0.78rem; font-weight: 700; border-radius: 6px;">Reservar Online</span>
+                                <span style="border: 1px solid rgba(26,23,20,0.25); color: #1A1714; padding: 10px 22px; font-size: 0.78rem; font-weight: 700; border-radius: 6px;">WhatsApp</span>
+                            </div>
+                        </div>
+                        <!-- Map + Footer -->
+                        <div style="height: 140px; background: url('https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&q=60') center/cover; filter: grayscale(1) brightness(0.6);"></div>
+                        <div style="background: #1A1714; padding: 20px 24px; text-align: center;">
+                            <div style="color: rgba(232,221,208,0.2); font-size: 0.7rem; letter-spacing: 1px;">DIRECCIÓN · TELÉFONO · HORARIO · INSTAGRAM</div>
                         </div>
                     </div>
                 </div>
@@ -528,9 +600,9 @@
 
         // Showcase switcher
         const projects = {
-            letavole: { title: 'Le Tavole', desc: 'Tienda online de vajillas de lujo — 36 productos reales de 10 marcas, filtros por marca, páginas de producto dinámicas', url: 'letavole.com', tags: ['E-Commerce', '6 páginas', '36 productos'] },
-            soko: { title: 'Soko Gastrobar', desc: 'Gastrobar de autor en Malasaña — carta digital, reservas online, ambiente nocturno premium', url: 'sokogastrobar.es', tags: ['Restaurante', 'Reservas', 'Carta Digital'] },
-            alma: { title: 'Clínica Alma', desc: 'Clínica dental en Chamberí — citas online, servicios especializados, confianza desde el primer clic', url: 'clinicaalma.es', tags: ['Salud', 'Citas Online', 'SEO Local'] }
+            letavole: { title: 'Tienda Online de Lujo', desc: 'E-commerce completo — 36 productos reales, filtros por marca, páginas de producto dinámicas, carrito, SEO', url: 'ejemplo-tienda.com', tags: ['E-Commerce', '6 páginas', 'Productos dinámicos'] },
+            restaurant: { title: 'Restaurante / Gastrobar', desc: 'Carta digital, galería de platos, reseñas integradas, reservas por WhatsApp, diseño premium nocturno', url: 'ejemplo-restaurante.es', tags: ['Carta Digital', 'Reservas', 'Galería'] },
+            barber: { title: 'Barbería / Salón', desc: 'Servicios con precios, equipo de barberos, galería de cortes, reserva online, reviews de Google', url: 'ejemplo-barberia.es', tags: ['Reservas Online', 'Equipo', 'Reviews'] }
         };
 
         function showProject(id) {
