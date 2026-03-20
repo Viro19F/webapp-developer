@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velka — Diseño Web Profesional para Negocios | Madrid</title>
+    <meta name="description" content="Diseñamos sitios web profesionales para negocios en Madrid. Entrega en días. Restaurantes, clínicas, tiendas, despachos.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* ===== MOCKUP SHOWCASE ===== */
+        .showcase { padding: 100px 0; background: var(--gray-100); }
+
+        .showcase-tabs {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .showcase-tab {
+            padding: 10px 20px;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid var(--gray-300);
+            background: var(--white);
+            color: var(--gray-700);
+            cursor: pointer;
+            transition: all var(--transition);
+        }
+
+        .showcase-tab:hover { border-color: var(--black); color: var(--black); }
+        .showcase-tab.active { background: var(--black); color: var(--white); border-color: var(--black); }
+
+        .showcase-browser {
+            max-width: 960px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1), 0 0 0 1px rgba(0,0,0,0.05);
+        }
+
+        .browser-bar {
+            background: var(--gray-100);
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .browser-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--gray-300);
+        }
+
+        .browser-dot:nth-child(1) { background: #FF605C; }
+        .browser-dot:nth-child(2) { background: #FFBD44; }
+        .browser-dot:nth-child(3) { background: #00CA4E; }
+
+        .browser-url {
+            flex: 1;
+            margin-left: 8px;
+            background: var(--white);
+            border-radius: 6px;
+            padding: 6px 12px;
+            font-size: 0.75rem;
+            color: var(--gray-500);
+            border: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .browser-content {
+            height: 540px;
+            overflow-y: auto;
+            scroll-behavior: smooth;
+        }
+
+        .browser-content::-webkit-scrollbar { width: 6px; }
+        .browser-content::-webkit-scrollbar-track { background: transparent; }
+        .browser-content::-webkit-scrollbar-thumb { background: var(--gray-300); border-radius: 3px; }
+
+        .showcase-item { display: none; }
+        .showcase-item.active { display: block; }
+
+        .showcase-info {
+            max-width: 960px;
+            margin: 24px auto 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .showcase-info-left h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .showcase-info-left p {
+            font-size: 0.82rem;
+            color: var(--gray-500);
+        }
+
+        .showcase-tags {
+            display: flex;
+            gap: 6px;
+        }
+
+        .showcase-tags span {
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 4px;
+            background: var(--white);
+            color: var(--gray-700);
+            border: 1px solid var(--gray-300);
+        }
+
+        /* ===== RESULTS STRIP ===== */
+        .results {
+            padding: 60px 0;
+            border-bottom: 1px solid var(--gray-100);
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            text-align: center;
+        }
+
+        .result-num {
+            font-size: 2.6rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .result-label {
+            font-size: 0.8rem;
+            color: var(--gray-500);
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .browser-content { height: 400px; }
+            .showcase-info { flex-direction: column; gap: 12px; align-items: flex-start; }
+            .results-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">velka.</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#work">Trabajos</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#how">Proceso</a></li>
+            </ul>
+            <a href="#contact" class="nav-cta">Hablemos</a>
+            <button class="nav-toggle" id="navToggle"><i class="ph ph-list"></i></button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-pill">
+                <span class="dot"></span>
+                Aceptando nuevos proyectos
+            </div>
+            <h1>Diseñamos la web que tu negocio necesita</h1>
+            <p>Sitios web profesionales, a medida, con contenido real de tu negocio. Entregados en días, no semanas.</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn btn-black">
+                    Solicitar Presupuesto <i class="ph ph-arrow-right"></i>
+                </a>
+                <a href="#work" class="btn btn-outline">
+                    Ver Trabajos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section class="results">
+        <div class="container">
+            <div class="results-grid">
+                <div>
+                    <div class="result-num">3</div>
+                    <div class="result-label">Proyectos entregados</div>
+                </div>
+                <div>
+                    <div class="result-num">5 días</div>
+                    <div class="result-label">Tiempo medio de entrega</div>
+                </div>
+                <div>
+                    <div class="result-num">9</div>
+                    <div class="result-label">Industrias cubiertas</div>
+                </div>
+                <div>
+                    <div class="result-num">100%</div>
+                    <div class="result-label">Clientes satisfechos</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SHOWCASE — LIVE MOCKUPS -->
+    <section class="showcase" id="work">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Portfolio</div>
+                <div class="section-title">Nuestros trabajos, en vivo</div>
+                <div class="section-desc">Navega por los sitios que hemos construido. Contenido real, diseño a medida.</div>
+            </div>
+
+            <div class="showcase-tabs">
+                <button class="showcase-tab active" onclick="showProject('letavole')">Le Tavole</button>
+                <button class="showcase-tab" onclick="showProject('soko')">Soko Gastrobar</button>
+                <button class="showcase-tab" onclick="showProject('alma')">Clínica Alma</button>
+            </div>
+
+            <div class="showcase-browser">
+                <div class="browser-bar">
+                    <div class="browser-dot"></div>
+                    <div class="browser-dot"></div>
+                    <div class="browser-dot"></div>
+                    <div class="browser-url" id="browserUrl">letavole.com</div>
+                </div>
+                <div class="browser-content" id="browserContent">
+                    <!-- LE TAVOLE MOCKUP -->
+                    <div class="showcase-item active" id="proj-letavole">
+                        <div style="background: #0F1C2B; color: rgba(255,255,255,0.85); text-align: center; padding: 10px; font-size: 0.72rem; letter-spacing: 1.5px; text-transform: uppercase;">Envío gratis en pedidos superiores a <strong style="color: #D4B896;">$150 USD</strong></div>
+                        <div style="padding: 20px 24px; border-bottom: 1px solid #E8E3DC; display: flex; justify-content: space-between; align-items: center; background: #FEFCF9;">
+                            <span style="font-family: Georgia; font-size: 1.5rem; color: #1A1A18; letter-spacing: 3px;">LE <em style="color: #B8956A;">TAVOLE</em></span>
+                            <span style="color: #6B6560; font-size: 0.78rem; letter-spacing: 1.5px;">TABLETOP · HOME · COCINA · MARCAS · CONTACTO</span>
+                        </div>
+                        <div style="height: 380px; background: linear-gradient(135deg, rgba(15,28,43,0.75), rgba(15,28,43,0.3)), url('https://images.unsplash.com/photo-1507914997211-56c683a2603e?w=1200&q=80') center/cover; display: flex; align-items: center; padding: 48px;">
+                            <div style="color: white;">
+                                <div style="font-size: 0.65rem; letter-spacing: 4px; color: #D4B896; margin-bottom: 16px;">EL ARTE DE SERVIR</div>
+                                <div style="font-family: Georgia; font-size: 2.8rem; line-height: 1.1; margin-bottom: 16px;">Elegancia y <em style="color: #D4B896;">Distinción</em><br>para tu Mesa</div>
+                                <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; max-width: 400px; margin-bottom: 24px;">Descubre nuestra colección curada de vajillas, cristalería y cubertería de las mejores marcas del mundo.</p>
+                                <span style="background: #B8956A; color: white; padding: 12px 28px; font-size: 0.75rem; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 600;">Explorar Colección</span>
+                            </div>
+                        </div>
+                        <div style="text-align: center; padding: 32px 24px; font-size: 0.65rem; letter-spacing: 3px; color: rgba(26,26,24,0.4); background: #FEFCF9;">CHRISTOFLE · JULISKA · HEREND · GEORG JENSEN · ALESSI · WEDGWOOD · SABRE PARIS</div>
+                        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; padding: 24px; background: #FEFCF9;">
+                            <div style="height: 200px; background: url('https://images.unsplash.com/photo-1530018607912-eff2daa1bac4?w=400&q=80') center/cover; border-radius: 4px; position: relative;"><div style="position:absolute; bottom:16px; left:16px; color:white; font-family:Georgia; font-size:1rem;">Vajillas</div></div>
+                            <div style="height: 200px; background: url('https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=400&q=80') center/cover; border-radius: 4px; position: relative;"><div style="position:absolute; bottom:16px; left:16px; color:white; font-family:Georgia; font-size:1rem;">Cristalería</div></div>
+                            <div style="height: 200px; background: url('https://images.unsplash.com/photo-1592492135673-55966d3b541a?w=400&q=80') center/cover; border-radius: 4px; position: relative;"><div style="position:absolute; bottom:16px; left:16px; color:white; font-family:Georgia; font-size:1rem;">Cubertería</div></div>
+                            <div style="height: 200px; background: url('https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=400&q=80') center/cover; border-radius: 4px; position: relative;"><div style="position:absolute; bottom:16px; left:16px; color:white; font-family:Georgia; font-size:1rem;">Home Décor</div></div>
+                        </div>
+                        <div style="padding: 40px 24px; text-align: center; background: #F7F4F0;">
+                            <div style="font-size: 0.65rem; letter-spacing: 3px; color: #B8956A; margin-bottom: 8px;">NOVEDADES</div>
+                            <div style="font-family: Georgia; font-size: 1.8rem; margin-bottom: 24px;">Recién <em style="color: #B8956A;">Llegados</em></div>
+                            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; max-width: 800px; margin: 0 auto;">
+                                <div style="background: white; border: 1px solid #F0ECE6; overflow: hidden;">
+                                    <div style="height: 160px; background: url('https://letavole.com/wp-content/uploads/2025/12/115375-6.jpg') center/cover;"></div>
+                                    <div style="padding: 12px; text-align: left;"><div style="font-size: 0.6rem; letter-spacing: 1px; color: #B8956A;">LA DOUBLE J</div><div style="font-family: Georgia; font-size: 0.85rem; margin: 4px 0;">Leaftrail Incense Holder</div><div style="font-size: 0.85rem; font-weight: 600;">US$347.00</div></div>
+                                </div>
+                                <div style="background: white; border: 1px solid #F0ECE6; overflow: hidden;">
+                                    <div style="height: 160px; background: url('https://letavole.com/wp-content/uploads/2025/11/115178.jpg') center/cover;"></div>
+                                    <div style="padding: 12px; text-align: left;"><div style="font-size: 0.6rem; letter-spacing: 1px; color: #B8956A;">JULISKA</div><div style="font-family: Georgia; font-size: 0.85rem; margin: 4px 0;">Willa Charger Amber</div><div style="font-size: 0.85rem; font-weight: 600;">US$125.00</div></div>
+                                </div>
+                                <div style="background: white; border: 1px solid #F0ECE6; overflow: hidden;">
+                                    <div style="height: 160px; background: url('https://letavole.com/wp-content/uploads/2025/12/115374.jpg') center/cover;"></div>
+                                    <div style="padding: 12px; text-align: left;"><div style="font-size: 0.6rem; letter-spacing: 1px; color: #B8956A;">LA DOUBLE J</div><div style="font-family: Georgia; font-size: 0.85rem; margin: 4px 0;">Parrotstem Tray Green</div><div style="font-size: 0.85rem; font-weight: 600;">US$318.00</div></div>
+                                </div>
+                                <div style="background: white; border: 1px solid #F0ECE6; overflow: hidden;">
+                                    <div style="height: 160px; background: url('https://letavole.com/wp-content/uploads/2025/12/115372.jpg') center/cover;"></div>
+                                    <div style="padding: 12px; text-align: left;"><div style="font-size: 0.6rem; letter-spacing: 1px; color: #B8956A;">ICHENDORF</div><div style="font-family: Georgia; font-size: 0.85rem; margin: 4px 0;">Leafflyer Tray Saffron</div><div style="font-size: 0.85rem; font-weight: 600;">US$401.00</div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SOKO GASTROBAR MOCKUP -->
+                    <div class="showcase-item" id="proj-soko">
+                        <div style="background: #0C0C0C; color: rgba(255,255,255,0.85); text-align: center; padding: 8px; font-size: 0.7rem; letter-spacing: 1.5px;">RESERVA TU MESA · <strong style="color: #E8B86D;">ABIERTO DE MARTES A DOMINGO</strong></div>
+                        <div style="background: #0C0C0C; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.08);">
+                            <span style="font-family: Georgia; font-size: 1.5rem; color: white; letter-spacing: 2px;">SOKO</span>
+                            <span style="color: rgba(255,255,255,0.45); font-size: 0.78rem; letter-spacing: 1.5px;">CARTA · EXPERIENCIA · RESERVAR · CONTACTO</span>
+                        </div>
+                        <div style="height: 380px; background: linear-gradient(to bottom, rgba(12,12,12,0.2), rgba(12,12,12,0.85)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80') center/cover; display: flex; align-items: flex-end; padding: 48px;">
+                            <div style="color: white; max-width: 500px;">
+                                <div style="font-size: 0.65rem; letter-spacing: 4px; color: #E8B86D; margin-bottom: 12px;">GASTROBAR · MALASAÑA · MADRID</div>
+                                <div style="font-family: Georgia; font-size: 2.8rem; line-height: 1.05; margin-bottom: 16px;">Cocina de autor en el corazón de Madrid</div>
+                                <p style="color: rgba(255,255,255,0.6); font-size: 0.88rem; margin-bottom: 24px;">Producto local, técnica internacional. Una experiencia gastronómica sin pretensiones.</p>
+                                <div style="display: flex; gap: 12px;">
+                                    <span style="background: #E8B86D; color: #0C0C0C; padding: 12px 24px; font-size: 0.75rem; letter-spacing: 1px; font-weight: 700;">RESERVAR MESA</span>
+                                    <span style="border: 1px solid rgba(255,255,255,0.3); color: white; padding: 12px 24px; font-size: 0.75rem; letter-spacing: 1px; font-weight: 600;">VER CARTA</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="background: #0C0C0C; padding: 40px 24px;">
+                            <div style="text-align: center; margin-bottom: 28px;">
+                                <div style="font-size: 0.65rem; letter-spacing: 3px; color: #E8B86D;">NUESTRA CARTA</div>
+                                <div style="font-family: Georgia; font-size: 1.6rem; color: white; margin-top: 6px;">Platos de temporada</div>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0; max-width: 700px; margin: 0 auto;">
+                                <div style="padding: 16px 20px; border-bottom: 1px solid rgba(255,255,255,0.06);">
+                                    <div style="display: flex; justify-content: space-between; color: white; font-size: 0.9rem; font-weight: 600;">
+                                        <span>Tartar de atún rojo</span><span style="color: #E8B86D;">€18</span>
+                                    </div>
+                                    <div style="color: rgba(255,255,255,0.4); font-size: 0.78rem; margin-top: 2px;">Aguacate, sésamo, ponzu casero</div>
+                                </div>
+                                <div style="padding: 16px 20px; border-bottom: 1px solid rgba(255,255,255,0.06);">
+                                    <div style="display: flex; justify-content: space-between; color: white; font-size: 0.9rem; font-weight: 600;">
+                                        <span>Croquetas de jamón ibérico</span><span style="color: #E8B86D;">€14</span>
+                                    </div>
+                                    <div style="color: rgba(255,255,255,0.4); font-size: 0.78rem; margin-top: 2px;">Bechamel de 48 horas, 6 piezas</div>
+                                </div>
+                                <div style="padding: 16px 20px; border-bottom: 1px solid rgba(255,255,255,0.06);">
+                                    <div style="display: flex; justify-content: space-between; color: white; font-size: 0.9rem; font-weight: 600;">
+                                        <span>Risotto de boletus</span><span style="color: #E8B86D;">€22</span>
+                                    </div>
+                                    <div style="color: rgba(255,255,255,0.4); font-size: 0.78rem; margin-top: 2px;">Parmigiano 24 meses, trufa negra</div>
+                                </div>
+                                <div style="padding: 16px 20px; border-bottom: 1px solid rgba(255,255,255,0.06);">
+                                    <div style="display: flex; justify-content: space-between; color: white; font-size: 0.9rem; font-weight: 600;">
+                                        <span>Solomillo a la brasa</span><span style="color: #E8B86D;">€28</span>
+                                    </div>
+                                    <div style="color: rgba(255,255,255,0.4); font-size: 0.78rem; margin-top: 2px;">Vaca madurada 45 días, salsa de Pedro Ximénez</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="background: #0C0C0C; padding: 32px 24px; text-align: center; border-top: 1px solid rgba(255,255,255,0.06);">
+                            <div style="color: rgba(255,255,255,0.3); font-size: 0.78rem; letter-spacing: 1px;">C/ SAN VICENTE FERRER, 28 · MALASAÑA · MAR-DOM 13:00–00:00 · 91 555 78 90</div>
+                        </div>
+                    </div>
+
+                    <!-- CLÍNICA ALMA MOCKUP -->
+                    <div class="showcase-item" id="proj-alma">
+                        <div style="background: #FFFFFF; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #F0F0F0;">
+                            <span style="font-size: 1.3rem; font-weight: 700; color: #1A3A5C; letter-spacing: -0.5px;">Clínica <span style="color: #4EA8DE;">Alma</span></span>
+                            <span style="color: #8899AA; font-size: 0.82rem;">Servicios · Equipo · Pacientes · Contacto</span>
+                        </div>
+                        <div style="background: linear-gradient(135deg, #F8FBFF 0%, #EDF4FD 100%); padding: 64px 48px; display: flex; gap: 40px; align-items: center;">
+                            <div style="flex: 1;">
+                                <div style="font-size: 0.68rem; letter-spacing: 2px; color: #4EA8DE; text-transform: uppercase; font-weight: 700; margin-bottom: 12px;">Odontología Avanzada · Chamberí</div>
+                                <div style="font-size: 2.4rem; font-weight: 700; color: #1A3A5C; line-height: 1.1; margin-bottom: 16px;">Tu sonrisa en las mejores manos</div>
+                                <p style="color: #6B8299; font-size: 0.88rem; margin-bottom: 24px; line-height: 1.7;">Más de 15 años cuidando sonrisas en Madrid. Tecnología de última generación, trato cercano y resultados que se ven.</p>
+                                <div style="display: flex; gap: 12px;">
+                                    <span style="background: #4EA8DE; color: white; padding: 12px 24px; font-size: 0.82rem; font-weight: 600; border-radius: 8px;">Pedir Cita Online</span>
+                                    <span style="border: 1px solid #D0DEE8; color: #1A3A5C; padding: 12px 24px; font-size: 0.82rem; font-weight: 600; border-radius: 8px;">Llamar Ahora</span>
+                                </div>
+                            </div>
+                            <div style="width: 280px; height: 220px; background: url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&q=80') center/cover; border-radius: 12px; flex-shrink: 0;"></div>
+                        </div>
+                        <div style="padding: 32px 24px; background: white;">
+                            <div style="text-align: center; margin-bottom: 24px;">
+                                <div style="font-size: 0.65rem; letter-spacing: 2px; color: #4EA8DE; text-transform: uppercase; font-weight: 700;">Nuestros Servicios</div>
+                                <div style="font-size: 1.5rem; font-weight: 700; color: #1A3A5C; margin-top: 6px;">Especialidades</div>
+                            </div>
+                            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;">
+                                <div style="text-align: center; padding: 24px 12px; border: 1px solid #F0F0F0; border-radius: 10px;">
+                                    <div style="width: 44px; height: 44px; background: #EDF4FD; border-radius: 10px; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; color: #4EA8DE; font-size: 1.2rem;">✦</div>
+                                    <div style="font-size: 0.88rem; font-weight: 700; color: #1A3A5C;">Implantes</div>
+                                    <div style="font-size: 0.75rem; color: #8899AA; margin-top: 4px;">Tecnología 3D guiada</div>
+                                </div>
+                                <div style="text-align: center; padding: 24px 12px; border: 1px solid #F0F0F0; border-radius: 10px;">
+                                    <div style="width: 44px; height: 44px; background: #EDF4FD; border-radius: 10px; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; color: #4EA8DE; font-size: 1.2rem;">◇</div>
+                                    <div style="font-size: 0.88rem; font-weight: 700; color: #1A3A5C;">Ortodoncia</div>
+                                    <div style="font-size: 0.75rem; color: #8899AA; margin-top: 4px;">Invisalign certificados</div>
+                                </div>
+                                <div style="text-align: center; padding: 24px 12px; border: 1px solid #F0F0F0; border-radius: 10px;">
+                                    <div style="width: 44px; height: 44px; background: #EDF4FD; border-radius: 10px; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; color: #4EA8DE; font-size: 1.2rem;">○</div>
+                                    <div style="font-size: 0.88rem; font-weight: 700; color: #1A3A5C;">Estética</div>
+                                    <div style="font-size: 0.75rem; color: #8899AA; margin-top: 4px;">Blanqueamiento láser</div>
+                                </div>
+                                <div style="text-align: center; padding: 24px 12px; border: 1px solid #F0F0F0; border-radius: 10px;">
+                                    <div style="width: 44px; height: 44px; background: #EDF4FD; border-radius: 10px; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; color: #4EA8DE; font-size: 1.2rem;">♡</div>
+                                    <div style="font-size: 0.88rem; font-weight: 700; color: #1A3A5C;">Infantil</div>
+                                    <div style="font-size: 0.75rem; color: #8899AA; margin-top: 4px;">Odontopediatría</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="background: #F8FBFF; padding: 32px 24px; display: flex; justify-content: center; gap: 40px; border-top: 1px solid #F0F0F0;">
+                            <div style="text-align: center;"><div style="font-size: 2rem; font-weight: 800; color: #4EA8DE;">15+</div><div style="font-size: 0.75rem; color: #8899AA;">Años de experiencia</div></div>
+                            <div style="text-align: center;"><div style="font-size: 2rem; font-weight: 800; color: #4EA8DE;">8.000+</div><div style="font-size: 0.75rem; color: #8899AA;">Pacientes atendidos</div></div>
+                            <div style="text-align: center;"><div style="font-size: 2rem; font-weight: 800; color: #4EA8DE;">4.9★</div><div style="font-size: 0.75rem; color: #8899AA;">Valoración Google</div></div>
+                        </div>
+                        <div style="padding: 24px; background: white; text-align: center; border-top: 1px solid #F0F0F0;">
+                            <div style="font-size: 0.82rem; color: #8899AA;">📍 C/ Fuencarral 92, Chamberí · ☎ 91 444 56 78 · Lun-Vie 9:00-20:00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="showcase-info" id="showcaseInfo">
+                <div class="showcase-info-left">
+                    <h3 id="projTitle">Le Tavole</h3>
+                    <p id="projDesc">Tienda online de vajillas de lujo — 36 productos reales, 10 marcas, filtros dinámicos</p>
+                </div>
+                <div class="showcase-tags" id="projTags">
+                    <span>E-Commerce</span>
+                    <span>6 páginas</span>
+                    <span>55 tests</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Servicios</div>
+                <div class="section-title">Todo lo que necesitas</div>
+                <div class="section-desc">Diseño, desarrollo, SEO, hosting y soporte. Todo incluido.</div>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="ph ph-layout"></i></div>
+                    <h3>Diseño a Medida</h3>
+                    <p>Cada web se diseña desde cero para tu industria. Nada de plantillas genéricas.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="ph ph-device-mobile"></i></div>
+                    <h3>Mobile First</h3>
+                    <p>Perfecta en móvil, tablet y escritorio. El 70% de tus clientes te visitan desde el móvil.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="ph ph-magnifying-glass"></i></div>
+                    <h3>SEO Optimizado</h3>
+                    <p>Schema markup, meta tags, Google Business. Apareces cuando tus clientes buscan.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="ph ph-gear"></i></div>
+                    <h3>Panel Admin</h3>
+                    <p>Edita textos, sube fotos, gestiona productos. Sin saber programar.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="ph ph-rocket-launch"></i></div>
+                    <h3>Entrega Rápida</h3>
+                    <p>Tu web lista en 3-7 días. No semanas. No meses.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="ph ph-headset"></i></div>
+                    <h3>Soporte Continuo</h3>
+                    <p>Hosting, SSL, actualizaciones y soporte por WhatsApp.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process" id="how">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Proceso</div>
+                <div class="section-title">Así trabajamos</div>
+            </div>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="process-num">1</div>
+                    <h3>Nos cuentas</h3>
+                    <p>Llamada de 30 min sobre tu negocio y objetivos.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-num">2</div>
+                    <h3>Diseñamos</h3>
+                    <p>Construimos tu web con contenido y fotos reales.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-num">3</div>
+                    <h3>Revisas</h3>
+                    <p>Te enseñamos el resultado. Ajustamos todo.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-num">4</div>
+                    <h3>En vivo</h3>
+                    <p>Lanzamos tu web. Lista para recibir clientes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="contact">
+        <div class="container">
+            <h2>¿Listo para tu nueva web?</h2>
+            <p>Cuéntanos sobre tu negocio. Te enviamos una propuesta personalizada en 24 horas.</p>
+            <div class="cta-btns">
+                <a href="https://wa.me/34XXXXXXXXX?text=Hola%2C%20me%20interesa%20una%20web%20profesional%20para%20mi%20negocio" class="btn btn-black" target="_blank">
+                    <i class="ph ph-whatsapp-logo"></i> WhatsApp
+                </a>
+                <a href="mailto:hola@velka.co" class="btn btn-outline">
+                    <i class="ph ph-envelope"></i> hola@velka.co
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-left">&copy; 2026 Velka. Madrid, España.</div>
+                <ul class="footer-links">
+                    <li><a href="#work">Trabajos</a></li>
+                    <li><a href="#services">Servicios</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/34XXXXXXXXX" class="wa-float" target="_blank"><i class="ph ph-whatsapp-logo"></i></a>
+
+    <script>
+        // Nav
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 10));
+        document.getElementById('navToggle').addEventListener('click', () => {
+            const l = document.getElementById('navLinks');
+            l.classList.toggle('open');
+            document.querySelector('#navToggle i').className = l.classList.contains('open') ? 'ph ph-x' : 'ph ph-list';
+        });
+
+        // Showcase switcher
+        const projects = {
+            letavole: { title: 'Le Tavole', desc: 'Tienda online de vajillas de lujo — 36 productos reales de 10 marcas, filtros por marca, páginas de producto dinámicas', url: 'letavole.com', tags: ['E-Commerce', '6 páginas', '36 productos'] },
+            soko: { title: 'Soko Gastrobar', desc: 'Gastrobar de autor en Malasaña — carta digital, reservas online, ambiente nocturno premium', url: 'sokogastrobar.es', tags: ['Restaurante', 'Reservas', 'Carta Digital'] },
+            alma: { title: 'Clínica Alma', desc: 'Clínica dental en Chamberí — citas online, servicios especializados, confianza desde el primer clic', url: 'clinicaalma.es', tags: ['Salud', 'Citas Online', 'SEO Local'] }
+        };
+
+        function showProject(id) {
+            // Hide all
+            document.querySelectorAll('.showcase-item').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.showcase-tab').forEach(el => el.classList.remove('active'));
+
+            // Show selected
+            document.getElementById('proj-' + id).classList.add('active');
+            event.target.classList.add('active');
+
+            // Update info
+            const p = projects[id];
+            document.getElementById('browserUrl').textContent = p.url;
+            document.getElementById('projTitle').textContent = p.title;
+            document.getElementById('projDesc').textContent = p.desc;
+            document.getElementById('projTags').innerHTML = p.tags.map(t => `<span>${t}</span>`).join('');
+
+            // Scroll browser to top
+            document.getElementById('browserContent').scrollTop = 0;
+        }
+    </script>
+
+</body>
+</html>
