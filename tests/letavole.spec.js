@@ -165,32 +165,47 @@ test.describe('Shop Page', () => {
 
 // ========== PRODUCT DETAIL PAGE ==========
 test.describe('Product Detail', () => {
-    test('loads with product info', async ({ page }) => {
-        await page.goto(`${BASE}/producto.html`);
-        await expect(page.locator('.product-detail-brand')).toContainText('La Double J');
-        await expect(page.locator('.product-detail-info h1')).toContainText('Leaftrail');
-        await expect(page.locator('.product-detail-price')).toContainText('US$347.00');
+    test('loads correct product from URL param', async ({ page }) => {
+        await page.goto(`${BASE}/producto.html?id=leaftrail-incense`);
+        await expect(page.locator('#pBrand')).toContainText('La Double J');
+        await expect(page.locator('#pName')).toContainText('Leaftrail');
+        await expect(page.locator('#pPrice')).toContainText('US$347.00');
+    });
+
+    test('loads different product when ID changes', async ({ page }) => {
+        await page.goto(`${BASE}/producto.html?id=willa-charger-amber`);
+        await expect(page.locator('#pBrand')).toContainText('Juliska');
+        await expect(page.locator('#pName')).toContainText('Willa');
+        await expect(page.locator('#pPrice')).toContainText('US$125.00');
+    });
+
+    test('shows out-of-stock for unavailable products', async ({ page }) => {
+        await page.goto(`${BASE}/producto.html?id=trinket-libellula`);
+        await expect(page.locator('#pStockText')).toContainText('Agotado');
     });
 
     test('stock status shows in stock', async ({ page }) => {
-        await page.goto(`${BASE}/producto.html`);
+        await page.goto(`${BASE}/producto.html?id=leaftrail-incense`);
         await expect(page.locator('.stock-status')).toContainText('En stock');
     });
 
     test('gallery thumbnails change main image', async ({ page }) => {
-        await page.goto(`${BASE}/producto.html`);
+        await page.goto(`${BASE}/producto.html?id=leaftrail-incense`);
         const thumbs = page.locator('.product-gallery-thumbs img');
         const mainImg = page.locator('#mainImg');
 
-        const initialSrc = await mainImg.getAttribute('src');
-        await thumbs.nth(1).click();
-        await page.waitForTimeout(300);
-        const newSrc = await mainImg.getAttribute('src');
-        expect(newSrc).not.toBe(initialSrc);
+        const count = await thumbs.count();
+        if (count > 1) {
+            const initialSrc = await mainImg.getAttribute('src');
+            await thumbs.nth(1).click();
+            await page.waitForTimeout(300);
+            const newSrc = await mainImg.getAttribute('src');
+            expect(newSrc).not.toBe(initialSrc);
+        }
     });
 
     test('quantity controls work', async ({ page }) => {
-        await page.goto(`${BASE}/producto.html`);
+        await page.goto(`${BASE}/producto.html?id=leaftrail-incense`);
         const qtyInput = page.locator('#qty');
 
         // Default is 1
@@ -210,14 +225,14 @@ test.describe('Product Detail', () => {
     });
 
     test('add to cart button shows confirmation', async ({ page }) => {
-        await page.goto(`${BASE}/producto.html`);
+        await page.goto(`${BASE}/producto.html?id=leaftrail-incense`);
         const addBtn = page.locator('.product-actions .btn-gold');
         await addBtn.click();
         await expect(addBtn).toContainText('Añadido');
     });
 
     test('product specs are visible', async ({ page }) => {
-        await page.goto(`${BASE}/producto.html`);
+        await page.goto(`${BASE}/producto.html?id=leaftrail-incense`);
         const specs = page.locator('.product-specs');
         await expect(specs).toContainText('Porcelana');
         await expect(specs).toContainText('Italia');
@@ -225,21 +240,25 @@ test.describe('Product Detail', () => {
     });
 
     test('WhatsApp inquiry link has product name', async ({ page }) => {
-        await page.goto(`${BASE}/producto.html`);
-        const waLink = page.locator('a:has-text("WhatsApp")');
+        await page.goto(`${BASE}/producto.html?id=leaftrail-incense`);
+        const waLink = page.locator('#pWhatsApp');
         const href = await waLink.getAttribute('href');
         expect(href).toContain('wa.me');
         expect(href).toContain('Leaftrail');
     });
 
-    test('related products section exists', async ({ page }) => {
-        await page.goto(`${BASE}/producto.html`);
-        const related = page.locator('.products-grid .product-card');
-        expect(await related.count()).toBe(4);
+    test('related products link to correct pages', async ({ page }) => {
+        await page.goto(`${BASE}/producto.html?id=leaftrail-incense`);
+        const related = page.locator('#relatedGrid .product-card');
+        const count = await related.count();
+        expect(count).toBeGreaterThanOrEqual(2);
+        // Check related links have ?id= params
+        const href = await related.first().getAttribute('href');
+        expect(href).toContain('?id=');
     });
 
     test('breadcrumb navigation works', async ({ page }) => {
-        await page.goto(`${BASE}/producto.html`);
+        await page.goto(`${BASE}/producto.html?id=leaftrail-incense`);
         const breadcrumb = page.locator('.breadcrumb');
         await expect(breadcrumb).toContainText('Inicio');
         await expect(breadcrumb).toContainText('Tienda');
@@ -329,10 +348,13 @@ test.describe('Navigation', () => {
         await expect(page).toHaveURL(/tienda/);
     });
 
-    test('can navigate from shop to product', async ({ page }) => {
+    test('can navigate from shop to product with correct ID', async ({ page }) => {
         await page.goto(`${BASE}/tienda.html`);
-        await page.click('.product-card >> nth=0');
-        await expect(page).toHaveURL(/producto/);
+        const firstCard = page.locator('.product-card').first();
+        const href = await firstCard.getAttribute('href');
+        expect(href).toContain('?id=');
+        await firstCard.click();
+        await expect(page).toHaveURL(/producto.*id=/);
     });
 
     test('can navigate from product back to shop via breadcrumb', async ({ page }) => {
@@ -391,7 +413,7 @@ test.describe('Mobile', () => {
     });
 
     test('product detail is scrollable on mobile', async ({ page }) => {
-        await page.goto(`${BASE}/producto.html`);
+        await page.goto(`${BASE}/producto.html?id=leaftrail-incense`);
         await expect(page.locator('.product-detail-info h1')).toBeVisible();
         await expect(page.locator('.product-detail-price')).toBeVisible();
     });

@@ -3,35 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leaftrail Incense Holder Blue — La Double J | Le Tavole</title>
-    <meta name="description" content="Leaftrail Incense Holder Blue de La Double J. Porcelana italiana hecha a mano de la colección Fantastic Creatures. US$347.00">
-    <!-- Open Graph -->
-    <meta property="og:title" content="Leaftrail Incense Holder Blue — La Double J | Le Tavole">
-    <meta property="og:description" content="Porcelana italiana hecha a mano de la colección Fantastic Creatures. US$347.00">
-    <meta property="og:image" content="https://letavole.com/wp-content/uploads/2025/12/115375-6.jpg">
-    <meta property="og:type" content="product">
+    <title>Producto — Le Tavole</title>
+    <meta name="description" content="Le Tavole — Vajillas de lujo, cristalería, cubertería y decoración del hogar.">
 
-    <!-- Product Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "Leaftrail Incense Holder Blue",
-        "brand": { "@type": "Brand", "name": "La Double J" },
-        "description": "Porta incienso de porcelana italiana de la colección Fantastic Creatures, creado con el artista Beto Val.",
-        "image": "https://letavole.com/wp-content/uploads/2025/12/115375-6.jpg",
-        "sku": "115375",
-        "material": "100% Porcelana",
-        "countryOfOrigin": "Italy",
-        "offers": {
-            "@type": "Offer",
-            "price": "347.00",
-            "priceCurrency": "USD",
-            "availability": "https://schema.org/InStock",
-            "seller": { "@type": "Organization", "name": "Le Tavole" }
-        }
-    }
-    </script>
+    <meta property="og:type" content="product">
+    <meta property="og:site_name" content="Le Tavole">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -68,11 +44,11 @@
         </div>
     </nav>
 
-    <!-- PRODUCT DETAIL -->
+    <!-- PRODUCT DETAIL — populated by JS -->
     <div class="container">
         <div style="padding: 24px 0;">
-            <div class="breadcrumb">
-                <a href="index.html">Inicio</a> / <a href="tienda.html">Tienda</a> / <a href="#">La Double J</a> / <span>Leaftrail Incense Holder Blue</span>
+            <div class="breadcrumb" id="breadcrumb">
+                <a href="index.html">Inicio</a> / <a href="tienda.html">Tienda</a> / <span id="breadcrumbBrand"></span> / <span id="breadcrumbName"></span>
             </div>
         </div>
 
@@ -80,49 +56,32 @@
             <!-- GALLERY -->
             <div class="product-gallery">
                 <div class="product-gallery-main">
-                    <img src="https://letavole.com/wp-content/uploads/2025/12/115375-6.jpg" alt="Leaftrail Incense Holder Blue" id="mainImg">
+                    <img src="" alt="" id="mainImg">
                 </div>
-                <div class="product-gallery-thumbs">
-                    <img src="https://letavole.com/wp-content/uploads/2025/12/115375-6.jpg" alt="Vista 1" class="active" onclick="changeImg(this)">
-                    <img src="https://letavole.com/wp-content/uploads/2025/12/115375_1.jpg" alt="Vista 2" onclick="changeImg(this)">
-                    <img src="https://letavole.com/wp-content/uploads/2025/12/115375_2.jpg" alt="Vista 3" onclick="changeImg(this)">
-                </div>
+                <div class="product-gallery-thumbs" id="thumbs"></div>
             </div>
 
             <!-- INFO -->
             <div class="product-detail-info">
-                <div class="product-detail-brand">La Double J</div>
-                <h1>Leaftrail Incense Holder Blue</h1>
-                <div class="product-detail-price">US$347.00</div>
+                <div class="product-detail-brand" id="pBrand"></div>
+                <h1 id="pName"></h1>
+                <div class="product-detail-price" id="pPrice"></div>
 
-                <div class="stock-status in-stock">
-                    <span class="stock-dot"></span> En stock
+                <div class="stock-status" id="pStock">
+                    <span class="stock-dot"></span> <span id="pStockText"></span>
                 </div>
 
-                <div class="product-detail-desc">
-                    Las pequeñas cosas convierten una casa en un santuario personal. Este porta incienso presenta el diseño Leaftrail de la colección <strong>Fantastic Creatures</strong>, creado en colaboración con el artista surrealista <strong>Beto Val</strong>. Diseñado para colocarse en cualquier habitación y combinarse con tu incienso preferido.
-                </div>
+                <div class="product-detail-desc" id="pDesc"></div>
 
-                <dl class="product-specs">
-                    <dt>Material</dt>
-                    <dd>100% Porcelana</dd>
-                    <dt>Origen</dt>
-                    <dd>Hecho en Italia</dd>
-                    <dt>Dimensiones</dt>
-                    <dd>18 × 11 cm</dd>
-                    <dt>Colección</dt>
-                    <dd>Fantastic Creatures con Beto Val</dd>
-                    <dt>SKU</dt>
-                    <dd>115375</dd>
-                </dl>
+                <dl class="product-specs" id="pSpecs"></dl>
 
-                <div class="product-actions">
+                <div class="product-actions" id="pActions">
                     <div class="qty-control">
                         <button onclick="changeQty(-1)">−</button>
                         <input type="number" value="1" min="1" id="qty">
                         <button onclick="changeQty(1)">+</button>
                     </div>
-                    <button class="btn btn-gold" style="flex:1;" onclick="addToCart()">
+                    <button class="btn btn-gold" style="flex:1;" id="addToCartBtn" onclick="addToCart()">
                         <i class="ph ph-bag"></i> Añadir al Carrito
                     </button>
                 </div>
@@ -131,15 +90,11 @@
                     <i class="ph ph-heart"></i> Añadir a Lista de Deseos
                 </button>
 
-                <a href="https://wa.me/18099181810?text=Hola%2C%20me%20interesa%20el%20Leaftrail%20Incense%20Holder%20Blue%20(US%24347)" class="btn btn-outline-dark btn-full btn-sm" target="_blank" style="margin-bottom: 24px;">
+                <a href="#" class="btn btn-outline-dark btn-full btn-sm" id="pWhatsApp" target="_blank" style="margin-bottom: 24px;">
                     <i class="ph ph-whatsapp-logo"></i> Consultar por WhatsApp
                 </a>
 
-                <div class="product-meta">
-                    <strong>Categorías:</strong> Accesorios, Home Décor, La Double J<br>
-                    <strong>Envío:</strong> Gratis en pedidos +$150 USD<br>
-                    <strong>Devoluciones:</strong> 15 días para cambios
-                </div>
+                <div class="product-meta" id="pMeta"></div>
             </div>
         </div>
     </div>
@@ -151,52 +106,7 @@
                 <div class="section-label">También te puede gustar</div>
                 <h2>Productos <em>Relacionados</em></h2>
             </div>
-            <div class="products-grid">
-                <a href="producto.html" class="product-card">
-                    <div class="product-img">
-                        <img src="https://letavole.com/wp-content/uploads/2025/12/115374.jpg" alt="Parrotstem Trinket Tray Green">
-                        <div class="product-quick">Vista Rápida</div>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-brand">Ichendorf</div>
-                        <h3>Parrotstem Trinket Tray Green</h3>
-                        <div class="product-price">US$318.00</div>
-                    </div>
-                </a>
-                <a href="producto.html" class="product-card">
-                    <div class="product-img">
-                        <img src="https://letavole.com/wp-content/uploads/2025/12/115373-0.jpg" alt="Leafbug Trinket Tray Light Blue">
-                        <div class="product-quick">Vista Rápida</div>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-brand">Ichendorf</div>
-                        <h3>Leafbug Trinket Tray Light Blue</h3>
-                        <div class="product-price">US$318.00</div>
-                    </div>
-                </a>
-                <a href="producto.html" class="product-card">
-                    <div class="product-img">
-                        <img src="https://letavole.com/wp-content/uploads/2025/12/115372.jpg" alt="Leafflyer Trinket Tray Saffron">
-                        <div class="product-quick">Vista Rápida</div>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-brand">Ichendorf</div>
-                        <h3>Leafflyer Trinket Tray Saffron</h3>
-                        <div class="product-price">US$401.00</div>
-                    </div>
-                </a>
-                <a href="producto.html" class="product-card">
-                    <div class="product-img">
-                        <img src="https://letavole.com/wp-content/uploads/2025/12/115358-02.jpg" alt="Decorative Plate">
-                        <div class="product-quick">Vista Rápida</div>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-brand">La Double J</div>
-                        <h3>Decorative Plate</h3>
-                        <div class="product-price">US$347.00</div>
-                    </div>
-                </a>
-            </div>
+            <div class="products-grid" id="relatedGrid"></div>
         </div>
     </section>
 
@@ -206,33 +116,11 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <span class="nav-logo">Le <em>Tavole</em></span>
-                    <p>El Arte de Servir. Vajillas de lujo, cristalería, cubertería y decoración del hogar. Santo Domingo, República Dominicana.</p>
+                    <p>El Arte de Servir. Santo Domingo, República Dominicana.</p>
                 </div>
-                <div>
-                    <h4>Tienda</h4>
-                    <ul>
-                        <li><a href="#">Vajillas</a></li>
-                        <li><a href="#">Cristalería</a></li>
-                        <li><a href="#">Cubertería</a></li>
-                        <li><a href="#">Home Décor</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Servicios</h4>
-                    <ul>
-                        <li><a href="#">Listas de Regalos</a></li>
-                        <li><a href="#">Envíos</a></li>
-                        <li><a href="#">Devoluciones</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Contacto</h4>
-                    <ul>
-                        <li><a href="tel:+18095655727">(809) 565-5727</a></li>
-                        <li><a href="mailto:[email protected]">[email protected]</a></li>
-                        <li><a href="#">Piantini, Santo Domingo</a></li>
-                    </ul>
-                </div>
+                <div><h4>Tienda</h4><ul><li><a href="tienda.html">Vajillas</a></li><li><a href="tienda.html">Cristalería</a></li><li><a href="tienda.html">Cubertería</a></li><li><a href="tienda.html">Home Décor</a></li></ul></div>
+                <div><h4>Servicios</h4><ul><li><a href="#">Listas de Regalos</a></li><li><a href="#">Envíos</a></li><li><a href="#">Devoluciones</a></li></ul></div>
+                <div><h4>Contacto</h4><ul><li><a href="tel:+18095655727">(809) 565-5727</a></li><li><a href="mailto:[email protected]">[email protected]</a></li><li><a href="contacto.html">Piantini, Santo Domingo</a></li></ul></div>
             </div>
             <div class="footer-bottom">
                 <span>&copy; 2026 Le Tavole. Todos los derechos reservados.</span>
@@ -242,6 +130,9 @@
     </footer>
 
     <a href="https://wa.me/18099181810" class="whatsapp-float" target="_blank"><i class="ph ph-whatsapp-logo"></i></a>
+
+    <!-- PRODUCT DATABASE -->
+    <script src="products.js"></script>
 
     <script>
         // Nav
@@ -253,6 +144,107 @@
             document.querySelector('#navToggle i').className = bar.classList.contains('open') ? 'ph ph-x' : 'ph ph-list';
         });
 
+        // Get product ID from URL
+        const params = new URLSearchParams(window.location.search);
+        const productId = params.get('id') || 'leaftrail-incense'; // default fallback
+
+        const product = getProduct(productId);
+
+        if (product) {
+            renderProduct(product);
+        } else {
+            // Product not found — show first product as fallback
+            const fallback = getAllProducts()[0];
+            if (fallback) renderProduct(fallback);
+        }
+
+        function renderProduct(p) {
+            // Title
+            document.title = `${p.name} — ${p.brand} | Le Tavole`;
+            document.querySelector('meta[name="description"]').content = `${p.name} de ${p.brand}. ${p.material || ''}. ${formatPrice(p.price)}. Le Tavole, Santo Domingo.`;
+
+            // Breadcrumb
+            document.getElementById('breadcrumbBrand').innerHTML = `<a href="tienda.html">${p.brand}</a>`;
+            document.getElementById('breadcrumbName').textContent = p.name;
+
+            // Main image
+            const mainImg = document.getElementById('mainImg');
+            mainImg.src = p.images[0];
+            mainImg.alt = p.name;
+
+            // Thumbnails
+            const thumbsEl = document.getElementById('thumbs');
+            if (p.images.length > 1) {
+                thumbsEl.innerHTML = p.images.map((img, i) =>
+                    `<img src="${img}" alt="Vista ${i+1}" class="${i === 0 ? 'active' : ''}" onclick="changeImg(this)">`
+                ).join('');
+            } else {
+                thumbsEl.style.display = 'none';
+            }
+
+            // Info
+            document.getElementById('pBrand').textContent = p.brand;
+            document.getElementById('pName').textContent = p.name;
+            document.getElementById('pPrice').textContent = formatPrice(p.price);
+
+            // Stock
+            const stockEl = document.getElementById('pStock');
+            const stockText = document.getElementById('pStockText');
+            if (p.status === 'in-stock') {
+                stockEl.className = 'stock-status in-stock';
+                stockText.textContent = 'En stock';
+            } else {
+                stockEl.className = 'stock-status out-of-stock';
+                stockText.textContent = 'Agotado';
+                document.getElementById('pActions').style.display = 'none';
+            }
+
+            // Description
+            document.getElementById('pDesc').textContent = p.description;
+
+            // Specs
+            const specs = [];
+            if (p.material) specs.push(['Material', p.material]);
+            if (p.origin) specs.push(['Origen', p.origin]);
+            if (p.dimensions) specs.push(['Dimensiones', p.dimensions]);
+            if (p.collection) specs.push(['Colección', p.collection]);
+            if (p.care) specs.push(['Cuidado', p.care]);
+            specs.push(['SKU', p.sku]);
+
+            document.getElementById('pSpecs').innerHTML = specs.map(([k, v]) =>
+                `<dt>${k}</dt><dd>${v}</dd>`
+            ).join('');
+
+            // WhatsApp
+            const waMsg = encodeURIComponent(`Hola, me interesa el ${p.name} (${formatPrice(p.price)})`);
+            document.getElementById('pWhatsApp').href = `https://wa.me/18099181810?text=${waMsg}`;
+
+            // Meta
+            document.getElementById('pMeta').innerHTML = `
+                <strong>Categoría:</strong> ${p.category}, ${p.brand}<br>
+                <strong>Envío:</strong> Gratis en pedidos +$150 USD<br>
+                <strong>Devoluciones:</strong> 15 días para cambios
+            `;
+
+            // Related products
+            const related = getRelatedProducts(p);
+            const relatedGrid = document.getElementById('relatedGrid');
+            relatedGrid.innerHTML = related.map(r => `
+                <a href="producto.html?id=${r.id}" class="product-card">
+                    <div class="product-img">
+                        <img src="${r.images[0]}" alt="${r.name}" loading="lazy">
+                        ${r.badge ? `<div class="product-badge">${r.badge}</div>` : ''}
+                        <div class="product-quick">Vista Rápida</div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">${r.brand}</div>
+                        <h3>${r.name}</h3>
+                        <div class="product-price">${formatPrice(r.price)}</div>
+                    </div>
+                </a>
+            `).join('');
+        }
+
         // Gallery
         function changeImg(thumb) {
             document.getElementById('mainImg').src = thumb.src;
@@ -263,14 +255,12 @@
         // Quantity
         function changeQty(delta) {
             const input = document.getElementById('qty');
-            const newVal = Math.max(1, parseInt(input.value) + delta);
-            input.value = newVal;
+            input.value = Math.max(1, parseInt(input.value) + delta);
         }
 
         // Add to cart
         function addToCart() {
-            const qty = document.getElementById('qty').value;
-            const btn = event.target.closest('.btn');
+            const btn = document.getElementById('addToCartBtn');
             btn.innerHTML = '<i class="ph ph-check"></i> Añadido al Carrito';
             btn.style.background = '#4A8B5C';
             setTimeout(() => {
