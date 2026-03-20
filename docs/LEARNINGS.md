@@ -124,6 +124,53 @@ This document evolves. Every client teaches something new. I update it after eac
 
 ---
 
+## Research #1: Successful Backoffice Apps (Stripe, Shopify, Linear, Vercel, Notion)
+
+This is cross-project research rather than one client. It matters because we are not only building websites anymore. We are building software behind websites too.
+
+### What Repeats In Strong Apps
+1. **One source of truth, many views.** Notion, Shopify, and Linear all show the same records in different ways instead of duplicating data to support each workflow.
+
+2. **Overview first, detail second.** Stripe, Shopify, and Vercel separate attention surfaces from deep editing screens. Good apps show what needs action first, then give a focused detail page to act on it.
+
+3. **Search is core infrastructure.** Strong tools treat search as a main navigation system, not a nice extra. Once records grow, nav-only systems break down.
+
+4. **Statuses need behavior behind them.** Shopify product states and Linear SLA states work because each label has operational meaning. A color badge without defined behavior is not enough.
+
+5. **Editing works best in guided sections.** Shopify's product editor is strong because it splits editing into meaningful chunks like media, inventory, pricing, publishing, and metadata instead of one endless form.
+
+6. **Permissions are part of product design.** Stripe and Notion both show that role boundaries shape how safe and usable the system feels. Access design is not cleanup work.
+
+7. **Previews and logs build trust.** Vercel and Stripe both reduce anxiety by showing what changed, what failed, and where to inspect the result.
+
+### What I Learned For Our Builds
+1. **Admin quality needs the same design attention as the public site.** A premium storefront plus a weak dashboard still feels like an unfinished product.
+
+2. **Backend and display architecture have to be designed together.** The data model should support multiple surfaces, and the interface should reflect that model clearly.
+
+3. **Homepage placement should be a first-class field, not custom code.** If a record can appear in more than one place, the admin needs explicit placement controls.
+
+4. **Search/filtering should enter earlier in our process.** We should not wait until the dataset becomes painful before designing for findability.
+
+5. **Text fields need constraints.** Strong apps do not leave critical UI copy entirely unstructured. They add field purpose, limits, visibility rules, and preview context.
+
+6. **Preview, draft, and live states should be treated as separate realities.** This is especially important once a site becomes editable by staff instead of only by us.
+
+7. **Observability belongs in small apps too.** Even a lightweight CMS should tell the user whether an upload, publish, import, or save worked.
+
+### What We Should Reuse Next
+1. **Stable record model**
+2. **Overview page + detail page split**
+3. **Structured edit sections**
+4. **Strong statuses**
+5. **Search or at least real filtering**
+6. **Uploads + previews**
+7. **Role-aware access once the app becomes production**
+
+See `docs/BACKOFFICE-APP-RESEARCH.md` and `backoffice/DESIGN-SPEC.md` for the reusable system rules behind these findings.
+
+---
+
 ## Universal Learnings (Apply to Every Client)
 
 ### Design Rules That Always Work
@@ -144,6 +191,17 @@ This document evolves. Every client teaches something new. I update it after eac
 6. **Business hours** visible somewhere
 7. **Meta descriptions** on every page (SEO)
 8. **Mobile responsive** (test at 375px, 768px, 1024px)
+
+### Features Every Operational App Needs
+1. **Clear statuses** with behavior behind them
+2. **Search or filtering** once the data can grow
+3. **Overview screen** for attention and priorities
+4. **Detail pages** for focused editing
+5. **Structured forms** grouped by user intent
+6. **Upload support** where images or documents matter
+7. **Preview of result** when content affects a public page
+8. **Permissions model** appropriate to risk level
+9. **Action feedback** for saves, imports, publishes, and failures
 
 ### Testing Checklist (Playwright)
 Run these for EVERY client site before delivery:
@@ -216,19 +274,24 @@ clients/<name>/
 4. **Mega menu dropdowns** — for sites with many categories
 5. **Input label float animation** — label moves up on focus
 6. **Image hover swap** — show alternate product angle on hover
+7. **Search-first admin patterns** — global search, recent items, saved filters where the data model justifies it
+8. **Draft/live publishing model** — make editable websites feel safer and more production-ready
+9. **Role-aware admin routing** — viewer/editor/admin permissions instead of one flat admin surface
 
 ### Medium Priority
-7. **Cookie consent banner** — required for EU clients (GDPR)
-8. **Newsletter popup** — elegant, "exclusive access" language, 10% off incentive
-9. **Skeleton loading states** — gray placeholders while images load
-10. **Product image zoom** — click/hover to see detail
-11. **"Complete the Look" section** — cross-sell on product pages
+10. **Cookie consent banner** — required for EU clients (GDPR)
+11. **Newsletter popup** — elegant, "exclusive access" language, 10% off incentive
+12. **Skeleton loading states** — gray placeholders while images load
+13. **Product image zoom** — click/hover to see detail
+14. **"Complete the Look" section** — cross-sell on product pages
+15. **Audit/event feed for admin actions** — especially for uploads, imports, and publishing
 
 ### Nice to Have
-12. **Dark mode toggle**
-13. **3D/AR product views** (94% conversion lift per research)
-14. **Tiered loyalty program**
-15. **Virtual consultation booking**
+16. **Dark mode toggle**
+17. **3D/AR product views** (94% conversion lift per research)
+18. **Tiered loyalty program**
+19. **Virtual consultation booking**
+20. **Keyboard-first admin shortcuts** for power users
 
 ## Key Insight from Luxury Research
 > "Spacing is the #1 signal of luxury. Double your margins. Then double them again."
@@ -258,4 +321,4 @@ See `docs/ADMIN-PANEL-GUIDE.md` and `docs/PROGRESSION.md` for full details.
 
 ---
 
-*Last updated: March 20, 2026 — after Le Tavole, Mori Matcha, Floristería Calero, admin panel research + Tapeo/Qargo analysis*
+*Last updated: March 20, 2026 — after Le Tavole, Mori Matcha, Floristería Calero, admin panel research, Tapeo/Qargo analysis, and backoffice app research*

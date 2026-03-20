@@ -16,6 +16,9 @@ Before starting a new client build, read in this order:
 4. The most similar design-spec or experiment folder
    - Example: `matcha/DESIGN-SPEC.md`
 5. The closest existing client folder in `clients/`
+6. If the project includes admin, CMS, dashboard, or internal operations work:
+   - `docs/BACKOFFICE-APP-RESEARCH.md`
+   - `backoffice/DESIGN-SPEC.md`
 
 ### Why this order
 - The brief tells you what this business is
@@ -42,12 +45,14 @@ Every serious client build should create or update all relevant artifacts below.
 - `docs/QA-REPORT-<CLIENT-NAME>.md` when testing is actually run
 - `docs/LEARNINGS.md` updated with client-specific lessons
 - `INDUSTRY-PLAYBOOK.md` updated only if the lesson generalizes beyond one client
+- `backoffice/DESIGN-SPEC.md` consulted or updated when the project includes admin, CMS, dashboard, or staff workflows
 
 ### Optional artifacts
 - `products.js` or structured local data file
 - research doc for niche market patterns
 - deployment notes if the site has unusual constraints
 - admin/backoffice prototype notes when the business needs editable products or services
+- research doc for successful product patterns in comparable apps
 
 ---
 
@@ -99,6 +104,7 @@ Examples of what belongs there:
 - specialty retail customers buy by use case
 - small physical stores benefit from visit/tasting CTAs
 - certain industries need product guidance before checkout
+- successful admin apps separate overview, search, and detail editing clearly
 
 Keep client-specific tone, visual nuance, and one-off brand ideas in a dedicated design-spec doc instead.
 
@@ -121,6 +127,11 @@ When a new request comes in, match it to the closest prior system memory:
 - read `florist/DESIGN-SPEC.md`
 - read `florist/THOUGHT-PROCESS.md`
 - read Floristería Calero concept files
+
+### If the project includes admin, CMS, backoffice, or internal tooling
+- read `docs/BACKOFFICE-APP-RESEARCH.md`
+- read `backoffice/DESIGN-SPEC.md`
+- read the closest existing client with an operational layer
 
 ### If the client is unclear
 - start with `INDUSTRY-PLAYBOOK.md`
@@ -150,5 +161,6 @@ At the time of writing, the repo has these reference points:
 - Le Tavole = luxury home-goods e-commerce
 - Mori Matcha = curated specialty retail with a physical-first conversion path
 - Floristería Calero concept = occasion-driven local florist / gifting retail
+- Backoffice memory = reusable admin, CMS, dashboard, and operational app rules
 
 Future projects should add to this library instead of replacing it.

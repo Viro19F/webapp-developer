@@ -417,6 +417,26 @@ Homepage, Product Catalog, Product Detail pages, Cart, Checkout (3 steps max), A
 - Separate content areas clearly: products, homepage, settings/access
 - Add previews and guidance so non-technical users know how their edits will land
 - Lightweight front-end gates are acceptable for concepts, but production apps need real authentication
+- Use one stable record model and let the interface expose multiple views on it when tasks differ
+- Separate overview pages from detail-edit pages
+- Treat statuses as operational logic, not decoration
+- Add search or at least real filtering once records can grow
+- Group forms by user intent: basic info, media, visibility, placement, metadata, logs
+- If the app publishes to a public site, make draft/live state explicit
+- Show action feedback for saves, imports, uploads, and publishing
+- Keep role boundaries clear: viewer, editor, admin at minimum
+
+### Backoffice / admin / dashboard rules
+- Successful apps are good because they reduce operational friction, not because they look enterprise
+- Search, filters, sorting, grouping, and visible-field controls matter more than extra decorative widgets
+- A dashboard should answer "what needs attention?" before it tries to expose every setting
+- A detail page should answer "what is this record and what can I change?"
+- If content can appear in different places, placement needs to be a real field in the system
+- If the app accepts text that affects layout, add guardrails: helper copy, limits, and preview context
+- Media upload should be native whenever imagery is central to the business
+- Observability should exist inside the app: recent activity, failed actions, publish status, sync status
+- Integrations should preserve source context rather than forcing users to retype outside information
+- Do not copy Stripe or Notion blindly. Copy the clarity of their models and workflows.
 
 ### What NOT to do (any site)
 - Auto-playing audio/video with sound
