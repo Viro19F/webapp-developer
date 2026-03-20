@@ -361,6 +361,31 @@ See `docs/COMPLIANCE-LAUNCH-RESEARCH.md` and `compliance/LAUNCH-COMPLIANCE-SPEC.
 
 ---
 
+## Research #9: Current Trend Signals By Area
+
+This research matters because not everything in the repo should be timeless. Some decisions should respond to what is changing right now.
+
+### What Repeats In Current Trend Signals
+1. **Commerce is moving into AI conversations.** Product discovery is spreading beyond traditional website browsing.
+
+2. **Observability, analytics, and AI-assisted development are converging.** Modern platforms increasingly connect code, runtime, performance, and telemetry.
+
+3. **Discoverability is no longer only classic SEO.** AI crawlers are now a meaningful part of how the web is processed.
+
+4. **Localization and multi-market work are becoming more structural.** Platforms and search guidance keep reinforcing explicit locale and market architecture.
+
+5. **EU-facing launches carry stronger accessibility and tracking pressure than before.**
+
+### What I Learned For Our Builds
+1. **We should distinguish evergreen rules from trend-aware decisions.**
+2. **Structured data and clean content models are becoming even more valuable because both humans and AI systems consume them.**
+3. **Measurement and observability should be treated as product infrastructure, not just reporting.**
+4. **We should be careful not to chase trend theatre.**
+
+See `trends/TRENDS-BY-AREA-2026.md`.
+
+---
+
 ## Universal Learnings (Apply to Every Client)
 
 ### Design Rules That Always Work
@@ -422,6 +447,13 @@ See `docs/COMPLIANCE-LAUNCH-RESEARCH.md` and `compliance/LAUNCH-COMPLIANCE-SPEC.
 3. **Search Console or equivalent search visibility review**
 4. **Performance monitoring beyond local tests**
 5. **Analytics choices that match privacy posture**
+
+### Trend-Aware Reminders
+1. **Not every trend deserves implementation**
+2. **AI-facing discoverability is becoming more relevant**
+3. **Observability is moving into the default stack**
+4. **Multi-market structure matters more than casual translation**
+5. **EU accessibility pressure is materially higher now than it was pre-2025**
 
 ### Testing Checklist (Playwright)
 Run these for EVERY client site before delivery:
@@ -503,27 +535,30 @@ clients/<name>/
 13. **Preview-first CMS workflows** — drafts, preview links, publish logs, and safer editorial systems
 14. **Measurement planning in the build phase** — events, key events, and performance signals before launch
 15. **Localization architecture templates** — URLs, hreflang, locale formatting, and fallback logic
+16. **Trend refresh cadence** — keep time-sensitive memory updated instead of letting it fossilize
 
 ### Medium Priority
-16. **Cookie consent banner** — required for EU clients (GDPR)
-17. **Newsletter popup** — elegant, "exclusive access" language, 10% off incentive
-18. **Skeleton loading states** — gray placeholders while images load
-19. **Product image zoom** — click/hover to see detail
-20. **"Complete the Look" section** — cross-sell on product pages
-21. **Audit/event feed for admin actions** — especially for uploads, imports, and publishing
-22. **Default launch checklist** — DNS, HTTPS, preview, forms, analytics, metadata
-23. **Dedicated landing-page templates for ads and outreach campaigns**
-24. **Compliance-aware launch checklist** — cookies, accessibility, privacy pages, and tracking review
+17. **Cookie consent banner** — required for EU clients (GDPR)
+18. **Newsletter popup** — elegant, "exclusive access" language, 10% off incentive
+19. **Skeleton loading states** — gray placeholders while images load
+20. **Product image zoom** — click/hover to see detail
+21. **"Complete the Look" section** — cross-sell on product pages
+22. **Audit/event feed for admin actions** — especially for uploads, imports, and publishing
+23. **Default launch checklist** — DNS, HTTPS, preview, forms, analytics, metadata
+24. **Dedicated landing-page templates for ads and outreach campaigns**
+25. **Compliance-aware launch checklist** — cookies, accessibility, privacy pages, and tracking review
+26. **AI-discoverability review** — structured content and machine-readable product/site surfaces
 
 ### Nice to Have
-25. **Dark mode toggle**
-26. **3D/AR product views** (94% conversion lift per research)
-27. **Tiered loyalty program**
-28. **Virtual consultation booking**
-29. **Keyboard-first admin shortcuts** for power users
-30. **Reusable outreach + proposal pack** for local business pitches
-31. **Durable media storage templates** for operational websites
-32. **Localized component libraries** for multilingual rollouts
+27. **Dark mode toggle**
+28. **3D/AR product views** (94% conversion lift per research)
+29. **Tiered loyalty program**
+30. **Virtual consultation booking**
+31. **Keyboard-first admin shortcuts** for power users
+32. **Reusable outreach + proposal pack** for local business pitches
+33. **Durable media storage templates** for operational websites
+34. **Localized component libraries** for multilingual rollouts
+35. **Trend dashboard or refresh note** inside the repo
 
 ## Key Insight from Luxury Research
 > "Spacing is the #1 signal of luxury. Double your margins. Then double them again."
@@ -553,4 +588,4 @@ See `docs/ADMIN-PANEL-GUIDE.md` and `docs/PROGRESSION.md` for full details.
 
 ---
 
-*Last updated: March 21, 2026 — after Le Tavole, Mori Matcha, Floristería Calero, admin panel research, Tapeo/Qargo analysis, backoffice app research, website systems research, ecommerce conversion research, lead-gen research, CMS/backend architecture research, analytics research, localization research, and compliance launch research*
+*Last updated: March 21, 2026 — after Le Tavole, Mori Matcha, Floristería Calero, admin panel research, Tapeo/Qargo analysis, backoffice app research, website systems research, ecommerce conversion research, lead-gen research, CMS/backend architecture research, analytics research, localization research, compliance launch research, and trend research by area*

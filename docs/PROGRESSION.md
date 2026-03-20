@@ -169,36 +169,51 @@ This document tracks the evolution of my capabilities as a web development partn
 - EU-facing launches should think deliberately about cookies, tracking, accessibility, and when legal review is still needed
 - The AI can now distinguish much more clearly between design decisions, operational decisions, and launch-risk decisions
 
+## Commit 13: Trend Intelligence By Area (current)
+**What I studied:**
+- Shopify Winter '26 and Summer '25 platform direction
+- Vercel AI Cloud, AI crawler, analytics, speed, and observability direction
+- Google localization/search guidance
+- European accessibility and cookie/compliance direction for EU-facing launches
+
+**What I now know beyond the evergreen playbooks:**
+- AI shopping surfaces are becoming a real commerce channel
+- AI crawler visibility is now part of discoverability thinking
+- integrated telemetry is increasingly part of the default web stack
+- localization and multi-market architecture are moving toward more deliberate systems
+- trend-aware design should influence architecture, but it should not replace fundamentals
+
 ---
 
 ## Capability Matrix
 
-| Capability | C1 | C2 | C3 | C4 | C5 | C6 | C7 | C8 | C9 | C10 | C11 | C12 |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Static HTML pages | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| Real scraped content | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| Multi-page sites | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| Shared CSS system | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| Automated testing | No | No | 53 | 53 | 55 | 55 | 55 | 55+ | 55+ | 55+ | 55+ | 55+ |
-| SEO (Schema, OG) | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| Luxury design patterns | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| Dynamic product pages | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| Specialty retail UX | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| Local business concepts | No | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes |
-| Admin panel / CMS | No | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes |
-| Auth system knowledge | No | No | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes |
-| CRM/dashboard patterns | No | No | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes |
-| Backoffice architecture memory | No | No | No | No | No | No | No | No | Yes | Yes | Yes | Yes |
-| Deployment strategy | No | No | No | No | No | No | No | No | No | Yes | Yes | Yes |
-| Website sales process | No | No | No | No | No | No | No | No | No | Yes | Yes | Yes |
-| Ecommerce conversion systems | No | No | No | No | No | No | No | No | No | No | Yes | Yes |
-| Lead-gen conversion systems | No | No | No | No | No | No | No | No | No | No | Yes | Yes |
-| Production CMS architecture | No | No | No | No | No | No | No | No | No | No | Yes | Yes |
-| Analytics / measurement systems | No | No | No | No | No | No | No | No | No | No | No | Yes |
-| Localization strategy | No | No | No | No | No | No | No | No | No | No | No | Yes |
-| Compliance-aware launch planning | No | No | No | No | No | No | No | No | No | No | No | Yes |
+| Capability | C1 | C2 | C3 | C4 | C5 | C6 | C7 | C8 | C9 | C10 | C11 | C12 | C13 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Static HTML pages | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Real scraped content | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Multi-page sites | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Shared CSS system | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Automated testing | No | No | 53 | 53 | 55 | 55 | 55 | 55+ | 55+ | 55+ | 55+ | 55+ | 55+ |
+| SEO (Schema, OG) | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Luxury design patterns | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Dynamic product pages | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Specialty retail UX | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Local business concepts | No | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Admin panel / CMS | No | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Auth system knowledge | No | No | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes |
+| CRM/dashboard patterns | No | No | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes |
+| Backoffice architecture memory | No | No | No | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes |
+| Deployment strategy | No | No | No | No | No | No | No | No | No | Yes | Yes | Yes | Yes |
+| Website sales process | No | No | No | No | No | No | No | No | No | Yes | Yes | Yes | Yes |
+| Ecommerce conversion systems | No | No | No | No | No | No | No | No | No | No | Yes | Yes | Yes |
+| Lead-gen conversion systems | No | No | No | No | No | No | No | No | No | No | Yes | Yes | Yes |
+| Production CMS architecture | No | No | No | No | No | No | No | No | No | No | Yes | Yes | Yes |
+| Analytics / measurement systems | No | No | No | No | No | No | No | No | No | No | No | Yes | Yes |
+| Localization strategy | No | No | No | No | No | No | No | No | No | No | No | Yes | Yes |
+| Compliance-aware launch planning | No | No | No | No | No | No | No | No | No | No | No | Yes | Yes |
+| Trend intelligence by area | No | No | No | No | No | No | No | No | No | No | No | No | Yes |
 
-*C1-C12 = Commits 1 through 12*
+*C1-C13 = Commits 1 through 13*
 
 ---
 
@@ -227,6 +242,8 @@ This document tracks the evolution of my capabilities as a web development partn
 **Localization:** Can reason about multilingual versus multi-regional architecture, hreflang, locale URLs, and locale-aware formatting.
 
 **Compliance:** Can flag cookie/tracking, accessibility, and EU-facing launch concerns earlier instead of treating them as last-minute surprises.
+
+**Trend intelligence:** Can separate evergreen best practices from current direction signals and use date-aware trend context without letting trend hype override fundamentals.
 
 ---
 

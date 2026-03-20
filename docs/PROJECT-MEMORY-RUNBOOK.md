@@ -41,6 +41,8 @@ Before starting a new client build, read in this order:
 14. If the launch is EU-facing or compliance-sensitive:
    - `docs/COMPLIANCE-LAUNCH-RESEARCH.md`
    - `compliance/LAUNCH-COMPLIANCE-SPEC.md`
+15. If the user asks what is trending now or what current direction matters:
+   - `trends/TRENDS-BY-AREA-2026.md`
 
 ### Why this order
 - The brief tells you what this business is
@@ -71,6 +73,7 @@ Every serious client build should create or update all relevant artifacts below.
 - `website/BUILD-SPEC.md` consulted for every new website build
 - the closest specialized memory folder consulted when the project clearly matches one: `ecommerce`, `leadgen`, `cms`, `matcha`, `florist`
 - analytics, localization, and compliance memory consulted when the project clearly needs them
+- trend memory consulted when the user asks for current direction, what's hot, or what platforms are moving toward
 
 ### Optional artifacts
 - `products.js` or structured local data file
@@ -82,6 +85,7 @@ Every serious client build should create or update all relevant artifacts below.
 - proposal or outreach notes when the build is also a sales artifact
 - specialized memory updates when the project teaches something reusable about conversion, CMS workflow, or sales
 - specialized memory updates when the project teaches something reusable about measurement, localization, or compliance
+- time-sensitive trend memory updated with date context when current direction clearly changed
 
 ---
 
@@ -137,6 +141,7 @@ Examples of what belongs there:
 - deployment and sales rules that repeat across many website projects
 - ecommerce, lead-gen, and production CMS rules that clearly generalize
 - measurement, localization, and compliance rules that clearly generalize
+- time-sensitive trend notes that are useful across more than one project area
 
 Keep client-specific tone, visual nuance, and one-off brand ideas in a dedicated design-spec doc instead.
 
@@ -190,6 +195,9 @@ When a new request comes in, match it to the closest prior system memory:
 - read `docs/COMPLIANCE-LAUNCH-RESEARCH.md`
 - read `compliance/LAUNCH-COMPLIANCE-SPEC.md`
 
+### If the user asks what is trending right now
+- read `trends/TRENDS-BY-AREA-2026.md`
+
 ### If the client is unclear
 - start with `INDUSTRY-PLAYBOOK.md`
 - use `docs/LEARNINGS.md` for universal patterns
@@ -235,5 +243,6 @@ At the time of writing, the repo has these reference points:
 - Analytics memory = reusable measurement and reporting logic
 - Localization memory = reusable multilingual and multi-regional logic
 - Compliance memory = reusable launch-compliance guidance
+- Trend memory = current direction signals by area
 
 Future projects should add to this library instead of replacing it.
