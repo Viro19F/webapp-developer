@@ -177,7 +177,8 @@
                 <span class="dot"></span>
                 Aceptando nuevos proyectos
             </div>
-            <h1>Diseñamos la web que tu negocio necesita</h1>
+            <h1>Tu negocio necesita<br><span id="rotatingText" style="color: #2563EB;"></span><span style="color: #2563EB; animation: blink 1s step-end infinite;">|</span></h1>
+            <style>@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }</style>
             <p>Sitios web profesionales, a medida, con contenido real de tu negocio. Entregados en días, no semanas.</p>
             <div class="hero-btns">
                 <a href="#contact" class="btn btn-black">
@@ -589,6 +590,40 @@
     <a href="https://wa.me/34XXXXXXXXX" class="wa-float" target="_blank"><i class="ph ph-whatsapp-logo"></i></a>
 
     <script>
+        // Rotating text
+        const phrases = [
+            'una web profesional.',
+            'presencia online real.',
+            'clientes desde Google.',
+            'diseño que impresiona.',
+            'resultados desde el día uno.',
+            'una carta digital moderna.',
+            'reservas por WhatsApp.',
+            'confianza al primer clic.',
+        ];
+        const rotEl = document.getElementById('rotatingText');
+        let phraseIdx = 0;
+        let charIdx = 0;
+        let deleting = false;
+        let pause = 0;
+
+        function typeLoop() {
+            const current = phrases[phraseIdx];
+            if (pause > 0) { pause--; requestAnimationFrame(() => setTimeout(typeLoop, 60)); return; }
+
+            if (!deleting) {
+                rotEl.textContent = current.slice(0, charIdx + 1);
+                charIdx++;
+                if (charIdx === current.length) { deleting = true; pause = 30; }
+            } else {
+                rotEl.textContent = current.slice(0, charIdx);
+                charIdx--;
+                if (charIdx === 0) { deleting = false; phraseIdx = (phraseIdx + 1) % phrases.length; }
+            }
+            requestAnimationFrame(() => setTimeout(typeLoop, deleting ? 30 : 70));
+        }
+        typeLoop();
+
         // Nav
         const nav = document.getElementById('nav');
         window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 10));
