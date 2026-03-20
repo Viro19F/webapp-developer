@@ -95,17 +95,39 @@ clients/<name>/
 
 ---
 
-## What to Improve Next
-1. **Slide-out cart** — mini cart that opens from right side without page reload
-2. **Mega menu dropdowns** — for sites with many categories (like Le Tavole)
-3. **Predictive search** — search bar with live results as you type
-4. **Image lazy loading** — `loading="lazy"` on all images below fold
-5. **Skeleton loading states** — gray placeholders while images load
-6. **Cookie consent banner** — required for EU clients
-7. **Dark mode toggle** — nice-to-have for modern sites
-8. **Micro-interactions** — button hover states, card lifts, smooth transitions
-9. **Schema markup** — JSON-LD for local business, products, reviews
-10. **OG meta tags** — so links look good when shared on social media
+## What to Improve Next (Priority Order)
+
+### Already Implemented (Le Tavole v2)
+- [x] Schema.org markup (LocalBusiness + Product JSON-LD)
+- [x] Open Graph meta tags
+- [x] Playwright automated testing (53 tests)
+- [x] Brand filter with live JavaScript
+
+### High Priority (Next Client)
+1. **Slide-out cart drawer** — opens from right with background blur (luxury standard)
+2. **Predictive search** — live results as you type with product images
+3. **Image lazy loading** — `loading="lazy"` on all images below fold
+4. **Mega menu dropdowns** — for sites with many categories
+5. **Input label float animation** — label moves up on focus
+6. **Image hover swap** — show alternate product angle on hover
+
+### Medium Priority
+7. **Cookie consent banner** — required for EU clients (GDPR)
+8. **Newsletter popup** — elegant, "exclusive access" language, 10% off incentive
+9. **Skeleton loading states** — gray placeholders while images load
+10. **Product image zoom** — click/hover to see detail
+11. **"Complete the Look" section** — cross-sell on product pages
+
+### Nice to Have
+12. **Dark mode toggle**
+13. **3D/AR product views** (94% conversion lift per research)
+14. **Tiered loyalty program**
+15. **Virtual consultation booking**
+
+## Key Insight from Luxury Research
+> "Spacing is the #1 signal of luxury. Double your margins. Then double them again."
+
+See `docs/LUXURY-ECOMMERCE-RESEARCH.md` for full analysis of Christofle, Juliska, Net-a-Porter patterns.
 
 ---
 
