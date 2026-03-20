@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{BUSINESS_NAME}} — {{TAGLINE}}</title>
+    <meta name="description" content="{{META_DESCRIPTION}}">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <style>
+        /* ========== CSS VARIABLES — EDIT THESE PER CLIENT ========== */
+        :root {
+            /* Brand colors */
+            --primary: #2563EB;        /* Main brand color */
+            --primary-dark: #1D4ED8;   /* Hover state */
+            --primary-light: #DBEAFE;  /* Light tint for backgrounds */
+            --accent: #F59E0B;         /* Secondary/accent color */
+
+            /* Neutrals */
+            --bg: #FFFFFF;
+            --bg-alt: #F8FAFC;
+            --surface: #FFFFFF;
+            --text: #1E293B;
+            --text-muted: #64748B;
+            --border: #E2E8F0;
+            --border-light: #F1F5F9;
+
+            /* Typography */
+            --font-display: 'Playfair Display', Georgia, serif;
+            --font-body: 'Inter', -apple-system, sans-serif;
+
+            /* Spacing & sizing */
+            --max-width: 1200px;
+            --radius: 12px;
+            --radius-sm: 8px;
+            --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+            --shadow-lg: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        /* ========== RESET & BASE ========== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img { max-width: 100%; height: auto; display: block; }
+        a { color: var(--primary); text-decoration: none; }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ========== NAVIGATION ========== */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-light);
+            transition: box-shadow 0.3s;
+        }
+
+        .nav.scrolled { box-shadow: var(--shadow); }
+
+        .nav-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+
+        .nav-logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .nav-logo span { color: var(--primary); }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover { color: var(--text); }
+
+        .nav-cta {
+            background: var(--primary);
+            color: #fff !important;
+            padding: 10px 24px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+
+        .nav-cta:hover { background: var(--primary-dark); }
+
+        /* Mobile menu */
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text);
+        }
+
+        /* ========== HERO ========== */
+        .hero {
+            padding: 160px 0 100px;
+            background: linear-gradient(135deg, var(--bg) 0%, var(--primary-light) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: 3.5rem;
+            line-height: 1.15;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--text);
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-bottom: 36px;
+            max-width: 500px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #fff;
+        }
+
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-1px); box-shadow: var(--shadow-lg); }
+
+        .btn-secondary {
+            background: var(--surface);
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover { border-color: var(--primary); color: var(--primary); }
+
+        .hero-image {
+            width: 100%;
+            height: 420px;
+            background: var(--border-light);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* ========== SECTION SHARED ========== */
+        section { padding: 100px 0; }
+
+        .section-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 60px;
+        }
+
+        .section-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .section-header h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        /* ========== SERVICES ========== */
+        .services { background: var(--bg-alt); }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .service-card {
+            background: var(--surface);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius);
+            padding: 36px 28px;
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary);
+        }
+
+        .service-icon {
+            width: 52px;
+            height: 52px;
+            background: var(--primary-light);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-size: 1.4rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        /* ========== ABOUT ========== */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 400px;
+            background: var(--border-light);
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-content h2 {
+            font-family: var(--font-display);
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .stats-row {
+            display: flex;
+            gap: 40px;
+            margin-top: 32px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
+        }
+
+        .stat-item strong {
+            display: block;
+            font-size: 2rem;
+            font-family: var(--font-display);
+            color: var(--primary);
+        }
+
+        .stat-item span {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* ========== TESTIMONIALS ========== */
+        .testimonials { background: var(--bg-alt); }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .testimonial-card {
+            background: var(--surface);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius);
+            padding: 32px;
+        }
+
+        .testimonial-stars {
+            color: var(--accent);
+            font-size: 1rem;
+            margin-bottom: 16px;
+        }
+
+        .testimonial-card blockquote {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--text);
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .testimonial-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+
+        .testimonial-author strong {
+            display: block;
+            font-size: 0.9rem;
+        }
+
+        .testimonial-author span {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* ========== CONTACT ========== */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+        }
+
+        .contact-info h2 {
+            font-family: var(--font-display);
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .contact-info > p {
+            color: var(--text-muted);
+            margin-bottom: 32px;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .contact-item-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--primary-light);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+        }
+
+        .contact-item strong {
+            display: block;
+            font-size: 0.9rem;
+        }
+
+        .contact-item span {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .contact-form {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 36px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            background: var(--surface);
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .form-group textarea { resize: vertical; min-height: 120px; }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 14px;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            border-radius: var(--radius-sm);
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .form-submit:hover { background: var(--primary-dark); }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--text);
+            color: rgba(255,255,255,0.7);
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand .nav-logo { color: #fff; margin-bottom: 16px; }
+        .footer-brand p { font-size: 0.9rem; line-height: 1.7; }
+
+        .footer h4 {
+            color: #fff;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .footer ul { list-style: none; }
+        .footer ul li { margin-bottom: 10px; }
+        .footer ul a {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.85rem;
+            transition: color 0.2s;
+        }
+        .footer ul a:hover { color: #fff; }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 16px;
+        }
+
+        .footer-social a {
+            color: rgba(255,255,255,0.5);
+            font-size: 1.2rem;
+            transition: color 0.2s;
+        }
+
+        .footer-social a:hover { color: #fff; }
+
+        /* ========== WHATSAPP FLOAT ========== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 56px;
+            height: 56px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.6rem;
+            box-shadow: 0 4px 12px rgba(37,211,102,0.3);
+            z-index: 99;
+            transition: transform 0.2s;
+        }
+
+        .whatsapp-float:hover { transform: scale(1.1); }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 968px) {
+            .hero-inner,
+            .about-grid,
+            .contact-grid { grid-template-columns: 1fr; }
+
+            .hero h1 { font-size: 2.5rem; }
+            .hero-image { height: 300px; }
+
+            .services-grid,
+            .testimonials-grid { grid-template-columns: 1fr; }
+
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+
+            .nav-links { display: none; }
+            .nav-toggle { display: block; }
+
+            /* Mobile menu open state */
+            .nav-links.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                right: 0;
+                background: #fff;
+                padding: 24px;
+                border-bottom: 1px solid var(--border);
+                box-shadow: var(--shadow);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 2rem; }
+            .hero-buttons { flex-direction: column; }
+            .stats-row { flex-direction: column; gap: 20px; }
+            .form-row { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ====== NAVIGATION ====== -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">{{BUSINESS_NAME_SHORT}}<span>.</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="nav-cta">Get in Touch</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ====== HERO ====== -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <i class="ph ph-star"></i>
+                    {{HERO_BADGE_TEXT}}
+                </div>
+                <h1>{{HERO_TITLE}}</h1>
+                <p>{{HERO_SUBTITLE}}</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        {{CTA_PRIMARY_TEXT}}
+                        <i class="ph ph-arrow-right"></i>
+                    </a>
+                    <a href="#services" class="btn btn-secondary">
+                        {{CTA_SECONDARY_TEXT}}
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- Replace src with client's hero image -->
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80" alt="{{BUSINESS_NAME}}">
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== SERVICES ====== -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">What We Offer</div>
+                <h2>Our Services</h2>
+                <p>{{SERVICES_SUBTITLE}}</p>
+            </div>
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="ph ph-star"></i></div>
+                    <h3>{{SERVICE_1_TITLE}}</h3>
+                    <p>{{SERVICE_1_DESC}}</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="ph ph-lightning"></i></div>
+                    <h3>{{SERVICE_2_TITLE}}</h3>
+                    <p>{{SERVICE_2_DESC}}</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="ph ph-heart"></i></div>
+                    <h3>{{SERVICE_3_TITLE}}</h3>
+                    <p>{{SERVICE_3_DESC}}</p>
+                </div>
+                <!-- Add more cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== ABOUT ====== -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&q=80" alt="About {{BUSINESS_NAME}}">
+                </div>
+                <div class="about-content">
+                    <div class="section-label">About Us</div>
+                    <h2>{{ABOUT_TITLE}}</h2>
+                    <p>{{ABOUT_P1}}</p>
+                    <p>{{ABOUT_P2}}</p>
+                    <div class="stats-row">
+                        <div class="stat-item">
+                            <strong>{{STAT_1_NUMBER}}</strong>
+                            <span>{{STAT_1_LABEL}}</span>
+                        </div>
+                        <div class="stat-item">
+                            <strong>{{STAT_2_NUMBER}}</strong>
+                            <span>{{STAT_2_LABEL}}</span>
+                        </div>
+                        <div class="stat-item">
+                            <strong>{{STAT_3_NUMBER}}</strong>
+                            <span>{{STAT_3_LABEL}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== TESTIMONIALS ====== -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Testimonials</div>
+                <h2>What Our Clients Say</h2>
+                <p>Real feedback from people who trust us.</p>
+            </div>
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <blockquote>"{{TESTIMONIAL_1_TEXT}}"</blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">{{TESTIMONIAL_1_INITIALS}}</div>
+                        <div>
+                            <strong>{{TESTIMONIAL_1_NAME}}</strong>
+                            <span>{{TESTIMONIAL_1_ROLE}}</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <blockquote>"{{TESTIMONIAL_2_TEXT}}"</blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">{{TESTIMONIAL_2_INITIALS}}</div>
+                        <div>
+                            <strong>{{TESTIMONIAL_2_NAME}}</strong>
+                            <span>{{TESTIMONIAL_2_ROLE}}</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <blockquote>"{{TESTIMONIAL_3_TEXT}}"</blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">{{TESTIMONIAL_3_INITIALS}}</div>
+                        <div>
+                            <strong>{{TESTIMONIAL_3_NAME}}</strong>
+                            <span>{{TESTIMONIAL_3_ROLE}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== CONTACT ====== -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="section-label">Get in Touch</div>
+                    <h2>Let's Work Together</h2>
+                    <p>{{CONTACT_SUBTITLE}}</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-item-icon"><i class="ph ph-map-pin"></i></div>
+                            <div>
+                                <strong>Address</strong>
+                                <span>{{ADDRESS}}</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon"><i class="ph ph-phone"></i></div>
+                            <div>
+                                <strong>Phone</strong>
+                                <span>{{PHONE}}</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon"><i class="ph ph-envelope"></i></div>
+                            <div>
+                                <strong>Email</strong>
+                                <span>{{EMAIL}}</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon"><i class="ph ph-clock"></i></div>
+                            <div>
+                                <strong>Hours</strong>
+                                <span>{{HOURS}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" name="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="tel" name="phone" placeholder="Your phone">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="email" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <select name="subject">
+                            <option value="">Select a topic...</option>
+                            <option>General Inquiry</option>
+                            <option>Request a Quote</option>
+                            <option>Book an Appointment</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea name="message" placeholder="How can we help you?" required></textarea>
+                    </div>
+                    <button type="submit" class="form-submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="nav-logo">{{BUSINESS_NAME_SHORT}}<span>.</span></div>
+                    <p>{{FOOTER_DESCRIPTION}}</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#testimonials">Reviews</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">{{SERVICE_1_TITLE}}</a></li>
+                        <li><a href="#">{{SERVICE_2_TITLE}}</a></li>
+                        <li><a href="#">{{SERVICE_3_TITLE}}</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:{{PHONE_RAW}}">{{PHONE}}</a></li>
+                        <li><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></li>
+                        <li><a href="#">{{ADDRESS_SHORT}}</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 {{BUSINESS_NAME}}. All rights reserved.</span>
+                <div class="footer-social">
+                    <a href="{{INSTAGRAM}}" target="_blank" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="{{FACEBOOK}}" target="_blank" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+                    <a href="{{LINKEDIN}}" target="_blank" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ====== WHATSAPP BUTTON ====== -->
+    <a href="https://wa.me/{{WHATSAPP_NUMBER}}?text={{WHATSAPP_MESSAGE}}" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="ph ph-whatsapp-logo"></i>
+    </a>
+
+    <!-- ====== SCRIPTS ====== -->
+    <script>
+        // Navbar scroll effect
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 20);
+        });
+
+        // Mobile menu toggle
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+            const icon = navToggle.querySelector('i');
+            icon.className = navLinks.classList.contains('open') ? 'ph ph-x' : 'ph ph-list';
+        });
+
+        // Close mobile menu on link click
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                navToggle.querySelector('i').className = 'ph ph-list';
+            });
+        });
+
+        // Contact form handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+
+            // Option 1: Send to backend API
+            // fetch('/api/contact', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify(data) });
+
+            // Option 2: mailto fallback
+            const subject = encodeURIComponent(data.subject || 'Website Inquiry');
+            const body = encodeURIComponent(`Name: ${data.name}\nPhone: ${data.phone}\nEmail: ${data.email}\n\n${data.message}`);
+            window.location.href = `mailto:{{EMAIL}}?subject=${subject}&body=${body}`;
+
+            // Show confirmation
+            this.innerHTML = '<p style="text-align:center;padding:40px;color:var(--primary);font-weight:600;">Message sent! We\'ll get back to you soon.</p>';
+        });
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.service-card, .testimonial-card, .about-content, .about-image').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s, transform 0.6s';
+            observer.observe(el);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,1546 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Tavole — El Arte de Servir: Elegancia y Distinción para tu Mesa</title>
+    <meta name="description" content="Le Tavole — Vajillas de lujo, cristalería, cubertería y decoración del hogar de las mejores marcas del mundo. Christofle, Juliska, Herend, Georg Jensen y más. Santo Domingo, RD.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <style>
+        :root {
+            --gold: #B8956A;
+            --gold-light: #D4B896;
+            --gold-pale: rgba(184,149,106,0.10);
+            --navy: #1A2A3A;
+            --navy-deep: #0F1C2B;
+            --bg: #FEFCF9;
+            --bg-alt: #F7F4F0;
+            --surface: #FFFFFF;
+            --text: #1A1A18;
+            --text-muted: #6B6560;
+            --text-light: rgba(26,26,24,0.45);
+            --border: #E8E3DC;
+            --border-light: #F0ECE6;
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Inter', -apple-system, sans-serif;
+            --max-width: 1280px;
+            --radius: 4px;
+            --shadow: 0 2px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 12px 40px rgba(0,0,0,0.08);
+            --transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img { max-width: 100%; height: auto; display: block; }
+        a { color: inherit; text-decoration: none; }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ========== ANNOUNCEMENT BAR ========== */
+        .announcement {
+            background: var(--navy-deep);
+            color: rgba(255,255,255,0.85);
+            text-align: center;
+            padding: 10px 24px;
+            font-size: 0.78rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .announcement strong { color: var(--gold-light); }
+
+        /* ========== NAVIGATION ========== */
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(254,252,249,0.97);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-light);
+            transition: box-shadow var(--transition);
+        }
+
+        .nav.scrolled { box-shadow: 0 1px 8px rgba(0,0,0,0.04); }
+
+        .nav-top {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--text);
+        }
+
+        .nav-logo em {
+            font-style: italic;
+            font-weight: 400;
+            color: var(--gold);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .nav-actions a {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            transition: color var(--transition);
+        }
+
+        .nav-actions a:hover { color: var(--gold); }
+
+        .nav-links-bar {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            list-style: none;
+            padding: 14px 0;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: color var(--transition);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--gold);
+            transition: width var(--transition);
+        }
+
+        .nav-links a:hover { color: var(--text); }
+        .nav-links a:hover::after { width: 100%; }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text);
+        }
+
+        /* ========== HERO ========== */
+        .hero {
+            position: relative;
+            height: 85vh;
+            min-height: 600px;
+            max-height: 900px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: url('https://images.unsplash.com/photo-1507914997211-56c683a2603e?w=1600&q=80') center/cover no-repeat;
+        }
+
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(15,28,43,0.75) 0%, rgba(15,28,43,0.3) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+            color: #fff;
+        }
+
+        .hero-label {
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gold-light);
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: 4.5rem;
+            font-weight: 400;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            max-width: 700px;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--gold-light);
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            font-weight: 300;
+            color: rgba(255,255,255,0.75);
+            max-width: 500px;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 32px;
+            font-family: var(--font-body);
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: all var(--transition);
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: #fff;
+        }
+
+        .btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+        .btn-outline {
+            background: transparent;
+            color: #fff;
+            border: 1px solid rgba(255,255,255,0.35);
+        }
+
+        .btn-outline:hover { border-color: var(--gold-light); color: var(--gold-light); }
+
+        /* ========== BRANDS MARQUEE ========== */
+        .brands-bar {
+            padding: 40px 0;
+            border-bottom: 1px solid var(--border-light);
+            overflow: hidden;
+        }
+
+        .brands-label {
+            text-align: center;
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--text-light);
+            margin-bottom: 24px;
+        }
+
+        .brands-track {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .brand-name {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--text-light);
+            white-space: nowrap;
+            transition: color var(--transition);
+        }
+
+        .brand-name:hover { color: var(--gold); }
+
+        /* ========== CATEGORIES ========== */
+        .categories { padding: 100px 0; }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+
+        .section-header h2 {
+            font-family: var(--font-display);
+            font-size: 2.8rem;
+            font-weight: 400;
+            color: var(--text);
+        }
+
+        .section-header h2 em {
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-top: 12px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cat-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .cat-card {
+            position: relative;
+            height: 420px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .cat-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .cat-card:hover img { transform: scale(1.05); }
+
+        .cat-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 60%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 28px;
+        }
+
+        .cat-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+
+        .cat-card span {
+            font-size: 0.75rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--gold-light);
+        }
+
+        /* ========== FEATURED PRODUCTS ========== */
+        .featured {
+            padding: 100px 0;
+            background: var(--bg-alt);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .product-card {
+            background: var(--surface);
+            border: 1px solid var(--border-light);
+            overflow: hidden;
+            transition: all var(--transition);
+        }
+
+        .product-card:hover {
+            box-shadow: var(--shadow-lg);
+            border-color: var(--border);
+        }
+
+        .product-img {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+            background: var(--bg-alt);
+        }
+
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-img img { transform: scale(1.04); }
+
+        .product-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: var(--navy-deep);
+            color: #fff;
+            font-size: 0.65rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 5px 12px;
+            font-weight: 600;
+        }
+
+        .product-quick {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 12px;
+            background: rgba(26,42,58,0.9);
+            color: #fff;
+            text-align: center;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 600;
+            transform: translateY(100%);
+            transition: transform var(--transition);
+            cursor: pointer;
+        }
+
+        .product-card:hover .product-quick { transform: translateY(0); }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-brand {
+            font-size: 0.68rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 6px;
+        }
+
+        .product-info h3 {
+            font-family: var(--font-display);
+            font-size: 1.15rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .product-price {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .product-price del {
+            color: var(--text-light);
+            font-weight: 400;
+            margin-left: 8px;
+            font-size: 0.85rem;
+        }
+
+        /* ========== EDITORIAL / ABOUT ========== */
+        .editorial {
+            padding: 120px 0;
+        }
+
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .editorial-img {
+            height: 580px;
+            overflow: hidden;
+        }
+
+        .editorial-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .editorial-content .section-label { text-align: left; }
+
+        .editorial-content h2 {
+            font-family: var(--font-display);
+            font-size: 2.8rem;
+            font-weight: 400;
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+
+        .editorial-content h2 em {
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        .editorial-content p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.9;
+            margin-bottom: 16px;
+        }
+
+        .editorial-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 40px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
+        }
+
+        .editorial-stat strong {
+            display: block;
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: var(--gold);
+        }
+
+        .editorial-stat span {
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        /* ========== GIFT REGISTRY ========== */
+        .registry {
+            padding: 100px 0;
+            background: var(--navy-deep);
+            color: #fff;
+            text-align: center;
+        }
+
+        .registry .section-label { color: var(--gold-light); }
+
+        .registry h2 {
+            font-family: var(--font-display);
+            font-size: 2.8rem;
+            font-weight: 400;
+            margin-bottom: 16px;
+        }
+
+        .registry h2 em {
+            font-style: italic;
+            color: var(--gold-light);
+        }
+
+        .registry > .container > p {
+            color: rgba(255,255,255,0.6);
+            max-width: 550px;
+            margin: 0 auto 48px;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .registry-features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-bottom: 48px;
+        }
+
+        .registry-feature {
+            padding: 36px 24px;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .registry-feature i {
+            font-size: 1.8rem;
+            color: var(--gold-light);
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .registry-feature h3 {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .registry-feature p {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.5);
+            line-height: 1.7;
+        }
+
+        .registry-btns {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-gold-outline {
+            background: transparent;
+            color: var(--gold-light);
+            border: 1px solid var(--gold);
+            padding: 14px 32px;
+            font-family: var(--font-body);
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all var(--transition);
+        }
+
+        .btn-gold-outline:hover { background: var(--gold); color: #fff; }
+
+        /* ========== TESTIMONIALS ========== */
+        .testimonials { padding: 100px 0; }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .testimonial-card {
+            border: 1px solid var(--border);
+            padding: 36px;
+        }
+
+        .testimonial-stars {
+            color: var(--gold);
+            font-size: 0.85rem;
+            margin-bottom: 16px;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-card blockquote {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-style: italic;
+            line-height: 1.7;
+            color: var(--text);
+            margin-bottom: 24px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .testimonial-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--gold-pale);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-weight: 600;
+            color: var(--gold);
+            font-size: 1rem;
+        }
+
+        .testimonial-author strong {
+            display: block;
+            font-size: 0.85rem;
+        }
+
+        .testimonial-author span {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        /* ========== INSTAGRAM ========== */
+        .instagram {
+            padding: 80px 0;
+            background: var(--bg-alt);
+        }
+
+        .instagram .section-header { margin-bottom: 40px; }
+
+        .insta-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 4px;
+        }
+
+        .insta-item {
+            position: relative;
+            aspect-ratio: 1;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .insta-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .insta-item:hover img { transform: scale(1.08); }
+
+        .insta-item::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(184,149,106,0);
+            transition: background var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .insta-item:hover::after { background: rgba(184,149,106,0.2); }
+
+        /* ========== CONTACT ========== */
+        .contact { padding: 100px 0; }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-info h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 16px;
+        }
+
+        .contact-info h2 em { font-style: italic; color: var(--gold); }
+
+        .contact-info > p {
+            color: var(--text-muted);
+            margin-bottom: 36px;
+            line-height: 1.8;
+        }
+
+        .contact-items {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .contact-icon {
+            width: 44px;
+            height: 44px;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .contact-item strong {
+            display: block;
+            font-size: 0.85rem;
+            margin-bottom: 2px;
+        }
+
+        .contact-item span {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .contact-social {
+            display: flex;
+            gap: 12px;
+            margin-top: 32px;
+        }
+
+        .contact-social a {
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            transition: all var(--transition);
+        }
+
+        .contact-social a:hover {
+            background: var(--gold);
+            color: #fff;
+            border-color: var(--gold);
+        }
+
+        .contact-form {
+            background: var(--bg-alt);
+            border: 1px solid var(--border-light);
+            padding: 40px;
+        }
+
+        .contact-form h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+
+        .form-group { margin-bottom: 20px; }
+
+        .form-group label {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            color: var(--text-muted);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 13px 16px;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            color: var(--text);
+            transition: border-color var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+
+        .form-group textarea { resize: vertical; min-height: 120px; }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 14px;
+            background: var(--gold);
+            color: #fff;
+            border: none;
+            font-family: var(--font-body);
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background var(--transition);
+        }
+
+        .form-submit:hover { background: var(--gold-light); }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--navy-deep);
+            color: rgba(255,255,255,0.6);
+            padding: 80px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-brand .nav-logo {
+            color: #fff;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .footer-brand p {
+            font-size: 0.85rem;
+            line-height: 1.8;
+        }
+
+        .footer h4 {
+            color: #fff;
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .footer ul { list-style: none; }
+        .footer ul li { margin-bottom: 12px; }
+
+        .footer ul a {
+            font-size: 0.85rem;
+            transition: color var(--transition);
+        }
+
+        .footer ul a:hover { color: var(--gold-light); }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.75rem;
+        }
+
+        .footer-payments {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.35);
+        }
+
+        /* ========== WHATSAPP ========== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 56px;
+            height: 56px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.6rem;
+            box-shadow: 0 4px 16px rgba(37,211,102,0.35);
+            z-index: 99;
+            transition: transform var(--transition);
+        }
+
+        .whatsapp-float:hover { transform: scale(1.1); }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1024px) {
+            .cat-grid { grid-template-columns: repeat(2, 1fr); }
+            .products-grid { grid-template-columns: repeat(2, 1fr); }
+            .hero h1 { font-size: 3.2rem; }
+            .editorial-grid { gap: 40px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .hero { height: 75vh; min-height: 500px; }
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 0.95rem; }
+
+            .nav-links-bar { display: none; }
+            .nav-links-bar.open {
+                display: block;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--bg);
+                border-bottom: 1px solid var(--border);
+                box-shadow: var(--shadow);
+                z-index: 100;
+            }
+            .nav-links-bar.open .nav-links {
+                flex-direction: column;
+                gap: 0;
+                padding: 0;
+            }
+            .nav-links-bar.open .nav-links li a {
+                display: block;
+                padding: 14px 24px;
+                border-bottom: 1px solid var(--border-light);
+            }
+            .nav-toggle { display: block; }
+
+            .cat-grid { grid-template-columns: 1fr; }
+            .cat-card { height: 320px; }
+            .products-grid { grid-template-columns: 1fr 1fr; }
+            .editorial-grid { grid-template-columns: 1fr; }
+            .editorial-img { height: 400px; }
+            .registry-features { grid-template-columns: 1fr; }
+            .testimonials-grid { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .insta-grid { grid-template-columns: repeat(3, 1fr); }
+            .footer-grid { grid-template-columns: 1fr; }
+            .brands-track { gap: 24px; }
+            .brand-name { font-size: 1rem; }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 2rem; }
+            .hero-btns { flex-direction: column; }
+            .products-grid { grid-template-columns: 1fr; }
+            .editorial-stats { flex-direction: column; gap: 20px; }
+            .form-row { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; gap: 12px; }
+            .registry-btns { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="announcement">
+        Envío gratis en pedidos superiores a <strong>$150 USD</strong> &nbsp;·&nbsp; Listas de regalos disponibles
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="nav" id="nav">
+        <div class="nav-top">
+            <a href="#" class="nav-logo">Le <em>Tavole</em></a>
+            <div class="nav-actions">
+                <a href="#" aria-label="Buscar"><i class="ph ph-magnifying-glass"></i></a>
+                <a href="#" aria-label="Mi cuenta"><i class="ph ph-user"></i></a>
+                <a href="#" aria-label="Favoritos"><i class="ph ph-heart"></i></a>
+                <a href="#" aria-label="Carrito"><i class="ph ph-bag"></i></a>
+                <button class="nav-toggle" id="navToggle" aria-label="Menú">
+                    <i class="ph ph-list"></i>
+                </button>
+            </div>
+        </div>
+        <div class="nav-links-bar" id="navLinksBar">
+            <ul class="nav-links">
+                <li><a href="#categories">Tabletop</a></li>
+                <li><a href="#categories">Home Décor</a></li>
+                <li><a href="#categories">Cocina</a></li>
+                <li><a href="#featured">Novedades</a></li>
+                <li><a href="#registry">Listas de Regalos</a></li>
+                <li><a href="#brands">Marcas</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-label">El Arte de Servir</div>
+            <h1>Elegancia y <em>Distinción</em> para tu Mesa</h1>
+            <p>Descubre nuestra colección curada de vajillas, cristalería y cubertería de las marcas más prestigiosas del mundo.</p>
+            <div class="hero-btns">
+                <a href="#featured" class="btn btn-gold">
+                    Explorar Colección
+                    <i class="ph ph-arrow-right"></i>
+                </a>
+                <a href="#registry" class="btn btn-outline">
+                    Crear Lista de Regalos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BRANDS BAR -->
+    <section class="brands-bar" id="brands">
+        <div class="brands-label">Marcas que nos distinguen</div>
+        <div class="brands-track">
+            <span class="brand-name">Christofle</span>
+            <span class="brand-name">Juliska</span>
+            <span class="brand-name">Herend</span>
+            <span class="brand-name">Georg Jensen</span>
+            <span class="brand-name">Ginori 1735</span>
+            <span class="brand-name">Alessi</span>
+            <span class="brand-name">Wedgwood</span>
+            <span class="brand-name">La Double J</span>
+            <span class="brand-name">Sabre Paris</span>
+            <span class="brand-name">Corkcicle</span>
+            <span class="brand-name">Nambé</span>
+            <span class="brand-name">Joseph Joseph</span>
+        </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Colecciones</div>
+                <h2>Explora Nuestro <em>Mundo</em></h2>
+                <p>Todo lo que necesitas para transformar cada comida en una experiencia extraordinaria.</p>
+            </div>
+            <div class="cat-grid">
+                <a href="#" class="cat-card">
+                    <img src="https://images.unsplash.com/photo-1530018607912-eff2daa1bac4?w=600&q=80" alt="Vajillas">
+                    <div class="cat-card-overlay">
+                        <h3>Vajillas</h3>
+                        <span>Explorar Colección</span>
+                    </div>
+                </a>
+                <a href="#" class="cat-card">
+                    <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=600&q=80" alt="Cristalería">
+                    <div class="cat-card-overlay">
+                        <h3>Cristalería</h3>
+                        <span>Explorar Colección</span>
+                    </div>
+                </a>
+                <a href="#" class="cat-card">
+                    <img src="https://images.unsplash.com/photo-1592492135673-55966d3b541a?w=600&q=80" alt="Cubertería">
+                    <div class="cat-card-overlay">
+                        <h3>Cubertería</h3>
+                        <span>Explorar Colección</span>
+                    </div>
+                </a>
+                <a href="#" class="cat-card">
+                    <img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=600&q=80" alt="Home Décor">
+                    <div class="cat-card-overlay">
+                        <h3>Home Décor</h3>
+                        <span>Explorar Colección</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED PRODUCTS -->
+    <section class="featured" id="featured">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Novedades</div>
+                <h2>Recién <em>Llegados</em></h2>
+                <p>Las últimas incorporaciones a nuestra colección, seleccionadas para ti.</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1595981234058-a9302fb97229?w=500&q=80" alt="Plato base dorado">
+                        <div class="product-badge">Nuevo</div>
+                        <div class="product-quick">Vista Rápida</div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Juliska</div>
+                        <h3>Berry & Thread Dinner Plate</h3>
+                        <div class="product-price">$42.00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1563865436874-9aef32095fad?w=500&q=80" alt="Copa de cristal">
+                        <div class="product-badge">Bestseller</div>
+                        <div class="product-quick">Vista Rápida</div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Christofle</div>
+                        <h3>Malmaison Wine Goblet</h3>
+                        <div class="product-price">$185.00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=500&q=80" alt="Set de cubiertos">
+                        <div class="product-quick">Vista Rápida</div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Sabre Paris</div>
+                        <h3>Icône 5-Piece Flatware Set</h3>
+                        <div class="product-price">$125.00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1584589167171-541ce45f1eea?w=500&q=80" alt="Florero decorativo">
+                        <div class="product-badge">Edición Limitada</div>
+                        <div class="product-quick">Vista Rápida</div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Georg Jensen</div>
+                        <h3>Bernadotte Vase Medium</h3>
+                        <div class="product-price">$210.00 <del>$260.00</del></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDITORIAL / ABOUT -->
+    <section class="editorial" id="about">
+        <div class="container">
+            <div class="editorial-grid">
+                <div class="editorial-img">
+                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80" alt="Mesa elegante Le Tavole">
+                </div>
+                <div class="editorial-content">
+                    <div class="section-label">Nuestra Historia</div>
+                    <h2>Donde el Arte se Encuentra con la <em>Mesa</em></h2>
+                    <p>Le Tavole nació de una pasión por transformar cada comida en un momento especial. Desde Santo Domingo, seleccionamos las piezas más exquisitas de las mejores casas europeas para llevar elegancia y distinción a los hogares del Caribe.</p>
+                    <p>Cada pieza en nuestra colección ha sido cuidadosamente seleccionada por su calidad artesanal, su diseño atemporal y su capacidad de convertir lo cotidiano en extraordinario.</p>
+                    <div class="editorial-stats">
+                        <div class="editorial-stat">
+                            <strong>25+</strong>
+                            <span>Marcas de lujo</span>
+                        </div>
+                        <div class="editorial-stat">
+                            <strong>1,500+</strong>
+                            <span>Productos</span>
+                        </div>
+                        <div class="editorial-stat">
+                            <strong>RD</strong>
+                            <span>Santo Domingo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GIFT REGISTRY -->
+    <section class="registry" id="registry">
+        <div class="container">
+            <div class="section-label">Listas de Regalos</div>
+            <h2>Celebra tus Momentos <em>Especiales</em></h2>
+            <p>Crea tu lista de bodas, cumpleaños o cualquier ocasión especial. Tus invitados encontrarán el regalo perfecto con facilidad.</p>
+            <div class="registry-features">
+                <div class="registry-feature">
+                    <i class="ph ph-pencil-line"></i>
+                    <h3>Crea tu Lista</h3>
+                    <p>Selecciona tus piezas favoritas de nuestra colección completa y compártela con tus seres queridos.</p>
+                </div>
+                <div class="registry-feature">
+                    <i class="ph ph-share-network"></i>
+                    <h3>Comparte Fácilmente</h3>
+                    <p>Envía tu lista por WhatsApp, email o redes sociales para que todos puedan acceder sin complicaciones.</p>
+                </div>
+                <div class="registry-feature">
+                    <i class="ph ph-gift"></i>
+                    <h3>Recibe con Alegría</h3>
+                    <p>Nosotros nos encargamos del empaque especial y la entrega. Tú solo disfruta de tus regalos.</p>
+                </div>
+            </div>
+            <div class="registry-btns">
+                <a href="#" class="btn btn-gold">Crear Mi Lista</a>
+                <a href="#" class="btn-gold-outline">Buscar una Lista</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Testimonios</div>
+                <h2>Lo que Dicen Nuestros <em>Clientes</em></h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <blockquote>"Le Tavole transformó completamente mi mesa de Navidad. La vajilla de Juliska es una obra de arte. El servicio personalizado fue excepcional."</blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">MC</div>
+                        <div>
+                            <strong>María Castillo</strong>
+                            <span>Santo Domingo</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <blockquote>"Creamos nuestra lista de bodas con Le Tavole y fue la mejor decisión. Piezas hermosas, empaque impecable y entrega puntual."</blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">AP</div>
+                        <div>
+                            <strong>Ana & Pedro</strong>
+                            <span>Piantini</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <blockquote>"La colección de Christofle que compré superó todas mis expectativas. Le Tavole es sinónimo de calidad y buen gusto en RD."</blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">RL</div>
+                        <div>
+                            <strong>Roberto López</strong>
+                            <span>Santo Domingo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INSTAGRAM -->
+    <section class="instagram">
+        <div class="section-header">
+            <div class="section-label">@letavole</div>
+            <h2>Síguenos en <em>Instagram</em></h2>
+        </div>
+        <div class="insta-grid">
+            <a href="https://instagram.com/letavole" target="_blank" class="insta-item">
+                <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80" alt="Instagram Le Tavole">
+            </a>
+            <a href="https://instagram.com/letavole" target="_blank" class="insta-item">
+                <img src="https://images.unsplash.com/photo-1530018607912-eff2daa1bac4?w=400&q=80" alt="Instagram Le Tavole">
+            </a>
+            <a href="https://instagram.com/letavole" target="_blank" class="insta-item">
+                <img src="https://images.unsplash.com/photo-1563865436874-9aef32095fad?w=400&q=80" alt="Instagram Le Tavole">
+            </a>
+            <a href="https://instagram.com/letavole" target="_blank" class="insta-item">
+                <img src="https://images.unsplash.com/photo-1584589167171-541ce45f1eea?w=400&q=80" alt="Instagram Le Tavole">
+            </a>
+            <a href="https://instagram.com/letavole" target="_blank" class="insta-item">
+                <img src="https://images.unsplash.com/photo-1595981234058-a9302fb97229?w=400&q=80" alt="Instagram Le Tavole">
+            </a>
+            <a href="https://instagram.com/letavole" target="_blank" class="insta-item">
+                <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=400&q=80" alt="Instagram Le Tavole">
+            </a>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="section-label">Contacto</div>
+                    <h2>Visítanos en <em>Piantini</em></h2>
+                    <p>Ven a conocer nuestra colección en persona. Nuestro equipo te ayudará a encontrar las piezas perfectas para tu mesa y tu hogar.</p>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="ph ph-map-pin"></i></div>
+                            <div>
+                                <strong>Dirección</strong>
+                                <span>Calle Agustín Lara #29-A, Piantini, Santo Domingo, RD</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="ph ph-phone"></i></div>
+                            <div>
+                                <strong>Teléfono</strong>
+                                <span>(809) 565-5727 · (809) 918-1810</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="ph ph-envelope"></i></div>
+                            <div>
+                                <strong>Email</strong>
+                                <span>[email protected]</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="ph ph-clock"></i></div>
+                            <div>
+                                <strong>Horario</strong>
+                                <span>Lun–Vie: 9:00am – 6:30pm · Sáb: 9:30am – 4:00pm</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-social">
+                        <a href="https://instagram.com/letavole" target="_blank" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+                        <a href="https://facebook.com/letavole" target="_blank" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+                        <a href="https://tiktok.com/@letavolerd" target="_blank" aria-label="TikTok"><i class="ph ph-tiktok-logo"></i></a>
+                        <a href="https://wa.me/18099181810" target="_blank" aria-label="WhatsApp"><i class="ph ph-whatsapp-logo"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <h3>Escríbenos</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Nombre</label>
+                            <input type="text" name="name" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Teléfono</label>
+                            <input type="tel" name="phone" placeholder="(809) 000-0000">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="email" placeholder="tu@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Asunto</label>
+                        <select name="subject">
+                            <option value="">Selecciona...</option>
+                            <option>Consulta sobre producto</option>
+                            <option>Lista de regalos</option>
+                            <option>Disponibilidad</option>
+                            <option>Envíos</option>
+                            <option>Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Mensaje</label>
+                        <textarea name="message" placeholder="¿En qué podemos ayudarte?" required></textarea>
+                    </div>
+                    <button type="submit" class="form-submit">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="nav-logo">Le <em>Tavole</em></span>
+                    <p>El Arte de Servir. Vajillas de lujo, cristalería, cubertería y decoración del hogar de las mejores marcas del mundo. Santo Domingo, República Dominicana.</p>
+                </div>
+                <div>
+                    <h4>Tienda</h4>
+                    <ul>
+                        <li><a href="#">Vajillas</a></li>
+                        <li><a href="#">Cristalería</a></li>
+                        <li><a href="#">Cubertería</a></li>
+                        <li><a href="#">Home Décor</a></li>
+                        <li><a href="#">Cocina</a></li>
+                        <li><a href="#">Novedades</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#">Listas de Regalos</a></li>
+                        <li><a href="#">Buscar una Lista</a></li>
+                        <li><a href="#">Envíos</a></li>
+                        <li><a href="#">Devoluciones</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="tel:+18095655727">(809) 565-5727</a></li>
+                        <li><a href="mailto:[email protected]">[email protected]</a></li>
+                        <li><a href="#">Piantini, Santo Domingo</a></li>
+                        <li><a href="https://wa.me/18099181810">WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 Le Tavole. Todos los derechos reservados.</span>
+                <div class="footer-payments">
+                    <span>Visa</span> · <span>Mastercard</span> · <span>PayPal</span> · <span>Transferencia</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP -->
+    <a href="https://wa.me/18099181810?text=Hola%20Le%20Tavole%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <i class="ph ph-whatsapp-logo"></i>
+    </a>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Navbar scroll
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 20);
+        });
+
+        // Mobile menu
+        const navToggle = document.getElementById('navToggle');
+        const navLinksBar = document.getElementById('navLinksBar');
+        navToggle.addEventListener('click', () => {
+            navLinksBar.classList.toggle('open');
+            const icon = navToggle.querySelector('i');
+            icon.className = navLinksBar.classList.contains('open') ? 'ph ph-x' : 'ph ph-list';
+        });
+
+        navLinksBar.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinksBar.classList.remove('open');
+                navToggle.querySelector('i').className = 'ph ph-list';
+            });
+        });
+
+        // Contact form
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const data = Object.fromEntries(new FormData(this));
+            const subject = encodeURIComponent(data.subject || 'Consulta desde la web');
+            const body = encodeURIComponent(`Nombre: ${data.name}\nTeléfono: ${data.phone}\nEmail: ${data.email}\n\n${data.message}`);
+            window.location.href = `mailto:[email protected]?subject=${subject}&body=${body}`;
+            this.innerHTML = '<p style="text-align:center;padding:40px;font-family:var(--font-display);font-size:1.3rem;color:var(--gold);">¡Mensaje enviado! Te responderemos pronto.</p>';
+        });
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.cat-card, .product-card, .testimonial-card, .editorial-content, .editorial-img, .registry-feature').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(24px)';
+            el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+            observer.observe(el);
+        });
+    </script>
+
+</body>
+</html>
