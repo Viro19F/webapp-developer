@@ -32,6 +32,15 @@ Before starting a new client build, read in this order:
 11. If the project needs a real production content system:
    - `docs/CMS-BACKEND-ARCHITECTURE-RESEARCH.md`
    - `cms/ARCHITECTURE-SPEC.md`
+12. If the project needs measurement or post-launch reporting:
+   - `docs/ANALYTICS-MEASUREMENT-RESEARCH.md`
+   - `analytics/MEASUREMENT-SPEC.md`
+13. If the project is multilingual or multi-regional:
+   - `docs/LOCALIZATION-RESEARCH.md`
+   - `localization/LOCALIZATION-SPEC.md`
+14. If the launch is EU-facing or compliance-sensitive:
+   - `docs/COMPLIANCE-LAUNCH-RESEARCH.md`
+   - `compliance/LAUNCH-COMPLIANCE-SPEC.md`
 
 ### Why this order
 - The brief tells you what this business is
@@ -61,6 +70,7 @@ Every serious client build should create or update all relevant artifacts below.
 - `backoffice/DESIGN-SPEC.md` consulted or updated when the project includes admin, CMS, dashboard, or staff workflows
 - `website/BUILD-SPEC.md` consulted for every new website build
 - the closest specialized memory folder consulted when the project clearly matches one: `ecommerce`, `leadgen`, `cms`, `matcha`, `florist`
+- analytics, localization, and compliance memory consulted when the project clearly needs them
 
 ### Optional artifacts
 - `products.js` or structured local data file
@@ -71,6 +81,7 @@ Every serious client build should create or update all relevant artifacts below.
 - deployment recommendation doc or notes when hosting/platform choice matters
 - proposal or outreach notes when the build is also a sales artifact
 - specialized memory updates when the project teaches something reusable about conversion, CMS workflow, or sales
+- specialized memory updates when the project teaches something reusable about measurement, localization, or compliance
 
 ---
 
@@ -125,6 +136,7 @@ Examples of what belongs there:
 - successful admin apps separate overview, search, and detail editing clearly
 - deployment and sales rules that repeat across many website projects
 - ecommerce, lead-gen, and production CMS rules that clearly generalize
+- measurement, localization, and compliance rules that clearly generalize
 
 Keep client-specific tone, visual nuance, and one-off brand ideas in a dedicated design-spec doc instead.
 
@@ -165,6 +177,18 @@ When a new request comes in, match it to the closest prior system memory:
 ### If the project needs a real production content system
 - read `docs/CMS-BACKEND-ARCHITECTURE-RESEARCH.md`
 - read `cms/ARCHITECTURE-SPEC.md`
+
+### If the project needs analytics or reporting
+- read `docs/ANALYTICS-MEASUREMENT-RESEARCH.md`
+- read `analytics/MEASUREMENT-SPEC.md`
+
+### If the project is multilingual or multi-regional
+- read `docs/LOCALIZATION-RESEARCH.md`
+- read `localization/LOCALIZATION-SPEC.md`
+
+### If the project is EU-facing or launch-compliance sensitive
+- read `docs/COMPLIANCE-LAUNCH-RESEARCH.md`
+- read `compliance/LAUNCH-COMPLIANCE-SPEC.md`
 
 ### If the client is unclear
 - start with `INDUSTRY-PLAYBOOK.md`
@@ -208,5 +232,8 @@ At the time of writing, the repo has these reference points:
 - Ecommerce memory = reusable store conversion logic
 - Lead-gen memory = reusable service-site conversion logic
 - CMS memory = reusable production content-system architecture
+- Analytics memory = reusable measurement and reporting logic
+- Localization memory = reusable multilingual and multi-regional logic
+- Compliance memory = reusable launch-compliance guidance
 
 Future projects should add to this library instead of replacing it.

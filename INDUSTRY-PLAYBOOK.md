@@ -438,6 +438,27 @@ Homepage, Product Catalog, Product Detail pages, Cart, Checkout (3 steps max), A
 - Do not treat SQLite like a default production database for multi-user website apps
 - Document what is editable, where the site is hosted, and who controls access
 
+### Measurement (every site)
+- Define key events before launch
+- Measure the real business outcomes, not just generic engagement
+- Connect Search Console for serious sites
+- Review real-user performance, not only local test scores
+- Choose analytics tools with privacy and consent implications in mind
+
+### Localization (when a site is multilingual or multi-regional)
+- Decide whether the site is multilingual, multi-regional, or both
+- Use distinct localized URLs
+- Keep metadata, nav, and key trust content consistent per locale
+- Use locale-aware date, number, and currency formatting
+- Do not add many locales without a maintenance plan
+
+### Launch compliance (especially for EU-facing sites)
+- Know which cookies or tracking technologies are present
+- Keep optional tracking separate from strictly necessary behavior
+- Review accessibility before production
+- Treat third-party scripts and embeds as compliance decisions, not only technical additions
+- Flag when legal or compliance counsel is still needed
+
 ### Internal tools (when a site includes admin)
 - The dashboard is part of the product quality, not an afterthought
 - Separate content areas clearly: products, homepage, settings/access

@@ -288,6 +288,79 @@ See `docs/CMS-BACKEND-ARCHITECTURE-RESEARCH.md` and `cms/ARCHITECTURE-SPEC.md`.
 
 ---
 
+## Research #6: Analytics / Measurement Systems
+
+This research matters because a website that cannot be measured cannot be improved with confidence.
+
+### What Repeats In Strong Measurement Systems
+1. **Events need hierarchy.** Not every interaction should be treated like a business outcome.
+
+2. **Conversions should match real goals.** Leads, calls, purchases, bookings, and search use are different signals and should not be collapsed carelessly.
+
+3. **Search visibility needs its own monitoring surface.** Search Console adds operational information that normal analytics tools do not replace.
+
+4. **Performance measurement should use real-user data where possible.** Local testing is useful, but live traffic reveals the real experience.
+
+5. **Analytics choice should consider privacy.** Not every site needs a heavy traditional tracking stack.
+
+### What I Learned For Our Builds
+1. **We should define measurement plans during the build, not after launch.**
+2. **Search Console should be treated as a standard launch step for serious sites.**
+3. **A small, useful event set is better than measuring every click.**
+4. **Privacy-aware analytics can be the better default when marketing complexity is low.**
+
+See `docs/ANALYTICS-MEASUREMENT-RESEARCH.md` and `analytics/MEASUREMENT-SPEC.md`.
+
+---
+
+## Research #7: Localization / Multilingual Website Systems
+
+This research matters because multilingual sites break quickly when translation, SEO, and locale behavior are treated as separate afterthoughts.
+
+### What Repeats In Strong Localized Sites
+1. **Language and region need to be modeled deliberately.** A multilingual site is not automatically a multi-regional one.
+
+2. **Alternate versions need explicit signals.** Distinct URLs and correct hreflang relationships matter.
+
+3. **Locale-aware formatting is part of product quality.** Dates, currencies, and numbers should match the audience.
+
+4. **Translation has to feel complete.** Mixed-language critical flows create both user and quality problems.
+
+5. **Framework support helps, but strategy still matters more.** URL structure, locale scope, and fallback logic need decisions.
+
+### What I Learned For Our Builds
+1. **Localization should be treated as architecture, not just copy replacement.**
+2. **Locale formatting rules should be part of the build spec for multi-market sites.**
+3. **We should not add many locales without a maintenance plan.**
+4. **Multilingual SEO and translation workflows need to be planned together.**
+
+See `docs/LOCALIZATION-RESEARCH.md` and `localization/LOCALIZATION-SPEC.md`.
+
+---
+
+## Research #8: Launch Compliance For EU-Facing Websites
+
+This research matters because safer launches depend on cookies, privacy choices, and accessibility being handled deliberately before production.
+
+### What Repeats In Safer Launches
+1. **Cookie and tracking decisions must be explicit.** Not all storage technologies are equal, and optional tracking should not be added carelessly.
+
+2. **Consent needs to be meaningful where required.** Accept/refuse behavior should not be fake.
+
+3. **Accessibility is part of launch quality.** For EU-facing digital services, accessibility pressure increased after the European Accessibility Act became applicable in June 2025.
+
+4. **Analytics and embeds affect compliance posture.** Third-party scripts are not neutral additions.
+
+### What I Learned For Our Builds
+1. **We should launch with less accidental tracking.**
+2. **Cookie/analytics choices belong in architecture decisions, not only in legal cleanup.**
+3. **Accessibility review should happen before production.**
+4. **For higher-risk launches, we should explicitly note when counsel is still needed.**
+
+See `docs/COMPLIANCE-LAUNCH-RESEARCH.md` and `compliance/LAUNCH-COMPLIANCE-SPEC.md`.
+
+---
+
 ## Universal Learnings (Apply to Every Client)
 
 ### Design Rules That Always Work
@@ -342,6 +415,13 @@ See `docs/CMS-BACKEND-ARCHITECTURE-RESEARCH.md` and `cms/ARCHITECTURE-SPEC.md`.
 3. **Trust above the fold or very early**
 4. **Specific next-step language**
 5. **Sales-process alignment**
+
+### Features Every Strong Measured Website Needs
+1. **A defined event plan**
+2. **Key events tied to business outcomes**
+3. **Search Console or equivalent search visibility review**
+4. **Performance monitoring beyond local tests**
+5. **Analytics choices that match privacy posture**
 
 ### Testing Checklist (Playwright)
 Run these for EVERY client site before delivery:
@@ -421,25 +501,29 @@ clients/<name>/
 11. **Proposal templates tied to business outcome** — stronger sales repeatability
 12. **Search and autocomplete patterns for stores** — especially use-case aware discovery
 13. **Preview-first CMS workflows** — drafts, preview links, publish logs, and safer editorial systems
+14. **Measurement planning in the build phase** — events, key events, and performance signals before launch
+15. **Localization architecture templates** — URLs, hreflang, locale formatting, and fallback logic
 
 ### Medium Priority
-14. **Cookie consent banner** — required for EU clients (GDPR)
-15. **Newsletter popup** — elegant, "exclusive access" language, 10% off incentive
-16. **Skeleton loading states** — gray placeholders while images load
-17. **Product image zoom** — click/hover to see detail
-18. **"Complete the Look" section** — cross-sell on product pages
-19. **Audit/event feed for admin actions** — especially for uploads, imports, and publishing
-20. **Default launch checklist** — DNS, HTTPS, preview, forms, analytics, metadata
-21. **Dedicated landing-page templates for ads and outreach campaigns**
+16. **Cookie consent banner** — required for EU clients (GDPR)
+17. **Newsletter popup** — elegant, "exclusive access" language, 10% off incentive
+18. **Skeleton loading states** — gray placeholders while images load
+19. **Product image zoom** — click/hover to see detail
+20. **"Complete the Look" section** — cross-sell on product pages
+21. **Audit/event feed for admin actions** — especially for uploads, imports, and publishing
+22. **Default launch checklist** — DNS, HTTPS, preview, forms, analytics, metadata
+23. **Dedicated landing-page templates for ads and outreach campaigns**
+24. **Compliance-aware launch checklist** — cookies, accessibility, privacy pages, and tracking review
 
 ### Nice to Have
-22. **Dark mode toggle**
-23. **3D/AR product views** (94% conversion lift per research)
-24. **Tiered loyalty program**
-25. **Virtual consultation booking**
-26. **Keyboard-first admin shortcuts** for power users
-27. **Reusable outreach + proposal pack** for local business pitches
-28. **Durable media storage templates** for operational websites
+25. **Dark mode toggle**
+26. **3D/AR product views** (94% conversion lift per research)
+27. **Tiered loyalty program**
+28. **Virtual consultation booking**
+29. **Keyboard-first admin shortcuts** for power users
+30. **Reusable outreach + proposal pack** for local business pitches
+31. **Durable media storage templates** for operational websites
+32. **Localized component libraries** for multilingual rollouts
 
 ## Key Insight from Luxury Research
 > "Spacing is the #1 signal of luxury. Double your margins. Then double them again."
@@ -469,4 +553,4 @@ See `docs/ADMIN-PANEL-GUIDE.md` and `docs/PROGRESSION.md` for full details.
 
 ---
 
-*Last updated: March 20, 2026 — after Le Tavole, Mori Matcha, Floristería Calero, admin panel research, Tapeo/Qargo analysis, backoffice app research, website systems research, ecommerce conversion research, lead-gen research, and CMS/backend architecture research*
+*Last updated: March 21, 2026 — after Le Tavole, Mori Matcha, Floristería Calero, admin panel research, Tapeo/Qargo analysis, backoffice app research, website systems research, ecommerce conversion research, lead-gen research, CMS/backend architecture research, analytics research, localization research, and compliance launch research*

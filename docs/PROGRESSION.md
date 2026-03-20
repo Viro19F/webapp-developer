@@ -141,7 +141,7 @@ This document tracks the evolution of my capabilities as a web development partn
 - Selling websites works best through consultative discovery, audits, and business-outcome proposals
 - Website work becomes repeatable when build, deployment, and sales logic are stored together
 
-## Commit 11: Conversion + CMS Architecture Research (current)
+## Commit 11: Conversion + CMS Architecture Research
 **What I studied:**
 - Baymard ecommerce research on checkout abandonment, guest checkout, and search behavior
 - Shopify material around checkout trust, conversion, product detail workflows, and abandoned checkouts
@@ -154,33 +154,51 @@ This document tracks the evolution of my capabilities as a web development partn
 - Production CMS systems need draft/live separation, preview workflows, environment discipline, granular roles, webhooks, and server-side auth/authorization
 - The AI can now distinguish much more clearly between brochure sites, lead-gen sites, stores, concept admins, and production content systems
 
+## Commit 12: Measurement, Localization, and Compliance Research (current)
+**What I studied:**
+- GA4 and Search Console guidance for events, key events, search visibility, and recommendations
+- Vercel Analytics, custom events, Speed Insights, and Observability
+- Google Search Central guidance for localized versions and multilingual/multi-regional sites
+- MDN Intl and W3C internationalization guidance
+- ICO, AEPD, European Commission, and WCAG guidance for cookies, privacy posture, accessibility, and EU-facing launch concerns
+
+**What I now know beyond the earlier system docs:**
+- Measurement should be planned during the build and tied to real outcomes, not added as generic scripts after launch
+- Search Console and real-user performance data should be part of serious website operations
+- Localized sites need URL strategy, hreflang, locale-aware formatting, and translation maintenance planning
+- EU-facing launches should think deliberately about cookies, tracking, accessibility, and when legal review is still needed
+- The AI can now distinguish much more clearly between design decisions, operational decisions, and launch-risk decisions
+
 ---
 
 ## Capability Matrix
 
-| Capability | C1 | C2 | C3 | C4 | C5 | C6 | C7 | C8 | C9 | C10 | C11 |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| Static HTML pages | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| Real scraped content | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| Multi-page sites | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| Shared CSS system | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| Automated testing | No | No | 53 | 53 | 55 | 55 | 55 | 55+ | 55+ | 55+ | 55+ |
-| SEO (Schema, OG) | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| Luxury design patterns | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| Dynamic product pages | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| Specialty retail UX | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes |
-| Local business concepts | No | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes |
-| Admin panel / CMS | No | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes |
-| Auth system knowledge | No | No | No | No | No | No | No | Yes | Yes | Yes | Yes |
-| CRM/dashboard patterns | No | No | No | No | No | No | No | Yes | Yes | Yes | Yes |
-| Backoffice architecture memory | No | No | No | No | No | No | No | No | Yes | Yes | Yes |
-| Deployment strategy | No | No | No | No | No | No | No | No | No | Yes | Yes |
-| Website sales process | No | No | No | No | No | No | No | No | No | Yes | Yes |
-| Ecommerce conversion systems | No | No | No | No | No | No | No | No | No | No | Yes |
-| Lead-gen conversion systems | No | No | No | No | No | No | No | No | No | No | Yes |
-| Production CMS architecture | No | No | No | No | No | No | No | No | No | No | Yes |
+| Capability | C1 | C2 | C3 | C4 | C5 | C6 | C7 | C8 | C9 | C10 | C11 | C12 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Static HTML pages | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Real scraped content | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Multi-page sites | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Shared CSS system | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Automated testing | No | No | 53 | 53 | 55 | 55 | 55 | 55+ | 55+ | 55+ | 55+ | 55+ |
+| SEO (Schema, OG) | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Luxury design patterns | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Dynamic product pages | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Specialty retail UX | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Local business concepts | No | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes |
+| Admin panel / CMS | No | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes |
+| Auth system knowledge | No | No | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes |
+| CRM/dashboard patterns | No | No | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes |
+| Backoffice architecture memory | No | No | No | No | No | No | No | No | Yes | Yes | Yes | Yes |
+| Deployment strategy | No | No | No | No | No | No | No | No | No | Yes | Yes | Yes |
+| Website sales process | No | No | No | No | No | No | No | No | No | Yes | Yes | Yes |
+| Ecommerce conversion systems | No | No | No | No | No | No | No | No | No | No | Yes | Yes |
+| Lead-gen conversion systems | No | No | No | No | No | No | No | No | No | No | Yes | Yes |
+| Production CMS architecture | No | No | No | No | No | No | No | No | No | No | Yes | Yes |
+| Analytics / measurement systems | No | No | No | No | No | No | No | No | No | No | No | Yes |
+| Localization strategy | No | No | No | No | No | No | No | No | No | No | No | Yes |
+| Compliance-aware launch planning | No | No | No | No | No | No | No | No | No | No | No | Yes |
 
-*C1-C11 = Commits 1 through 11*
+*C1-C12 = Commits 1 through 12*
 
 ---
 
@@ -204,6 +222,12 @@ This document tracks the evolution of my capabilities as a web development partn
 
 **CMS architecture:** Can reason about draft/live flows, preview, roles, webhooks, environments, Postgres-backed auth, and the step up from concept admin to production content system.
 
+**Measurement:** Can plan analytics and key events, connect search/performance monitoring, and choose lighter or heavier analytics stacks more deliberately.
+
+**Localization:** Can reason about multilingual versus multi-regional architecture, hreflang, locale URLs, and locale-aware formatting.
+
+**Compliance:** Can flag cookie/tracking, accessibility, and EU-facing launch concerns earlier instead of treating them as last-minute surprises.
+
 ---
 
-*Last updated: March 20, 2026*
+*Last updated: March 21, 2026*
