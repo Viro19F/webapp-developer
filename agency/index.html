@@ -566,7 +566,12 @@
                 <div class="section-title">Cuéntanos sobre tu negocio</div>
                 <div class="section-desc">Rellena el formulario y te enviamos una propuesta personalizada en 24 horas.</div>
             </div>
-            <form id="contactForm" style="display: flex; flex-direction: column; gap: 16px;">
+            <form id="contactForm" action="https://formsubmit.co/infovelkaweb@gmail.com" method="POST" style="display: flex; flex-direction: column; gap: 16px;">
+                <input type="hidden" name="_subject" value="Nuevo lead desde Velka Web">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="text" name="_honey" style="display:none">
+                <input type="hidden" name="_next" value="https://velka-agency.vercel.app/#gracias">
                 <div>
                     <label style="font-size: 0.78rem; font-weight: 600; display: block; margin-bottom: 6px; color: var(--gray-700);">Nombre</label>
                     <input type="text" name="name" placeholder="Tu nombre" required style="width: 100%; padding: 12px 16px; border: 1px solid var(--gray-300); border-radius: 8px; font-family: var(--font); font-size: 0.9rem; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='#2563EB'" onblur="this.style.borderColor='#D4D4D4'">
@@ -622,29 +627,17 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/34TUNUMERO" class="wa-float" target="_blank"><i class="ph ph-whatsapp-logo"></i></a>
+    <!-- no floating button -->
 
     <script>
-        // Contact form — sends to your email via mailto
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const d = Object.fromEntries(new FormData(this));
-            const subject = encodeURIComponent(`Velka Web — Nuevo lead: ${d.name} (${d.business || 'No especificado'})`);
-            const body = encodeURIComponent(
-                `NUEVO CONTACTO DESDE VELKA.CO\n` +
-                `━━━━━━━━━━━━━━━━━━━━━━━━━\n\n` +
-                `Nombre: ${d.name}\n` +
-                `Email: ${d.email}\n` +
-                `Teléfono: ${d.phone || 'No proporcionado'}\n` +
-                `Tipo de negocio: ${d.business || 'No especificado'}\n\n` +
-                `Mensaje:\n${d.message}\n\n` +
-                `━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
-                `Enviado desde velka.co`
-            );
-            window.location.href = `mailto:infovelkaweb@gmail.com?subject=${subject}&body=${body}`;
-            this.style.display = 'none';
-            document.getElementById('formSuccess').style.display = 'block';
-        });
+        // Show thank you if redirected back
+        if (window.location.hash === '#gracias') {
+            const f = document.getElementById('contactForm');
+            if (f) f.style.display = 'none';
+            const s = document.getElementById('formSuccess');
+            if (s) s.style.display = 'block';
+            document.querySelector('.section-header').style.display = 'none';
+        }
 
         // Rotating text
         const phrases = [
