@@ -75,7 +75,28 @@ This document tracks the evolution of my capabilities as a web development partn
 
 ---
 
-## Commit 6: Admin Panel Knowledge + Existing App Analysis (current)
+## Commit 6: Mori Matcha Experiment (e2183f8)
+**Client:** Specialty matcha retailer concept, Madrid
+**What I learned:**
+- Use-case navigation beats generic categories for specialty retail (ceremonial, daily, latte, gifts)
+- Education must live inside the shopping flow (tasting notes, caffeine feel, serving guide)
+- Branded SVG product art works when photography isn't ready yet
+- Physical stores need soft conversion CTAs ("Book tasting" > "Buy now")
+- Small opinionated catalogs convert better than large noisy ones
+
+## Commit 7: Floristería Calero Concept (1be6b92)
+**Client:** Local florist redesign concept, Madrid
+**What I learned:**
+- Occasion-based navigation for florists (birthday, romance, thank you, condolence)
+- Same-day delivery, phone, hours must be above the fold for urgent-purchase businesses
+- Dedicated pages for high-value services (weddings, funerary) — not just categories
+- Real business photography > concept art for local business pitches
+- Lightweight admin panel with product CRUD, image upload, homepage placement controls
+- FAQ content often contains the strongest sales copy
+- Admin quality matters as much as storefront quality
+- Motion should never gate critical content
+
+## Commit 8: Admin Panel Knowledge + Existing App Analysis (current)
 **What I studied:**
 - WordPress, Shopify, Stripe, Squarespace, Vercel admin panels
 - Tapeo project: Express + SQLite + session auth + admin dashboard + business dashboard
@@ -98,19 +119,23 @@ This document tracks the evolution of my capabilities as a web development partn
 
 ## Capability Matrix
 
-| Capability | Commit 1 | Commit 2 | Commit 3 | Commit 4 | Commit 5 | Now |
-|---|---|---|---|---|---|---|
-| Static HTML pages | Yes | Yes | Yes | Yes | Yes | Yes |
-| Real scraped content | No | Yes | Yes | Yes | Yes | Yes |
-| Multi-page sites | No | Yes | Yes | Yes | Yes | Yes |
-| Shared CSS system | No | Yes | Yes | Yes | Yes | Yes |
-| Automated testing | No | No | 53 tests | 53 tests | 55 tests | 55+ |
-| SEO (Schema, OG) | No | No | Yes | Yes | Yes | Yes |
-| Luxury design patterns | No | No | No | Yes | Yes | Yes |
-| Dynamic product pages | No | No | No | No | Yes | Yes |
-| Admin panel knowledge | No | No | No | No | No | Yes |
-| Auth system knowledge | No | No | No | No | No | Yes |
-| CRM/dashboard patterns | No | No | No | No | No | Yes |
+| Capability | C1 | C2 | C3 | C4 | C5 | C6 | C7 | C8 |
+|---|---|---|---|---|---|---|---|---|
+| Static HTML pages | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Real scraped content | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Multi-page sites | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Shared CSS system | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Automated testing | No | No | 53 | 53 | 55 | 55 | 55 | 55+ |
+| SEO (Schema, OG) | No | No | Yes | Yes | Yes | Yes | Yes | Yes |
+| Luxury design patterns | No | No | No | Yes | Yes | Yes | Yes | Yes |
+| Dynamic product pages | No | No | No | No | Yes | Yes | Yes | Yes |
+| Specialty retail UX | No | No | No | No | No | Yes | Yes | Yes |
+| Local business concepts | No | No | No | No | No | No | Yes | Yes |
+| Admin panel / CMS | No | No | No | No | No | No | Yes | Yes |
+| Auth system knowledge | No | No | No | No | No | No | No | Yes |
+| CRM/dashboard patterns | No | No | No | No | No | No | No | Yes |
+
+*C1-C8 = Commits 1 through 8*
 
 ---
 
