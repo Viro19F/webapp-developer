@@ -20,13 +20,12 @@
         <div class="nav-inner">
             <a href="#" class="nav-logo">La <span>Floresta</span></a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#rooms">Habitaciones</a></li>
-                <li><a href="#services">Servicios</a></li>
-                <li><a href="#gallery">Galería</a></li>
-                <li><a href="#location">Ubicación</a></li>
-                <li><a href="#contact">Contacto</a></li>
+                <li><a href="habitaciones.html">Habitaciones</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="instalaciones.html">Instalaciones</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
-            <a href="#contact" class="nav-cta">Reservar</a>
+            <a href="contacto.html" class="nav-cta">Reservar</a>
             <button class="nav-toggle" id="navToggle"><i class="ph ph-list"></i></button>
         </div>
     </nav>
@@ -40,8 +39,8 @@
                 <h1>Vive en un palacio del siglo XVI</h1>
                 <p>Residencia de estudiantes en pleno centro de Segovia. 34 habitaciones con baño privado, pensión completa y a 10 minutos de IE University.</p>
                 <div class="hero-btns">
-                    <a href="#contact" class="btn btn-stone">Solicitar Plaza</a>
-                    <a href="#rooms" class="btn btn-white">Ver Habitaciones</a>
+                    <a href="contacto.html" class="btn btn-stone">Solicitar Plaza</a>
+                    <a href="habitaciones.html" class="btn btn-white">Ver Habitaciones</a>
                 </div>
             </div>
         </div>
@@ -102,453 +101,69 @@
         </div>
     </section>
 
-    <!-- ROOMS -->
-    <section id="rooms">
+
+    <!-- QUICK LINKS -->
+    <section style="padding: 80px 0;">
         <div class="container">
             <div class="section-header">
-                <div class="section-label">Habitaciones</div>
-                <div class="section-title">Elige tu espacio</div>
-                <div class="section-desc">6 categorías desde 12m² hasta 48m². Todas con baño privado, WiFi, climatización y escritorio de estudio.</div>
+                <div class="section-label">Descubre La Floresta</div>
+                <div class="section-title">Tu nueva residencia</div>
             </div>
-            <div class="rooms-grid">
-                <div class="room-card" onclick="openRoom('bronze')">
-                    <div class="room-img" style="background-image: url('https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/c8bcc77a/Bronze.jpg');"></div>
-                    <div class="room-info">
-                        <h3>Bronze</h3>
-                        <div class="room-size">≥12m² · Cama 135×200</div>
-                        <div class="room-price">€1.805<span>/mes</span></div>
-                        <div class="room-features">
-                            <span>Baño privado</span>
-                            <span>Mini-nevera</span>
-                            <span>TV</span>
-                            <span>Caja fuerte</span>
-                        </div>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+                <a href="habitaciones.html" style="display: block; border: 1px solid var(--gray-200); border-radius: var(--radius); overflow: hidden; transition: all 0.25s ease;">
+                    <div style="height: 200px; background: url('https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/3ea55cf1/Silver.jpg') center/cover;"></div>
+                    <div style="padding: 24px;">
+                        <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 4px;">Habitaciones y Precios</h3>
+                        <p style="font-size: 0.85rem; color: var(--gray-600);">6 categorías desde 12m² hasta 48m². Todas con baño privado. Desde €1.805/mes.</p>
+                        <span style="display: inline-flex; align-items: center; gap: 4px; margin-top: 12px; font-size: 0.82rem; font-weight: 600; color: var(--stone);">Ver habitaciones <i class="ph ph-arrow-right"></i></span>
                     </div>
-                </div>
-                <div class="room-card" onclick="openRoom('silver')">
-                    <div class="room-img" style="background-image: url('https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/3ea55cf1/Silver.jpg');">
-                        <div class="room-badge">Popular</div>
+                </a>
+                <a href="servicios.html" style="display: block; border: 1px solid var(--gray-200); border-radius: var(--radius); overflow: hidden; transition: all 0.25s ease;">
+                    <div style="height: 200px; background: url('https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/4ba0092b/7eea018/Cenas.jpg') center/cover;"></div>
+                    <div style="padding: 24px;">
+                        <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 4px;">Servicios Incluidos</h3>
+                        <p style="font-size: 0.85rem; color: var(--gray-600);">Pensión completa, recepción 24/7, limpieza diaria, WiFi, climatización y mucho más.</p>
+                        <span style="display: inline-flex; align-items: center; gap: 4px; margin-top: 12px; font-size: 0.82rem; font-weight: 600; color: var(--stone);">Ver servicios <i class="ph ph-arrow-right"></i></span>
                     </div>
-                    <div class="room-info">
-                        <h3>Silver</h3>
-                        <div class="room-size">≥16m² · Cama 135×200</div>
-                        <div class="room-price">€1.855<span>/mes</span></div>
-                        <div class="room-features">
-                            <span>Baño privado</span>
-                            <span>Más espacio</span>
-                            <span>Mini-nevera</span>
-                            <span>TV</span>
-                        </div>
+                </a>
+                <a href="instalaciones.html" style="display: block; border: 1px solid var(--gray-200); border-radius: var(--radius); overflow: hidden; transition: all 0.25s ease;">
+                    <div style="height: 200px; background: url('https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/4ba0092b/97fe93f8/IMG-20221019-WA0018.jpg') center/cover;"></div>
+                    <div style="padding: 24px;">
+                        <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 4px;">Instalaciones</h3>
+                        <p style="font-size: 0.85rem; color: var(--gray-600);">Patio histórico, coworking 24h, sala de cine, terraza chill-out, comedor y más.</p>
+                        <span style="display: inline-flex; align-items: center; gap: 4px; margin-top: 12px; font-size: 0.82rem; font-weight: 600; color: var(--stone);">Ver instalaciones <i class="ph ph-arrow-right"></i></span>
                     </div>
-                </div>
-                <div class="room-card" onclick="openRoom('gold')">
-                    <div class="room-img" style="background-image: url('https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/3ea55cf1/IMG_9495.jpg');"></div>
-                    <div class="room-info">
-                        <h3>Gold</h3>
-                        <div class="room-size">≥18m² · Cama 150×200</div>
-                        <div class="room-price">€1.955<span>/mes</span></div>
-                        <div class="room-features">
-                            <span>Baño privado</span>
-                            <span>Cama grande</span>
-                            <span>Mini-nevera</span>
-                            <span>TV</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="room-card" onclick="openRoom('platinum')">
-                    <div class="room-img" style="background-image: url('https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/3ea55cf1/Platinum.jpg');"></div>
-                    <div class="room-info">
-                        <h3>Platinum</h3>
-                        <div class="room-size">≥24m² · Cama 150×200</div>
-                        <div class="room-price">€2.055<span>/mes</span></div>
-                        <div class="room-features">
-                            <span>Techos decorados</span>
-                            <span>Terraza posible</span>
-                            <span>Baño doble zona</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="room-card" onclick="openRoom('diamond')">
-                    <div class="room-img" style="background-image: url('https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/7eea018/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(29).jpg');">
-                        <div class="room-badge">Premium</div>
-                    </div>
-                    <div class="room-info">
-                        <h3>Diamond</h3>
-                        <div class="room-size">≥29m² · Cama 210×200</div>
-                        <div class="room-price">€2.175<span>/mes</span></div>
-                        <div class="room-features">
-                            <span>Zona chaise longue</span>
-                            <span>TV giratoria</span>
-                            <span>Almacenaje premium</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="room-card" onclick="openRoom('suite')">
-                    <div class="room-img" style="background-image: url('https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/7eea018/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(28).jpg');">
-                        <div class="room-badge">Exclusiva</div>
-                    </div>
-                    <div class="room-info">
-                        <h3>Suite Diamond</h3>
-                        <div class="room-size">≥48m² · Cama 210×200 · Dos niveles</div>
-                        <div class="room-price">€2.220<span>/mes</span></div>
-                        <div class="room-features">
-                            <span>Dos niveles</span>
-                            <span>Terraza privada</span>
-                            <span>Bañera + ducha</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 32px;">
-                <p style="font-size: 0.82rem; color: var(--gray-400); margin-bottom: 8px;">Todos los precios incluyen pensión completa L-V, limpieza diaria, ropa de cama y suministros.</p>
-                <p style="font-size: 0.85rem; color: var(--green); font-weight: 600;"><i class="ph ph-info"></i> Curso 2026/27 completo — Lista de espera abierta</p>
+                </a>
             </div>
         </div>
     </section>
 
     <div class="divider"></div>
-
-    <!-- SERVICES -->
-    <section class="bg-light" id="services">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">Servicios</div>
-                <div class="section-title">Todo incluido</div>
-                <div class="section-desc">Para que solo te preocupes de estudiar. Nosotros nos encargamos del resto.</div>
-            </div>
-            <div class="services-grid">
-                <div class="service-item">
-                    <i class="ph ph-bell-ringing"></i>
-                    <h4>Recepción 24/7</h4>
-                    <p>Personal bilingüe disponible las 24 horas, los 7 días</p>
-                </div>
-                <div class="service-item">
-                    <i class="ph ph-wifi-high"></i>
-                    <h4>WiFi + Cable</h4>
-                    <p>Internet por cable en habitación y WiFi en todo el edificio</p>
-                </div>
-                <div class="service-item">
-                    <i class="ph ph-fork-knife"></i>
-                    <h4>Pensión Completa</h4>
-                    <p>Desayuno, comida y cena de lunes a viernes</p>
-                </div>
-                <div class="service-item">
-                    <i class="ph ph-broom"></i>
-                    <h4>Limpieza Diaria</h4>
-                    <p>Habitaciones y zonas comunes de lunes a viernes</p>
-                </div>
-                <div class="service-item">
-                    <i class="ph ph-lock-key"></i>
-                    <h4>Cerradura Inteligente</h4>
-                    <p>Acceso con tarjeta y app móvil a habitación y residencia</p>
-                </div>
-                <div class="service-item">
-                    <i class="ph ph-thermometer"></i>
-                    <h4>Climatización</h4>
-                    <p>Calefacción y aire acondicionado individual regulable</p>
-                </div>
-                <div class="service-item">
-                    <i class="ph ph-shield-check"></i>
-                    <h4>Seguridad</h4>
-                    <p>Alarma contra incendios y videovigilancia en accesos</p>
-                </div>
-                <div class="service-item">
-                    <i class="ph ph-t-shirt"></i>
-                    <h4>Ropa de Cama</h4>
-                    <p>Sábanas, edredón, almohadas y toallas con cambio semanal</p>
-                </div>
-                <div class="service-item">
-                    <i class="ph ph-wrench"></i>
-                    <h4>Mantenimiento</h4>
-                    <p>Equipo propio de reparaciones y coordinación externa</p>
-                </div>
-                <div class="service-item">
-                    <i class="ph ph-printer"></i>
-                    <h4>Impresión</h4>
-                    <p>Servicio de impresión de documentos en recepción</p>
-                </div>
-                <div class="service-item">
-                    <i class="ph ph-package"></i>
-                    <h4>Paquetería</h4>
-                    <p>Recepción y custodia de paquetes y correspondencia</p>
-                </div>
-                <div class="service-item">
-                    <i class="ph ph-washing-machine"></i>
-                    <h4>Lavandería</h4>
-                    <p>Lavadoras, secadoras, planchas y tendederos autoservicio</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- INSTALACIONES -->
-    <section id="gallery">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">Instalaciones</div>
-                <div class="section-title">Espacios pensados para ti</div>
-                <div class="section-desc">Un palacio del siglo XVI convertido en tu hogar.</div>
-            </div>
-
-            <!-- Patio -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-bottom: 56px;">
-                <div style="height: 320px; border-radius: var(--radius); overflow: hidden;">
-                    <img src="https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/4ba0092b/97fe93f8/IMG-20221019-WA0018.jpg" alt="Patio de columnas" style="width:100%;height:100%;object-fit:cover;">
-                </div>
-                <div>
-                    <div class="section-label">El corazón de la residencia</div>
-                    <h3 style="font-family: var(--serif); font-size: 1.5rem; margin-bottom: 10px;">Patio de Columnas</h3>
-                    <p style="color: var(--gray-600); font-size: 0.9rem; line-height: 1.8;">Sin duda, el corazón de La Floresta es nuestro singular patio de columnas. Un espacio histórico original del palacio donde puedes socializar, estudiar o simplemente disfrutar del ambiente único de vivir en un edificio del siglo XVI.</p>
-                </div>
-            </div>
-
-            <!-- Sala Proyecciones -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-bottom: 56px; direction: rtl;">
-                <div style="height: 320px; border-radius: var(--radius); overflow: hidden; direction: ltr;">
-                    <img src="https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/4ba0092b/97fe93f8/DSC_0175%20(1)%20(Mediano).jpg" alt="Sala de proyecciones" style="width:100%;height:100%;object-fit:cover;">
-                </div>
-                <div style="direction: ltr;">
-                    <div class="section-label">Ocio y presentaciones</div>
-                    <h3 style="font-family: var(--serif); font-size: 1.5rem; margin-bottom: 10px;">Sala de Proyecciones / TV</h3>
-                    <p style="color: var(--gray-600); font-size: 0.9rem; line-height: 1.8;">La Residencia cuenta con una amplia sala de estar y de TV diseñada para disfrutar ratos de ocio, entretenerse y descansar con otros compañeros. Esta sala cuenta con un sofá y un equipo audiovisual compuesto por un proyector que crea una gran imagen, como si fuera un cine y un equipo de sonido. Los estudiantes pueden utilizar este equipo también para realizar o practicar sus propias presentaciones.</p>
-                </div>
-            </div>
-
-            <!-- Coworking -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-bottom: 56px;">
-                <div style="height: 320px; border-radius: var(--radius); overflow: hidden;">
-                    <img src="https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/e689f525/71d63746/home-escaleras.jpg" alt="Coworking" style="width:100%;height:100%;object-fit:cover;">
-                </div>
-                <div>
-                    <div class="section-label">Estudio 24 horas</div>
-                    <h3 style="font-family: var(--serif); font-size: 1.5rem; margin-bottom: 10px;">Coworking</h3>
-                    <p style="color: var(--gray-600); font-size: 0.9rem; line-height: 1.8;">Espacio de estudio y trabajo colaborativo abierto las 24 horas. Con luz natural, amplias mesas de trabajo, sillas confortables e internet WiFi y por cable. Diseñado para favorecer la concentración y los trabajos en grupo.</p>
-                </div>
-            </div>
-
-            <!-- Terraza + Comedor + Ocio -->
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 56px;">
-                <div style="border: 1px solid var(--gray-200); border-radius: var(--radius); overflow: hidden;">
-                    <div style="height: 180px; overflow: hidden;">
-                        <img src="https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/4ba0092b/97fe93f8/acueducto.jpg" alt="Terraza" style="width:100%;height:100%;object-fit:cover;">
-                    </div>
-                    <div style="padding: 20px;">
-                        <h4 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 4px;">Terraza Chill-Out</h4>
-                        <p style="font-size: 0.8rem; color: var(--gray-600); line-height: 1.6;">Terraza en la planta alta para relajarse y estudiar al aire libre con luz natural.</p>
-                    </div>
-                </div>
-                <div style="border: 1px solid var(--gray-200); border-radius: var(--radius); overflow: hidden;">
-                    <div style="height: 180px; overflow: hidden;">
-                        <img src="https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/4ba0092b/7eea018/Cenas.jpg" alt="Comedor" style="width:100%;height:100%;object-fit:cover;">
-                    </div>
-                    <div style="padding: 20px;">
-                        <h4 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 4px;">Comedor</h4>
-                        <p style="font-size: 0.8rem; color: var(--gray-600); line-height: 1.6;">Servicio de desayuno y cena L-V con menús profesionales. También zona autoservicio 24h con microondas y tostadora.</p>
-                    </div>
-                </div>
-                <div style="border: 1px solid var(--gray-200); border-radius: var(--radius); overflow: hidden;">
-                    <div style="height: 180px; overflow: hidden;">
-                        <img src="https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/4ba0092b/7eea018/recepcion%20Maria.jpg" alt="Recepción" style="width:100%;height:100%;object-fit:cover;">
-                    </div>
-                    <div style="padding: 20px;">
-                        <h4 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 4px;">Recepción 24h</h4>
-                        <p style="font-size: 0.8rem; color: var(--gray-600); line-height: 1.6;">Personal bilingüe disponible las 24 horas para seguridad, paquetería y asistencia.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Extras grid -->
-            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
-                <div style="text-align: center; padding: 20px; border: 1px solid var(--gray-200); border-radius: var(--radius);">
-                    <i class="ph ph-game-controller" style="font-size: 1.4rem; color: var(--stone); display: block; margin-bottom: 8px;"></i>
-                    <div style="font-size: 0.85rem; font-weight: 700;">Zona de Juegos</div>
-                    <div style="font-size: 0.75rem; color: var(--gray-400);">Ping-pong y juegos de mesa</div>
-                </div>
-                <div style="text-align: center; padding: 20px; border: 1px solid var(--gray-200); border-radius: var(--radius);">
-                    <i class="ph ph-washing-machine" style="font-size: 1.4rem; color: var(--stone); display: block; margin-bottom: 8px;"></i>
-                    <div style="font-size: 0.85rem; font-weight: 700;">Lavandería</div>
-                    <div style="font-size: 0.75rem; color: var(--gray-400);">Lavadoras, secadoras, planchas</div>
-                </div>
-                <div style="text-align: center; padding: 20px; border: 1px solid var(--gray-200); border-radius: var(--radius);">
-                    <i class="ph ph-coffee" style="font-size: 1.4rem; color: var(--stone); display: block; margin-bottom: 8px;"></i>
-                    <div style="font-size: 0.85rem; font-weight: 700;">Lobby</div>
-                    <div style="font-size: 0.75rem; color: var(--gray-400);">Café, té, microondas 24h</div>
-                </div>
-                <div style="text-align: center; padding: 20px; border: 1px solid var(--gray-200); border-radius: var(--radius);">
-                    <i class="ph ph-suitcase" style="font-size: 1.4rem; color: var(--stone); display: block; margin-bottom: 8px;"></i>
-                    <div style="font-size: 0.85rem; font-weight: 700;">Equipajes</div>
-                    <div style="font-size: 0.75rem; color: var(--gray-400);">Sala segura de almacenaje</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- LOCATION -->
-    <section class="bg-light" id="location">
-        <div class="container">
-            <div class="section-header" style="text-align: left; margin-bottom: 32px;">
-                <div class="section-label">Ubicación</div>
-                <div class="section-title">En el corazón de Segovia</div>
-            </div>
-            <div class="location-grid">
-                <div class="location-map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3018.5!2d-4.1219!3d40.9487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sC%2F+San+Agust%C3%ADn+21%2C+Segovia!5e0!3m2!1ses!2ses!4v1" allowfullscreen loading="lazy"></iframe>
-                </div>
-                <div class="location-details">
-                    <div class="location-item">
-                        <i class="ph ph-map-pin"></i>
-                        <div>
-                            <strong>Dirección</strong>
-                            <span>C/ San Agustín, Nº21<br>40001 Segovia, España</span>
-                        </div>
-                    </div>
-                    <div class="location-item">
-                        <i class="ph ph-graduation-cap"></i>
-                        <div>
-                            <strong>IE University</strong>
-                            <span>10 minutos caminando</span>
-                        </div>
-                    </div>
-                    <div class="location-item">
-                        <i class="ph ph-castle-turret"></i>
-                        <div>
-                            <strong>Plaza Mayor y Acueducto</strong>
-                            <span>5 minutos caminando</span>
-                        </div>
-                    </div>
-                    <div class="location-item">
-                        <i class="ph ph-phone"></i>
-                        <div>
-                            <strong>Teléfono</strong>
-                            <span><a href="tel:+34921487738">921 487 738</a> · <a href="tel:+34699149214">699 149 214</a></span>
-                        </div>
-                    </div>
-                    <div class="location-item">
-                        <i class="ph ph-envelope"></i>
-                        <div>
-                            <strong>Email</strong>
-                            <span><a href="mailto:reservas@laflorestasegovia.com">reservas@laflorestasegovia.com</a></span>
-                        </div>
-                    </div>
-                    <div class="location-item">
-                        <i class="ph ph-clock"></i>
-                        <div>
-                            <strong>Recepción</strong>
-                            <span>24 horas, 7 días a la semana</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- HISTORY -->
-    <section style="padding: 80px 0; border-top: 1px solid var(--gray-200);">
+    <section style="padding: 80px 0;">
         <div class="container" style="max-width: 700px; text-align: center;">
             <div class="section-label">Nuestra Historia</div>
             <div class="section-title">Palacio de la Floresta de Trifontane</div>
-            <p style="color: var(--gray-600); line-height: 1.8; font-size: 0.92rem; margin-top: 16px;">Un palacio del siglo XVI donde el Rey Enrique IV concedió el título de Marquesa de La Floresta y Trifontane. Rehabilitado con respeto a su arquitectura original, abrió sus puertas como residencia universitaria en septiembre de 2019. Hoy combina la historia de cinco siglos con las comodidades que necesita un estudiante del siglo XXI.</p>
-            <p style="color: var(--gray-400); font-size: 0.82rem; margin-top: 12px;">Gestionado por Alojamientos Internacionales de Segovia S.L. · También operamos <a href="https://factoryresidence.com/" target="_blank" style="color: var(--stone);">The Factory Residence Hall</a></p>
-        </div>
-    </section>
-
-    <!-- SUMMER -->
-    <section>
-        <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;">
-                <div>
-                    <div class="section-label">Verano y Grupos</div>
-                    <div class="section-title">También en verano</div>
-                    <div class="section-desc" style="margin-bottom: 20px;">En junio, julio y agosto abrimos para grupos, cursos, congresos y eventos. Habitaciones con baño privado, salones de reuniones, cafetería y restaurante.</div>
-                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px;">
-                        <li style="font-size: 0.85rem; color: var(--gray-600); display: flex; align-items: center; gap: 8px;"><i class="ph ph-check-circle" style="color: var(--green);"></i> Habitaciones dobles, individuales y familiares</li>
-                        <li style="font-size: 0.85rem; color: var(--gray-600); display: flex; align-items: center; gap: 8px;"><i class="ph ph-check-circle" style="color: var(--green);"></i> Salas de reuniones con internet</li>
-                        <li style="font-size: 0.85rem; color: var(--gray-600); display: flex; align-items: center; gap: 8px;"><i class="ph ph-check-circle" style="color: var(--green);"></i> Servicio de catering y eventos</li>
-                        <li style="font-size: 0.85rem; color: var(--gray-600); display: flex; align-items: center; gap: 8px;"><i class="ph ph-check-circle" style="color: var(--green);"></i> A 15 min del Acueducto, Catedral y Alcázar</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-outline">Solicitar Presupuesto para Grupos</a>
-                </div>
-                <div style="height: 360px; border-radius: var(--radius); overflow: hidden;">
-                    <img src="https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/4ba0092b/97fe93f8/acueducto.jpg" alt="Segovia" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-            </div>
+            <p style="color: var(--gray-600); line-height: 1.8; font-size: 0.92rem; margin-top: 16px;">Un palacio del siglo XVI donde el Rey Enrique IV concedió el título de Marquesa de La Floresta y Trifontane. Rehabilitado con respeto a su arquitectura original, abrió sus puertas como residencia universitaria en septiembre de 2019.</p>
         </div>
     </section>
 
     <div class="divider"></div>
 
-    <!-- CONTACT -->
-    <section class="bg-light" id="contact">
+    <!-- CTA -->
+    <section style="padding: 80px 0; text-align: center; background: var(--gray-100);">
         <div class="container">
-            <div class="section-header">
-                <div class="section-label">Contacto</div>
-                <div class="section-title">¿Interesado en una plaza?</div>
-                <div class="section-desc">Rellena el formulario y te contactamos en 24 horas. También puedes visitarnos con cita previa.</div>
-            </div>
-            <div class="contact-grid">
-                <form class="contact-form" action="https://formsubmit.co/reservas@laflorestasegovia.com" method="POST">
-                    <input type="hidden" name="_subject" value="Nueva consulta desde la web - La Floresta">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_template" value="table">
-                    <input type="text" name="_honey" style="display:none">
-                    <div>
-                        <label>Nombre completo</label>
-                        <input type="text" name="name" placeholder="Tu nombre" required>
-                    </div>
-                    <div>
-                        <label>Email</label>
-                        <input type="email" name="email" placeholder="tu@email.com" required>
-                    </div>
-                    <div>
-                        <label>Teléfono</label>
-                        <input type="tel" name="phone" placeholder="+34 600 000 000">
-                    </div>
-                    <div>
-                        <label>Interesado en</label>
-                        <select name="interest">
-                            <option value="">Selecciona...</option>
-                            <option>Plaza curso 2027/28</option>
-                            <option>Lista de espera 2026/27</option>
-                            <option>Estancia de verano</option>
-                            <option>Grupo o evento</option>
-                            <option>Visita a la residencia</option>
-                            <option>Otra consulta</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label>Mensaje</label>
-                        <textarea name="message" placeholder="Cuéntanos qué necesitas..."></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-stone btn-full">Enviar Consulta</button>
-                </form>
-                <div>
-                    <div style="background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 28px; margin-bottom: 16px;">
-                        <h3 style="font-size: 1rem; font-weight: 700; margin-bottom: 16px;">Información rápida</h3>
-                        <div style="display: flex; flex-direction: column; gap: 14px;">
-                            <div style="display: flex; gap: 10px; align-items: center; font-size: 0.85rem;"><i class="ph ph-phone" style="color: var(--stone);"></i> <a href="tel:+34921487738">921 487 738</a></div>
-                            <div style="display: flex; gap: 10px; align-items: center; font-size: 0.85rem;"><i class="ph ph-device-mobile" style="color: var(--stone);"></i> <a href="tel:+34699149214">699 149 214</a></div>
-                            <div style="display: flex; gap: 10px; align-items: center; font-size: 0.85rem;"><i class="ph ph-envelope" style="color: var(--stone);"></i> <a href="mailto:reservas@laflorestasegovia.com">reservas@laflorestasegovia.com</a></div>
-                            <div style="display: flex; gap: 10px; align-items: center; font-size: 0.85rem;"><i class="ph ph-map-pin" style="color: var(--stone);"></i> C/ San Agustín, 21 · 40001 Segovia</div>
-                            <div style="display: flex; gap: 10px; align-items: center; font-size: 0.85rem;"><i class="ph ph-clock" style="color: var(--stone);"></i> Recepción 24h · Visitas con cita previa</div>
-                        </div>
-                    </div>
-                    <div style="background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 28px;">
-                        <h3 style="font-size: 1rem; font-weight: 700; margin-bottom: 12px;">Síguenos</h3>
-                        <div style="display: flex; gap: 12px;">
-                            <a href="https://www.instagram.com/florestaresidence/" target="_blank" style="display: flex; align-items: center; gap: 6px; font-size: 0.85rem; color: var(--gray-600);"><i class="ph ph-instagram-logo" style="font-size: 1.2rem;"></i> @florestaresidence</a>
-                            <a href="https://www.facebook.com/Floresta-Residence-105229505259541" target="_blank" style="display: flex; align-items: center; gap: 6px; font-size: 0.85rem; color: var(--gray-600);"><i class="ph ph-facebook-logo" style="font-size: 1.2rem;"></i> Facebook</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="section-title">¿Interesado en una plaza?</div>
+            <p style="color: var(--gray-600); margin: 8px auto 24px; max-width: 440px;">Curso 2026/27 completo. Lista de espera abierta. Contacta con nosotros.</p>
+            <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+                <a href="contacto.html" class="btn btn-stone">Solicitar Plaza</a>
+                <a href="tel:+34921487738" class="btn btn-outline">Llamar: 921 487 738</a>
             </div>
         </div>
     </section>
 
-    <!-- FACTORY LINK -->
+    <!-- FACTORY -->
     <section style="padding: 48px 0; text-align: center; border-top: 1px solid var(--gray-200);">
         <div class="container">
             <p style="font-size: 0.88rem; color: var(--gray-600);">¿Buscas una opción más económica? Visita <a href="https://factoryresidence.com/" target="_blank" style="color: var(--stone); font-weight: 600;">The Factory Residence Hall</a></p>
@@ -566,9 +181,9 @@
                 <div class="footer-col">
                     <h4>Residencia</h4>
                     <ul>
-                        <li><a href="#rooms">Habitaciones</a></li>
-                        <li><a href="#services">Servicios</a></li>
-                        <li><a href="#gallery">Instalaciones</a></li>
+                        <li><a href="habitaciones.html">Habitaciones</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="instalaciones.html">Instalaciones</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -576,7 +191,7 @@
                     <ul>
                         <li><a href="tel:+34921487738">921 487 738</a></li>
                         <li><a href="mailto:reservas@laflorestasegovia.com">reservas@laflorestasegovia.com</a></li>
-                        <li><a href="#location">C/ San Agustín, 21</a></li>
+                        <li><a href="contacto.html">C/ San Agustín, 21</a></li>
                     </ul>
                 </div>
             </div>
@@ -590,122 +205,7 @@
         </div>
     </footer>
 
-    <!-- ROOM MODAL -->
-    <div class="room-overlay" id="roomOverlay" onclick="if(event.target===this)closeRoom()">
-        <div class="room-modal">
-            <button class="room-modal-close" onclick="closeRoom()"><i class="ph ph-x"></i></button>
-            <div class="room-modal-img" id="rmImg"></div>
-            <div id="rmThumbs" style="display: flex; gap: 4px; padding: 4px 16px; background: var(--gray-100);"></div>
-            <div class="room-modal-body">
-                <div id="rmBadge" style="display:none;"></div>
-                <h2 id="rmName"></h2>
-                <div class="room-modal-size" id="rmSize"></div>
-                <div class="room-modal-price" id="rmPrice"></div>
-                <div class="room-modal-desc" id="rmDesc"></div>
-                <h3 style="font-size: 0.82rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--gray-400); margin-bottom: 14px;">Incluye</h3>
-                <div class="room-modal-features" id="rmFeatures"></div>
-                <div class="room-modal-cta">
-                    <a href="#contact" class="btn btn-stone" onclick="closeRoom()">Solicitar Esta Habitación</a>
-                    <a href="tel:+34921487738" class="btn btn-outline">Llamar</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <script>
-        // Room data
-        const rooms = {
-            bronze: {
-                name: 'Bronze', size: '≥12m² · Cama doble 135×200 cm', price: '€1.805', badge: '',
-                img: 'https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/c8bcc77a/Bronze.jpg',
-                imgs: ['https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/c8bcc77a/Bronze.jpg','https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/3ea55cf1/Bronze-2.jpg','https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/7eea018/Ba%C3%B1o.jpg'],
-                desc: 'Confortable habitación exterior con baño privado. Diseñada para ofrecer todo lo necesario para estudiar y descansar con tranquilidad. Luz natural, escritorio amplio y almacenaje inteligente.',
-                features: ['Baño privado completo', 'Escritorio de estudio', 'Mini-nevera', 'TV pantalla plana', 'Caja fuerte', 'WiFi + cable', 'Aire acondicionado', 'Calefacción individual', 'Armario', 'Estanterías']
-            },
-            silver: {
-                name: 'Silver', size: '≥16m² · Cama doble 135×200 cm', price: '€1.855', badge: 'Popular',
-                img: 'https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/3ea55cf1/Silver.jpg',
-                imgs: ['https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/3ea55cf1/Silver.jpg','https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/c8bcc77a/Silver.jpg','https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/c8bcc77a/ba%C3%B1o%203.jpg'],
-                desc: 'Espaciosa habitación exterior con más metros para moverte con libertad. El mismo equipamiento que Bronze en un formato más generoso, ideal para quienes valoran el espacio personal.',
-                features: ['Baño privado completo', '16m² mínimo', 'Escritorio de estudio', 'Mini-nevera', 'TV pantalla plana', 'Caja fuerte', 'WiFi + cable', 'Aire acondicionado', 'Calefacción individual', 'Armario amplio']
-            },
-            gold: {
-                name: 'Gold', size: '≥18m² · Cama grande 150×200 cm', price: '€1.955', badge: '',
-                img: 'https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/3ea55cf1/IMG_9495.jpg',
-                imgs: ['https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/3ea55cf1/IMG_9495.jpg','https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/3ea55cf1/Gold-2.jpg','https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/3ea55cf1/IMG_9543.jpg'],
-                desc: 'Habitación amplia con cama de 150 cm para un descanso superior. Más espacio, más confort y las mismas prestaciones premium que caracterizan a La Floresta.',
-                features: ['Baño privado completo', 'Cama grande 150 cm', '18m² mínimo', 'Escritorio de estudio', 'Mini-nevera', 'TV pantalla plana', 'Caja fuerte', 'WiFi + cable', 'Climatización individual', 'Armario completo']
-            },
-            platinum: {
-                name: 'Platinum', size: '≥24m² · Cama grande 150×200 cm', price: '€2.055', badge: '',
-                img: 'https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/3ea55cf1/Platinum.jpg',
-                imgs: ['https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/3ea55cf1/Platinum.jpg','https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/3ea55cf1/Platinum-2.jpg','https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/7eea018/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(27).jpg','https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/7eea018/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(26).jpg'],
-                desc: 'Singulares y espaciosas habitaciones exteriores en las que disfrutarás de detalles únicos: algunas con techos decorados originales del palacio, posibilidad de terraza y baños con doble zona.',
-                features: ['Baño privado doble zona', 'Techos históricos decorados', 'Terraza (según disponibilidad)', 'Cama grande 150 cm', '24m² mínimo', 'Escritorio de estudio', 'Mini-nevera', 'TV pantalla plana', 'WiFi + cable', 'Climatización individual']
-            },
-            diamond: {
-                name: 'Diamond', size: '≥29m² · Cama XL 210×200 cm', price: '€2.175', badge: 'Premium',
-                img: 'https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/7eea018/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(29).jpg',
-                imgs: ['https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/7eea018/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(29).jpg','https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/3ea55cf1/Diamond.jpg','https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/c8bcc77a/diamante.jpg'],
-                desc: 'Exclusivas y espaciosas habitaciones con zona de estar tipo chaise longue, cama extra grande de 210 cm, TV giratoria y almacenaje premium. Para quienes buscan lo mejor.',
-                features: ['Zona chaise longue', 'Cama XL 210×200 cm', 'TV giratoria', 'Almacenaje premium', 'Baño privado completo', '29m² mínimo', 'Escritorio amplio', 'Mini-nevera', 'WiFi + cable', 'Climatización individual']
-            },
-            suite: {
-                name: 'Suite Diamond', size: '≥48m² · Cama XL 210×200 cm · Dos niveles', price: '€2.220', badge: 'Exclusiva',
-                img: 'https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/7eea018/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(28).jpg',
-                imgs: ['https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/7eea018/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(28).jpg','https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/7eea018/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(30).jpg','https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/7eea018/BA%C3%91O%20Suite%20Diamond.jpg'],
-                desc: 'La habitación más espectacular de La Floresta. Distribuida en dos niveles con cama extra grande, escritorio junto a amplios ventanales, baño completo con bañera y ducha, y terraza privada. Una experiencia única en un palacio del siglo XVI.',
-                features: ['Dos niveles', 'Terraza privada', 'Bañera + ducha', 'Cama XL 210×200 cm', '48m² mínimo', 'Escritorio junto a ventanales', 'Zona de estar', 'Mini-nevera', 'TV pantalla plana', 'WiFi + cable', 'Climatización individual', 'Armario doble']
-            }
-        };
-
-        function openRoom(id) {
-            const r = rooms[id];
-            document.getElementById('rmImg').style.backgroundImage = `url('${r.img}')`;
-            document.getElementById('rmName').textContent = r.name;
-            document.getElementById('rmSize').textContent = r.size;
-            document.getElementById('rmPrice').innerHTML = `${r.price}<span>/mes</span>`;
-            document.getElementById('rmDesc').textContent = r.desc;
-
-            const badgeEl = document.getElementById('rmBadge');
-            if (r.badge) {
-                badgeEl.style.display = 'block';
-                badgeEl.className = 'room-modal-badge';
-                badgeEl.style.position = 'static';
-                badgeEl.style.display = 'inline-block';
-                badgeEl.style.marginBottom = '12px';
-                badgeEl.textContent = r.badge;
-            } else {
-                badgeEl.style.display = 'none';
-            }
-
-            // Thumbnails
-            const thumbsEl = document.getElementById('rmThumbs');
-            if (r.imgs && r.imgs.length > 1) {
-                thumbsEl.style.display = 'flex';
-                thumbsEl.innerHTML = r.imgs.map((img, i) =>
-                    `<div onclick="document.getElementById('rmImg').style.backgroundImage='url(${img})'" style="width:70px;height:50px;background:url('${img}') center/cover;border-radius:4px;cursor:pointer;border:2px solid ${i===0?'var(--stone)':'transparent'};flex-shrink:0;" onmouseover="this.style.borderColor='var(--stone)'" onmouseout="this.style.borderColor='transparent'"></div>`
-                ).join('');
-            } else {
-                thumbsEl.style.display = 'none';
-            }
-
-            document.getElementById('rmFeatures').innerHTML = r.features.map(f =>
-                `<div class="feat"><i class="ph ph-check-circle"></i> ${f}</div>`
-            ).join('');
-
-            document.getElementById('roomOverlay').classList.add('open');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeRoom() {
-            document.getElementById('roomOverlay').classList.remove('open');
-            document.body.style.overflow = '';
-        }
-
-        // Close on Escape
-        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeRoom(); });
-
         const nav = document.getElementById('nav');
         window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20));
         document.getElementById('navToggle').addEventListener('click', () => {
@@ -719,12 +219,11 @@
                 document.querySelector('#navToggle i').className = 'ph ph-list';
             });
         });
-
         // Scroll reveal
         const obs = new IntersectionObserver(entries => {
             entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; }});
         }, { threshold: 0.1 });
-        document.querySelectorAll('.room-card, .service-item, .gallery-item, .highlight-card').forEach(el => {
+        document.querySelectorAll('.highlight-card').forEach(el => {
             el.style.opacity = '0'; el.style.transform = 'translateY(16px)';
             el.style.transition = 'opacity 0.5s ease, transform 0.5s ease'; obs.observe(el);
         });

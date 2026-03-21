@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habitaciones y Precios — La Floresta Segovia</title>
+    <meta name="description" content="6 categorías de habitaciones desde 12m² hasta 48m². Todas con baño privado. Desde €1.805/mes con pensión completa.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">La <span>Floresta</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="habitaciones.html" class="active">Habitaciones</a></li>
+                <li><a href="servicios.html" class="">Servicios</a></li>
+                <li><a href="instalaciones.html" class="">Instalaciones</a></li>
+                <li><a href="contacto.html" class="">Contacto</a></li>
+            </ul>
+            <a href="contacto.html" class="nav-cta">Reservar</a>
+            <button class="nav-toggle" id="navToggle"><i class="ph ph-list"></i></button>
+        </div>
+    </nav>
+
+    <section class="page-hero" style="padding: 130px 0 50px; background: var(--gray-100); text-align: center;">
+        <div class="container">
+            <div class="section-label">Habitaciones y Precios</div>
+            <div class="section-title" style="font-size: 2.5rem;">Elige tu espacio</div>
+            <p style="color: var(--gray-600); margin-top: 8px;">6 categorías desde 12m² hasta 48m². Todas con baño privado, pensión completa L-V incluida.</p>
+        </div>
+    </section>
+<!-- ROOMS -->
+    <section >
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Habitaciones</div>
+                <div class="section-title">Elige tu espacio</div>
+                <div class="section-desc">6 categorías desde 12m² hasta 48m². Todas con baño privado, WiFi, climatización y escritorio de estudio.</div>
+            </div>
+            <div class="rooms-grid">
+                <div class="room-card" onclick="openRoom('bronze')">
+                    <div class="room-img" style="background-image: url('https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/c8bcc77a/Bronze.jpg');"></div>
+                    <div class="room-info">
+                        <h3>Bronze</h3>
+                        <div class="room-size">≥12m² · Cama 135×200</div>
+                        <div class="room-price">€1.805<span>/mes</span></div>
+                        <div class="room-features">
+                            <span>Baño privado</span>
+                            <span>Mini-nevera</span>
+                            <span>TV</span>
+                            <span>Caja fuerte</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="room-card" onclick="openRoom('silver')">
+                    <div class="room-img" style="background-image: url('https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/3ea55cf1/Silver.jpg');">
+                        <div class="room-badge">Popular</div>
+                    </div>
+                    <div class="room-info">
+                        <h3>Silver</h3>
+                        <div class="room-size">≥16m² · Cama 135×200</div>
+                        <div class="room-price">€1.855<span>/mes</span></div>
+                        <div class="room-features">
+                            <span>Baño privado</span>
+                            <span>Más espacio</span>
+                            <span>Mini-nevera</span>
+                            <span>TV</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="room-card" onclick="openRoom('gold')">
+                    <div class="room-img" style="background-image: url('https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/3ea55cf1/IMG_9495.jpg');"></div>
+                    <div class="room-info">
+                        <h3>Gold</h3>
+                        <div class="room-size">≥18m² · Cama 150×200</div>
+                        <div class="room-price">€1.955<span>/mes</span></div>
+                        <div class="room-features">
+                            <span>Baño privado</span>
+                            <span>Cama grande</span>
+                            <span>Mini-nevera</span>
+                            <span>TV</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="room-card" onclick="openRoom('platinum')">
+                    <div class="room-img" style="background-image: url('https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/3ea55cf1/Platinum.jpg');"></div>
+                    <div class="room-info">
+                        <h3>Platinum</h3>
+                        <div class="room-size">≥24m² · Cama 150×200</div>
+                        <div class="room-price">€2.055<span>/mes</span></div>
+                        <div class="room-features">
+                            <span>Techos decorados</span>
+                            <span>Terraza posible</span>
+                            <span>Baño doble zona</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="room-card" onclick="openRoom('diamond')">
+                    <div class="room-img" style="background-image: url('https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/7eea018/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(29).jpg');">
+                        <div class="room-badge">Premium</div>
+                    </div>
+                    <div class="room-info">
+                        <h3>Diamond</h3>
+                        <div class="room-size">≥29m² · Cama 210×200</div>
+                        <div class="room-price">€2.175<span>/mes</span></div>
+                        <div class="room-features">
+                            <span>Zona chaise longue</span>
+                            <span>TV giratoria</span>
+                            <span>Almacenaje premium</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="room-card" onclick="openRoom('suite')">
+                    <div class="room-img" style="background-image: url('https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/7eea018/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(28).jpg');">
+                        <div class="room-badge">Exclusiva</div>
+                    </div>
+                    <div class="room-info">
+                        <h3>Suite Diamond</h3>
+                        <div class="room-size">≥48m² · Cama 210×200 · Dos niveles</div>
+                        <div class="room-price">€2.220<span>/mes</span></div>
+                        <div class="room-features">
+                            <span>Dos niveles</span>
+                            <span>Terraza privada</span>
+                            <span>Bañera + ducha</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 32px;">
+                <p style="font-size: 0.82rem; color: var(--gray-400); margin-bottom: 8px;">Todos los precios incluyen pensión completa L-V, limpieza diaria, ropa de cama y suministros.</p>
+                <p style="font-size: 0.85rem; color: var(--green); font-weight: 600;"><i class="ph ph-info"></i> Curso 2026/27 completo — Lista de espera abierta</p>
+            </div>
+        </div>
+    </section>
+
+
+<!-- ROOM MODAL -->
+    <div class="room-overlay" id="roomOverlay" onclick="if(event.target===this)closeRoom()">
+        <div class="room-modal">
+            <button class="room-modal-close" onclick="closeRoom()"><i class="ph ph-x"></i></button>
+            <div class="room-modal-img" id="rmImg"></div>
+            <div id="rmThumbs" style="display: flex; gap: 4px; padding: 4px 16px; background: var(--gray-100);"></div>
+            <div class="room-modal-body">
+                <div id="rmBadge" style="display:none;"></div>
+                <h2 id="rmName"></h2>
+                <div class="room-modal-size" id="rmSize"></div>
+                <div class="room-modal-price" id="rmPrice"></div>
+                <div class="room-modal-desc" id="rmDesc"></div>
+                <h3 style="font-size: 0.82rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--gray-400); margin-bottom: 14px;">Incluye</h3>
+                <div class="room-modal-features" id="rmFeatures"></div>
+                <div class="room-modal-cta">
+                    <a href="#contact" class="btn btn-stone" onclick="closeRoom()">Solicitar Esta Habitación</a>
+                    <a href="tel:+34921487738" class="btn btn-outline">Llamar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Room data
+        const rooms = {
+            bronze: {
+                name: 'Bronze', size: '≥12m² · Cama doble 135×200 cm', price: '€1.805', badge: '',
+                img: 'https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/c8bcc77a/Bronze.jpg',
+                imgs: ['https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/c8bcc77a/Bronze.jpg','https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/3ea55cf1/Bronze-2.jpg','https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/7eea018/Ba%C3%B1o.jpg'],
+                desc: 'Confortable habitación exterior con baño privado. Diseñada para ofrecer todo lo necesario para estudiar y descansar con tranquilidad. Luz natural, escritorio amplio y almacenaje inteligente.',
+                features: ['Baño privado completo', 'Escritorio de estudio', 'Mini-nevera', 'TV pantalla plana', 'Caja fuerte', 'WiFi + cable', 'Aire acondicionado', 'Calefacción individual', 'Armario', 'Estanterías']
+            },
+            silver: {
+                name: 'Silver', size: '≥16m² · Cama doble 135×200 cm', price: '€1.855', badge: 'Popular',
+                img: 'https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/3ea55cf1/Silver.jpg',
+                imgs: ['https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/3ea55cf1/Silver.jpg','https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/c8bcc77a/Silver.jpg','https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/c8bcc77a/ba%C3%B1o%203.jpg'],
+                desc: 'Espaciosa habitación exterior con más metros para moverte con libertad. El mismo equipamiento que Bronze en un formato más generoso, ideal para quienes valoran el espacio personal.',
+                features: ['Baño privado completo', '16m² mínimo', 'Escritorio de estudio', 'Mini-nevera', 'TV pantalla plana', 'Caja fuerte', 'WiFi + cable', 'Aire acondicionado', 'Calefacción individual', 'Armario amplio']
+            },
+            gold: {
+                name: 'Gold', size: '≥18m² · Cama grande 150×200 cm', price: '€1.955', badge: '',
+                img: 'https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/3ea55cf1/IMG_9495.jpg',
+                imgs: ['https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/3ea55cf1/IMG_9495.jpg','https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/3ea55cf1/Gold-2.jpg','https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/3ea55cf1/IMG_9543.jpg'],
+                desc: 'Habitación amplia con cama de 150 cm para un descanso superior. Más espacio, más confort y las mismas prestaciones premium que caracterizan a La Floresta.',
+                features: ['Baño privado completo', 'Cama grande 150 cm', '18m² mínimo', 'Escritorio de estudio', 'Mini-nevera', 'TV pantalla plana', 'Caja fuerte', 'WiFi + cable', 'Climatización individual', 'Armario completo']
+            },
+            platinum: {
+                name: 'Platinum', size: '≥24m² · Cama grande 150×200 cm', price: '€2.055', badge: '',
+                img: 'https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/3ea55cf1/Platinum.jpg',
+                imgs: ['https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/3ea55cf1/Platinum.jpg','https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/3ea55cf1/Platinum-2.jpg','https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/7eea018/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(27).jpg','https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/7eea018/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(26).jpg'],
+                desc: 'Singulares y espaciosas habitaciones exteriores en las que disfrutarás de detalles únicos: algunas con techos decorados originales del palacio, posibilidad de terraza y baños con doble zona.',
+                features: ['Baño privado doble zona', 'Techos históricos decorados', 'Terraza (según disponibilidad)', 'Cama grande 150 cm', '24m² mínimo', 'Escritorio de estudio', 'Mini-nevera', 'TV pantalla plana', 'WiFi + cable', 'Climatización individual']
+            },
+            diamond: {
+                name: 'Diamond', size: '≥29m² · Cama XL 210×200 cm', price: '€2.175', badge: 'Premium',
+                img: 'https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/7eea018/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(29).jpg',
+                imgs: ['https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/7eea018/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(29).jpg','https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/3ea55cf1/Diamond.jpg','https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/c8bcc77a/diamante.jpg'],
+                desc: 'Exclusivas y espaciosas habitaciones con zona de estar tipo chaise longue, cama extra grande de 210 cm, TV giratoria y almacenaje premium. Para quienes buscan lo mejor.',
+                features: ['Zona chaise longue', 'Cama XL 210×200 cm', 'TV giratoria', 'Almacenaje premium', 'Baño privado completo', '29m² mínimo', 'Escritorio amplio', 'Mini-nevera', 'WiFi + cable', 'Climatización individual']
+            },
+            suite: {
+                name: 'Suite Diamond', size: '≥48m² · Cama XL 210×200 cm · Dos niveles', price: '€2.220', badge: 'Exclusiva',
+                img: 'https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/7eea018/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(28).jpg',
+                imgs: ['https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/7eea018/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(28).jpg','https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/7eea018/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(30).jpg','https://laflorestasegovia.com/Media/laflorestasegovia/_Profiles/7b244c85/7eea018/BA%C3%91O%20Suite%20Diamond.jpg'],
+                desc: 'La habitación más espectacular de La Floresta. Distribuida en dos niveles con cama extra grande, escritorio junto a amplios ventanales, baño completo con bañera y ducha, y terraza privada. Una experiencia única en un palacio del siglo XVI.',
+                features: ['Dos niveles', 'Terraza privada', 'Bañera + ducha', 'Cama XL 210×200 cm', '48m² mínimo', 'Escritorio junto a ventanales', 'Zona de estar', 'Mini-nevera', 'TV pantalla plana', 'WiFi + cable', 'Climatización individual', 'Armario doble']
+            }
+        };
+
+        function openRoom(id) {
+            const r = rooms[id];
+            document.getElementById('rmImg').style.backgroundImage = `url('${r.img}')`;
+            document.getElementById('rmName').textContent = r.name;
+            document.getElementById('rmSize').textContent = r.size;
+            document.getElementById('rmPrice').innerHTML = `${r.price}<span>/mes</span>`;
+            document.getElementById('rmDesc').textContent = r.desc;
+
+            const badgeEl = document.getElementById('rmBadge');
+            if (r.badge) {
+                badgeEl.style.display = 'block';
+                badgeEl.className = 'room-modal-badge';
+                badgeEl.style.position = 'static';
+                badgeEl.style.display = 'inline-block';
+                badgeEl.style.marginBottom = '12px';
+                badgeEl.textContent = r.badge;
+            } else {
+                badgeEl.style.display = 'none';
+            }
+
+            // Thumbnails
+            const thumbsEl = document.getElementById('rmThumbs');
+            if (r.imgs && r.imgs.length > 1) {
+                thumbsEl.style.display = 'flex';
+                thumbsEl.innerHTML = r.imgs.map((img, i) =>
+                    `<div onclick="document.getElementById('rmImg').style.backgroundImage='url(${img})'" style="width:70px;height:50px;background:url('${img}') center/cover;border-radius:4px;cursor:pointer;border:2px solid ${i===0?'var(--stone)':'transparent'};flex-shrink:0;" onmouseover="this.style.borderColor='var(--stone)'" onmouseout="this.style.borderColor='transparent'"></div>`
+                ).join('');
+            } else {
+                thumbsEl.style.display = 'none';
+            }
+
+            document.getElementById('rmFeatures').innerHTML = r.features.map(f =>
+                `<div class="feat"><i class="ph ph-check-circle"></i> ${f}</div>`
+            ).join('');
+
+            document.getElementById('roomOverlay').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeRoom() {
+            document.getElementById('roomOverlay').classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        // Close on Escape
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeRoom(); });
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <span class="nav-logo">La <span>Floresta</span></span>
+                    <p>Residencia universitaria en un palacio del siglo XVI. Centro histórico de Segovia.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Residencia</h4>
+                    <ul>
+                        <li><a href="habitaciones.html">Habitaciones</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="instalaciones.html">Instalaciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="tel:+34921487738">921 487 738</a></li>
+                        <li><a href="mailto:reservas@laflorestasegovia.com">reservas@laflorestasegovia.com</a></li>
+                        <li><a href="contacto.html">C/ San Agustín, 21</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 Alojamientos Internacionales de Segovia S.L.</span>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/florestaresidence/" target="_blank"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="https://www.facebook.com/Floresta-Residence-105229505259541" target="_blank"><i class="ph ph-facebook-logo"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20));
+        document.getElementById('navToggle').addEventListener('click', () => {
+            const l = document.getElementById('navLinks');
+            l.classList.toggle('open');
+            document.querySelector('#navToggle i').className = l.classList.contains('open') ? 'ph ph-x' : 'ph ph-list';
+        });
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('open');
+                document.querySelector('#navToggle i').className = 'ph ph-list';
+            });
+        });
+    </script>
+</body>
+</html>
