@@ -589,3 +589,15 @@ See `docs/ADMIN-PANEL-GUIDE.md` and `docs/PROGRESSION.md` for full details.
 ---
 
 *Last updated: March 21, 2026 — after Le Tavole, Mori Matcha, Floristería Calero, admin panel research, Tapeo/Qargo analysis, backoffice app research, website systems research, ecommerce conversion research, lead-gen research, CMS/backend architecture research, analytics research, localization research, compliance launch research, and trend research by area*
+
+
+## Perkstage Build (Full-Stack Student Platform)
+See `docs/LEARNINGS-PERKSTAGE.md` for the complete deep dive. Key takeaways:
+- Fernando prefers white/clean Apple-style over dark editorial
+- Always offer dark/light toggle
+- Percentages only on discount badges, no emoji in UI
+- Text-focused > icon-heavy. Serif quotes for reviews only
+- Square photo tiles with rounded corners > horizontal cards
+- Interactive rotating elements > static lists
+- "Welcoming but exclusive" is the brand tone
+- Sora headings + Inter body + dark navy accent (#1E3A6E)
