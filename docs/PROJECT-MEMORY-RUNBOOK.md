@@ -165,6 +165,11 @@ When a new request comes in, match it to the closest prior system memory:
 - read `florist/THOUGHT-PROCESS.md`
 - read Floristería Calero concept files
 
+### If the client is a winery, vineyard, or wine-tourism destination
+- read `winery/DESIGN-SPEC.md`
+- read Bodegas Pinuaga client files in `clients/bodegas-pinuaga/`
+- read the wineries section of `INDUSTRY-PLAYBOOK.md`
+
 ### If the project includes admin, CMS, backoffice, or internal tooling
 - read `docs/BACKOFFICE-APP-RESEARCH.md`
 - read `backoffice/DESIGN-SPEC.md`
@@ -235,6 +240,7 @@ At the time of writing, the repo has these reference points:
 - Le Tavole = luxury home-goods e-commerce
 - Mori Matcha = curated specialty retail with a physical-first conversion path
 - Floristería Calero concept = occasion-driven local florist / gifting retail
+- Bodegas Pinuaga = organic winery and wine-tourism destination (storytelling + experiences)
 - Backoffice memory = reusable admin, CMS, dashboard, and operational app rules
 - Website systems memory = reusable build, deployment, and sales rules
 - Ecommerce memory = reusable store conversion logic

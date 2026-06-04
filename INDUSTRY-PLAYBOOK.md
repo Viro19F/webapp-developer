@@ -386,6 +386,85 @@ Homepage, Product Catalog, Product Detail pages, Cart, Checkout (3 steps max), A
 
 ---
 
+## 10. WINERIES & WINE TOURISM
+
+### Pages
+Homepage, About / Family Story, Wines (collection + flagship), Visits / Experiences (one per tier), Booking, Contact, optional Online Shop, optional Press / Awards
+
+### Design
+- **Palette:** Warm cream + deep wine red + terracotta + olive/gold. Avoid the "luxury black + gold" cliché — wine country reads through warmth, not darkness.
+- **Cream backgrounds with deep-wine text** convert better than dark hero pages for the 25–40 target
+- **Editorial split layouts** (image + copy, alternating sides) every 1–2 sections — reads as a magazine
+- **Stats strip** with serif italic numerals (years of tradition, % organic, hectares, distance from major city)
+- **Italic display quotes** between sections — storytelling beats
+- **Footer in deep ink + cream type + gold accents** to anchor the document
+
+### Typography
+- Display serif (Cormorant Garamond, Maharlika, Playfair) for headings — italic accents work
+- Clean grotesque sans (Inter, Livvic) for body. Never let the display font drop below ~22px
+- The wordmark logo is typography too — treat as part of the system, not a sticker
+
+### Photography (priority order)
+1. People in the vines — the family, the crew, hands at work. Authentic > stock.
+2. Wine being made — vat, fermentation, hand-stirring, barrel cellars
+3. Wide vineyard landscape with horizon — establishes the place
+4. Lifestyle moments — bottle + glasses on a table, sunset on the terrace
+5. Bottle product shots — keep these for the wine detail modals, not for hero imagery
+
+### Must-have features
+- **Book a Visit** as the dominant CTA — in nav, hero, every experience card, sticky mobile, repeated in CTA banners
+- **WhatsApp float** (mandatory for Spanish + LATAM markets) with pre-filled message
+- **Experience tiers** as separate cards with: meta (duration / group), title, body, price, Book button
+- **Wine collection grid** with click-to-modal detail (bottle photo + tasting notes + pairing + technical specs)
+- **Family-story page** with origin date, philosophy decisions, and the people
+- **Booking form** with 6–8 fields max (mailto fallback for pitch stage)
+- **Google Maps embed** on contact, light grayscale + sepia filter to match palette
+- **Stats strip** anchoring the value prop early
+
+### Wine detail modal (reusable pattern)
+- Card on page: tag (Red · Crianza, Rosé, etc.), name, vintage, one-line description
+- Hover: small arrow indicator slides in
+- Click: opens modal with bottle photo (object-fit contain, drop-shadow, cream gradient bg) + name + tasting notes + pair-with + specs (grape, aging, alcohol, production) + award (if any) + CTAs
+- Close on X / backdrop / Escape
+- Use real bottle photos pulled from the client's existing WordPress site (`/wp-content/uploads/`) for pitch credibility
+
+### Lifestyle section (a winery-specific section that we've made standard)
+Full-bleed image (bottle + glasses, terrace, picnic) + short editorial copy + soft CTA. Speaks directly to the 25–40 audience without selling. Distinct from the product and process sections.
+
+### Content strategy
+- First-person plural ("we", "our family")
+- Specific over vague: "200 cepas planted by our grandparents in 1965" beats "century-old tradition"
+- Numbers ground claims (years, altitude, % organic, bottles produced)
+- Spanish words sprinkled into English copy read authentic (Bodega, Cencibel, Manchego)
+- Italic display quotes from "the family" — storytelling tone
+
+### What NOT to do
+- Stock photo "rolling vineyards" — readable as fake in 2 seconds
+- Generic "passion for wine" copy
+- Bottle-shot-on-white as hero imagery — looks like e-commerce, not a destination
+- Awards-as-decoration with no context
+- "Premium / boutique / artisanal" without proof
+- Dark luxury cliché — wine country is warm, not black
+
+### Trust signals
+- Organic certifications (logo + cert number / body)
+- Awards with context (year, competition, wine name)
+- Years in operation + generation count
+- Real photography of the family / team
+- Press mentions (if any)
+- Specific sustainability practices, not just "eco"
+
+### Operational notes
+- Primary CTA = book a visit, not buy a bottle. E-commerce is secondary, never competing.
+- For pitches: mailto fallback is acceptable. For production: server-backed form (Formspree, Resend, own backend).
+- WhatsApp pre-filled message hugely increases conversion in EU/LATAM
+- If the winery has an existing shop, link out — don't try to rebuild e-commerce on day one
+- Private group / event hire deserves its own conversion path (often higher-ticket than walk-up visits)
+
+See `winery/DESIGN-SPEC.md` for the full reusable spec and `clients/bodegas-pinuaga/` for the reference implementation.
+
+---
+
 ## UNIVERSAL RULES (ALL INDUSTRIES)
 
 ### Mobile

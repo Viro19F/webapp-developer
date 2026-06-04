@@ -601,3 +601,76 @@ See `docs/LEARNINGS-PERKSTAGE.md` for the complete deep dive. Key takeaways:
 - Interactive rotating elements > static lists
 - "Welcoming but exclusive" is the brand tone
 - Sora headings + Inter body + dark navy accent (#1E3A6E)
+
+---
+
+## Client #4: Bodegas Pinuaga (Organic Winery + Wine Tourism, La Mancha) — June 2026
+
+First winery client. Marketing-pitch deliverable: redesign of bodegaspinuaga.com, focused on the 25–40 couples/groups audience, with storytelling + sustainability + booking as the three pillars.
+
+See `winery/DESIGN-SPEC.md` for the reusable system rules behind these findings.
+
+### What Worked
+1. **Warm cream + wine + terracotta palette** beats the default "luxury winery dark mode". Wine-country reads through warmth, not blackness. The site feels like a sunny afternoon at the estate, which is the actual product.
+
+2. **Maharlika (display) + Livvic (body) is a strong premium pair**, distinct from the Cormorant/Inter default. Maharlika is sharp and editorial; Livvic is clean and friendly. Worth keeping in the type rotation for premium / heritage brands.
+
+3. **Image-first asymmetric layouts everywhere**. Every section pairs a photo with copy in a split layout, alternating side. The result reads as a magazine, not a website. This is the antidote to "AI-looking" pages.
+
+4. **The magazine-spread philosophy section** (image + italic quote overlay on the left, numbered list with hairline dividers on the right) replaced the original 3-symmetric-card layout and was the single biggest "this stopped looking AI" win. Save this pattern.
+
+5. **A dedicated lifestyle section** (woman + bottle + glasses, "A bottle, two glasses, a memory") speaks directly to 25–40 couples without selling. Different from product photography and from process photography. Worth adding to the standard premium toolkit.
+
+6. **Real bottle photos pulled from the client's existing WordPress site** (`/wp-content/uploads/`) made the wine modal pitch-credible immediately. Don't fake bottle shots — fetch the real ones.
+
+7. **The "click any wine for details" modal** turned the catalogue into an interactive feature. Each card opens a popup with the bottle, tasting notes, pairing, and specs. This is reusable for any product catalogue (wines, dishes, hotel rooms, treatments).
+
+8. **Single-file shareable HTML with multi-page SPA routing** is the right format for a marketing pitch. One file, base64-inlined assets, JS image map for dedup, hash routing for back/forward — feels like a real site to the recipient. Repeatable via a Python build script saved in the client folder.
+
+9. **A transparent-PNG logo, processed once with Pillow**, looks correct on every surface. Blend-mode tricks (`mix-blend-mode: multiply` on a JPEG) leave faint edge artifacts that read as cheap. Fix the asset, don't patch the CSS.
+
+### What I Learned (Mistakes & Fixes)
+1. **First logo attempt used blend modes on the original JPEG.** Worked OK on cream nav, struggled on dark footer, and had subtle anti-aliasing halos. Switched to a transparent PNG processed with Pillow (`pixel.r > 235 → alpha 0`). Cleaner result everywhere, no CSS gymnastics needed.
+
+2. **Tried recreating the logo as pure HTML text.** Lost the gold sunburst icon entirely, which is the actual recognizable mark for the brand. Lesson: native-typography logos are great when the wordmark IS the brand, but if the icon carries equity, restore the real artwork.
+
+3. **Initial philosophy section was three symmetric text columns.** Client immediately read it as AI-generated, even though the copy was good. The fix wasn't better copy — it was breaking the symmetry with imagery. Save the pattern.
+
+4. **Maharlika is decorative — risk of being unreadable at body sizes.** Restricted to headings only, kept Livvic for everything 16px and below. If using Maharlika, never let it touch paragraph copy.
+
+5. **Default modal image styling (object-fit: cover, dark bg)** worked for landscape photos but cropped bottle product shots awkwardly. Switched modal-image background to a cream gradient with `object-fit: contain` + drop-shadow + padding — bottles now display as product showcases instead of being chopped.
+
+6. **Wine card hover affordance was missing.** Cards looked clickable but the hover state didn't confirm it. Added a small arrow `::after` indicator that slides in on hover. Tiny detail, big credibility lift.
+
+### Technical Decisions
+- **Pillow for asset processing** is now part of the build pipeline. Resize bottle photos to 600px longest side, JPEG quality 82, and turn near-white logo pixels transparent in one pass.
+- **JS image map (`const IMAGES = {...}`) + `data-img` attribute** is how we deduplicate base64 images in the single-file build. A photo referenced 5 times still only adds its bytes once. Final file ended up 1.6 MB with 16 images.
+- **SPA hash routing** with `popstate` + `history.pushState` for back/forward + scroll-to-top on page switch. Felt like a real multi-page site even though it's one HTML file.
+- **Modal pattern is now standard for rich product catalogues**: data-key attribute, JS reads from a dict, populates fields, opens with `.open` class + body lock. Close on X / backdrop / Escape / popstate.
+
+### Reusable Lessons For Wineries
+1. **Photo strategy in priority order**: people in the vines → wine being made → wide landscape → lifestyle moments → bottle product shots
+2. **Stat strip with serif italic numerals** (60, 100%, 7, 1h) anchors the value prop in five seconds
+3. **A dedicated experiences page with deep splits per tier** beats stacking them on one short visits page — each experience deserves its own narrative
+4. **Footer in deep ink with cream type + gold accents** anchors the document and gives the logo the dark-mode treatment it needs
+5. **WhatsApp float is mandatory for Spanish-market wineries** — it's how people actually book
+
+### Reusable Lessons That Generalize Beyond Wineries
+1. **When a section feels AI-generated, it's symmetric and text-only** — fix with asymmetry + photography, not better copy
+2. **Lifestyle section beats product section** for emotional brand positioning — full-bleed image + short copy
+3. **Click-to-modal product detail** is universal: wines, dishes, rooms, services, treatments
+4. **Real photography from the client's own existing site** is the highest-credibility input for a redesign pitch
+5. **Single-file SPA with base64 assets** is the right delivery format for marketing pitches — packages everything into one shareable artifact
+6. **Process the asset, don't patch the CSS** — transparent PNG > blend-mode hack, the right way to fix a logo is fix the file once
+7. **Save the build script in the client folder** so the single-file artifact stays reproducible and updatable later
+
+### What Still Needs Work
+1. **Wine modal needs "next / previous wine" navigation** for browsing the collection without closing
+2. **Bottle photography from third-party sites is inconsistent** — some studio, some still-life. A real engagement should commission consistent product photography
+3. **The art-on-the-bottle story** (Miguel Ángel Muñoz Zamora) could be its own page with a label gallery — currently a single paragraph
+4. **Booking form is mailto-only** — production needs a server-backed form (Formspree, Resend, or own backend)
+5. **The 200 Cepas flagship deserves a longer-form storytelling page** — vines, soil, vintage variations, vertical tasting notes. Currently just the modal
+
+---
+
+*Last updated: June 4, 2026 — added Bodegas Pinuaga learnings (wineries + wine tourism), winery design spec, and reusable patterns (lifestyle section, click-to-modal, transparent PNG logo, single-file multi-page SPA delivery).*
