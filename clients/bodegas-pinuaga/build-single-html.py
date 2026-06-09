@@ -172,7 +172,7 @@ NAV = """
             <li><a href="#wines" data-page="wines">Wines</a></li>
             <li><a href="#visits" data-page="visits">Visits</a></li>
             <li><a href="#contact" data-page="contact">Contact</a></li>
-            <li><a href="#visits" data-page="visits" class="nav-cta">Book a Visit</a></li>
+            <li><a href="#visits" data-page="visits" data-scroll="book-form" class="nav-cta">Book a Visit</a></li>
         </ul>
         <button class="nav-toggle" id="navToggle" aria-label="Menu">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
@@ -216,6 +216,14 @@ FOOTER = """
         </div>
     </div>
 </footer>
+
+<div class="toast" id="globalToast" role="status" aria-live="polite">
+    <span class="toast-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 10 18 20 6"></polyline></svg>
+    </span>
+    <span class="toast-text">Booking received — we'll confirm within 24 hours.</span>
+</div>
+
 
 <a href="https://wa.me/34629058900?text=Hello%2C%20I%27d%20like%20to%20book%20a%20visit" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.1 1.6 5.9L0 24l6.3-1.6c1.7 1 3.7 1.5 5.7 1.5 6.6 0 12-5.4 12-12 0-3.2-1.3-6.2-3.5-8.4zM12 22c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7 1 1-3.6-.3-.4A9.9 9.9 0 0 1 2 12c0-5.5 4.5-10 10-10s10 4.5 10 10-4.5 10-10 10zm5.5-7.5l-2.1-1c-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.3-.7.1-.8-.3-1.6-.7-2.2-1.4-.6-.6-1-1.3-1.3-2.1-.1-.2 0-.4.1-.5.4-.4.6-.7.8-1 .1-.2.1-.4 0-.5l-1-2.2c-.2-.5-.4-.4-.6-.4-.2 0-.4 0-.6 0-.2 0-.5.1-.8.4-.3.3-1 .9-1 2.3 0 1.4 1 2.7 1.2 2.9.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4z"/></svg>
@@ -288,93 +296,109 @@ PAGE_HOME = """
 <main class="page" id="page-home">
 
 <section class="hero">
-    <img data-img="hero" alt="Pinuaga vineyards in La Mancha" class="hero-img">
+    <img data-img="hero" alt="Vineyards of Pinuaga, La Mancha" class="hero-img">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-        <span class="eyebrow hero-eyebrow">Toledo · La Mancha · Since 1965</span>
-        <h1>Organic wine,<br><em>land that remembers.</em></h1>
-        <p>A family winery among century-old vineyards. Walk the estate, taste wines from native grapes and stay for lunch surrounded by nature.</p>
+        <span class="eyebrow hero-eyebrow">Toledo · La Mancha · 1 hour from Madrid</span>
+        <h1>Take a break<br><em>from the chaos.</em></h1>
+        <p>Slow down for a day in the vineyards of Toledo, where good wine, good food, and good company come together.</p>
         <div class="hero-buttons">
-            <a href="#visits" data-page="visits" class="btn btn-light">Book a visit <span class="arrow">→</span></a>
-            <a href="#about" data-page="about" class="btn btn-ghost-light">Our story</a>
+            <a href="#visits" data-page="visits" data-scroll="book-form" class="btn btn-light">Book your escape <span class="arrow">→</span></a>
+            <a href="https://wa.me/34629058900?text=Hello%2C%20I%27d%20like%20to%20book%20a%20day%20at%20Pinuaga" target="_blank" class="btn btn-ghost-light">WhatsApp us</a>
         </div>
     </div>
-    <div class="hero-scroll-indicator">Scroll</div>
+    <div class="hero-scroll-indicator">Slow down</div>
 </section>
 
-<section>
+<!-- ====== THE PINUAGA RHYTHM (lifestyle / atmosphere) ====== -->
+<section class="rhythm-section">
     <div class="container">
-        <div class="split">
-            <div class="split-text">
-                <span class="eyebrow">Family tradition</span>
-                <h2>Sixty years making wine the way it used to be made.</h2>
-                <p>Pinuaga is a family winery in La Mancha where three generations have looked after the same vines. We farm organically, we recover old Cencibel clones and we craft with minimal intervention.</p>
-                <p>What you taste in a glass started decades ago — in the soil, in the vine, and in the hands that worked them.</p>
-                <a href="#about" data-page="about" class="btn btn-secondary">Read our story <span class="arrow">→</span></a>
+        <div class="rhythm-intro">
+            <div class="rhythm-intro-image">
+                <img data-img="rows" alt="Quiet vineyard rows leading toward the hills">
             </div>
-            <div class="split-image">
-                <img data-img="workers" alt="The crew during harvest">
-                <span class="caption">The crew · Harvest 2024</span>
+            <div>
+                <span class="eyebrow">The Pinuaga rhythm</span>
+                <h2>Where time stretches out a little longer.</h2>
+                <p>An hour from Madrid. A different world. Pinuaga isn&rsquo;t a tour with a tasting at the end &mdash; it&rsquo;s a long, slow day spent walking old vines, eating from the land, drinking wine made right here, and remembering what it feels like to be unreachable.</p>
+                <p>Couples come for the silence. Friends come for the long lunch. Everyone leaves a little lighter.</p>
+            </div>
+        </div>
+
+        <div class="rhythm-pillars">
+            <div class="rhythm-pillar">
+                <h3>Disconnect.</h3>
+                <p>Leave the phone in the car. There&rsquo;s no Wi-Fi by design, no schedule that matters, and no group chat that can&rsquo;t wait. The only notifications here are the birds.</p>
+            </div>
+            <div class="rhythm-pillar">
+                <h3>Breathe.</h3>
+                <p>700 metres of altitude, olive groves and holm oaks, clean wind from the sierra. Your shoulders drop before the first glass.</p>
+            </div>
+            <div class="rhythm-pillar">
+                <h3>Connect.</h3>
+                <p>With the people you came with. With the family who&rsquo;ll receive you. With a row of vines that&rsquo;s older than you. Days here turn into stories you&rsquo;ll repeat for years.</p>
             </div>
         </div>
     </div>
 </section>
 
+<!-- ====== STATS ====== -->
 <section class="section-tight section-bone">
     <div class="container">
         <div class="stats">
-            <div class="stat"><strong>60</strong><span>Years of tradition</span></div>
-            <div class="stat"><strong>100%</strong><span>Organic farming</span></div>
-            <div class="stat"><strong>7</strong><span>Wines crafted</span></div>
             <div class="stat"><strong>1h</strong><span>From Madrid</span></div>
+            <div class="stat"><strong>0</strong><span>Tour buses</span></div>
+            <div class="stat"><strong>700m</strong><span>Of altitude</span></div>
+            <div class="stat"><strong>60</strong><span>Years in the family</span></div>
         </div>
     </div>
 </section>
 
+<!-- ====== EXPERIENCES (emotion-led) ====== -->
 <section>
     <div class="container">
         <div class="section-header">
-            <span class="eyebrow">Experiences at the winery</span>
-            <h2>A visit that stays with you.</h2>
-            <p>Designed for couples and small groups. You're welcomed by someone from the family, we walk the estate, we taste, and we eat very well.</p>
+            <span class="eyebrow">How to spend your day</span>
+            <h2>An afternoon you won&rsquo;t want to leave.</h2>
+            <p>Three ways to slow down at Pinuaga. All hosted personally, all in small groups, all designed so the day feels long in the best possible way.</p>
         </div>
         <div class="experiences-grid">
 
             <article class="experience-card">
-                <div class="experience-img"><img data-img="woman" alt="Wine tasting on the terrace"></div>
+                <div class="experience-img"><img data-img="woman" alt="A tasting on the terrace, vineyard in the distance"></div>
                 <div class="experience-body">
-                    <div class="experience-meta"><span>90 min</span><span>2 — 8 guests</span></div>
-                    <h3>Classic Visit &amp; Tasting</h3>
-                    <p>A walk through the vineyard and cellar, followed by a guided tasting of four wines from the collection, paired with local cheese and olive oil.</p>
+                    <div class="experience-meta"><span>The slow afternoon</span><span>2 &mdash; 8 guests</span></div>
+                    <h3>A walk, four glasses, a long view.</h3>
+                    <p>Walk old vines with one of us. Visit the cellar where the wine is still resting in barrels. Sit down on the terrace for four wines, Manchego cheese, and the kind of quiet you forgot existed.</p>
                     <div class="experience-foot">
-                        <div class="experience-price">€25 <small>/ person</small></div>
-                        <a href="#visits" data-page="visits" class="btn btn-primary">Book</a>
+                        <div class="experience-price">&euro;25 <small>/ person</small></div>
+                        <a href="#visits" data-page="visits" data-scroll="book-form" class="btn btn-primary">Reserve</a>
                     </div>
                 </div>
             </article>
 
             <article class="experience-card">
-                <div class="experience-img"><img data-img="rows" alt="Lush vineyard rows"></div>
+                <div class="experience-img"><img data-img="rows" alt="Long lunch beside the vineyard"></div>
                 <div class="experience-body">
-                    <div class="experience-meta"><span>3 hours</span><span>2 — 12 guests</span></div>
-                    <h3>Lunch Among the Vines</h3>
-                    <p>The full experience: tour, tasting and a three-course lunch made with local produce, served at the estate.</p>
+                    <div class="experience-meta"><span>The long lunch</span><span>2 &mdash; 12 guests</span></div>
+                    <h3>Three courses, five wines, nowhere to be.</h3>
+                    <p>The full Pinuaga day. Visit, tasting, and a three-course lunch made with what&rsquo;s in season locally, served at a table that faces the vineyard. Stay for coffee. Stay for the sunset if you want.</p>
                     <div class="experience-foot">
-                        <div class="experience-price">€65 <small>/ person</small></div>
-                        <a href="#visits" data-page="visits" class="btn btn-primary">Book</a>
+                        <div class="experience-price">&euro;65 <small>/ person</small></div>
+                        <a href="#visits" data-page="visits" data-scroll="book-form" class="btn btn-primary">Reserve</a>
                     </div>
                 </div>
             </article>
 
             <article class="experience-card">
-                <div class="experience-img"><img data-img="grapes" alt="Hand-picked grapes"></div>
+                <div class="experience-img"><img data-img="workers" alt="Harvest morning with the crew"></div>
                 <div class="experience-body">
-                    <div class="experience-meta"><span>September only</span><span>Limited spots</span></div>
-                    <h3>Harvest with the Family</h3>
-                    <p>Three weekends a year. Pick with us in the morning, see the grapes come in, taste the fresh-pressed must.</p>
+                    <div class="experience-meta"><span>The harvest weekend</span><span>September only</span></div>
+                    <h3>Pick grapes at sunrise. Taste the day&rsquo;s wine.</h3>
+                    <p>Three weekends a year. Pick with the crew from first light, watch the grapes come into the cellar, taste the fresh-pressed must, and stay for a long lunch with the family. The most authentic version of Pinuaga.</p>
                     <div class="experience-foot">
-                        <div class="experience-price">€85 <small>/ person</small></div>
-                        <a href="#visits" data-page="visits" class="btn btn-primary">Book</a>
+                        <div class="experience-price">&euro;85 <small>/ person</small></div>
+                        <a href="#visits" data-page="visits" data-scroll="book-form" class="btn btn-primary">Reserve</a>
                     </div>
                 </div>
             </article>
@@ -383,48 +407,108 @@ PAGE_HOME = """
     </div>
 </section>
 
-<section class="section-cream-deep">
+<!-- ====== TESTIMONIALS ====== -->
+<section class="testimonials-section">
     <div class="container">
-        <div class="philosophy-feature">
-            <figure class="philosophy-figure">
-                <img data-img="vat" alt="Hand-stirring the fermenting wine">
-                <figcaption class="figure-caption">
-                    <span class="quote-mark">&ldquo;</span>
-                    Good wine begins in the soil. Our job is to get out of its way.
-                </figcaption>
-            </figure>
-            <div class="philosophy-body">
-                <span class="eyebrow">Philosophy</span>
-                <h2>Three ideas behind every bottle.</h2>
-                <p class="intro">No formulas, no shortcuts. Just three principles we've held onto since the first generation planted these vines.</p>
-                <div class="philosophy-list">
-                    <article class="philosophy-item"><div class="philosophy-num">01</div><div><h3>Truly organic</h3><p>No synthetic chemicals, no shortcuts. We work the land and the vine respecting natural cycles, and we certify every vintage. What goes into the bottle is what happens in the field.</p></div></article>
-                    <article class="philosophy-item"><div class="philosophy-num">02</div><div><h3>Native grapes</h3><p>We've recovered old Cencibel clones — La Mancha's historic variety — and we still farm plots most growers have given up on.</p></div></article>
-                    <article class="philosophy-item"><div class="philosophy-num">03</div><div><h3>Minimal intervention</h3><p>We craft with patience and we don't force anything. Spontaneous fermentations, slow aging, and as little as possible between the grape and your glass.</p></div></article>
+        <div class="section-header">
+            <span class="eyebrow">What guests remember</span>
+            <h2>The best afternoons that almost weren&rsquo;t.</h2>
+            <p>From couples on a weekend escape to friends on a long-overdue catch-up &mdash; here&rsquo;s what they say after they go home.</p>
+        </div>
+
+        <div class="testimonials-grid">
+
+            <div class="testimonial-card">
+                <p class="testimonial-quote">We came up from Madrid for a quick lunch. Stayed five hours. Drove home different people.</p>
+                <div class="testimonial-meta">
+                    <div class="testimonial-meta-mark">A</div>
+                    <div class="testimonial-author">
+                        <strong>Ana &amp; Tom&aacute;s</strong>
+                        <span>MADRID &middot; ANNIVERSARY</span>
+                    </div>
                 </div>
+            </div>
+
+            <div class="testimonial-card">
+                <p class="testimonial-quote">We&rsquo;ve been to wineries all over Spain. Nowhere makes you forget the city like Pinuaga does. The family really hosts you.</p>
+                <div class="testimonial-meta">
+                    <div class="testimonial-meta-mark">D</div>
+                    <div class="testimonial-author">
+                        <strong>David &amp; friends</strong>
+                        <span>BARCELONA &middot; LONG WEEKEND</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <p class="testimonial-quote">The lunch alone is worth the drive. Add the people, the wine, the silence, and you&rsquo;ve got the perfect Sunday.</p>
+                <div class="testimonial-meta">
+                    <div class="testimonial-meta-mark">S</div>
+                    <div class="testimonial-author">
+                        <strong>Sof&iacute;a</strong>
+                        <span>VALENCIA &middot; BIRTHDAY</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <p class="testimonial-quote">A reset button, in winery form. The kind of day that re-calibrates your whole week.</p>
+                <div class="testimonial-meta">
+                    <div class="testimonial-meta-mark">C</div>
+                    <div class="testimonial-author">
+                        <strong>Carla &amp; Lucas</strong>
+                        <span>SEVILLA &middot; WEEKEND ESCAPE</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="testimonials-stars-bar">
+            <div class="testimonials-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+            <div class="testimonials-stars-text">4.9 / 5 &middot; based on 240+ guest reviews</div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== ABOUT THE WINERY (compressed, supporting) ====== -->
+<section>
+    <div class="container">
+        <div class="split">
+            <div class="split-text">
+                <span class="eyebrow">Why this place exists</span>
+                <h2>Sixty years on one small piece of La Mancha.</h2>
+                <p>Three generations have worked these vines. Our grandfather planted the first ones in 1965, thinking his children wouldn&rsquo;t want to take over. He was wrong &mdash; twice. We farm organically, we recover old Cencibel clones, and we make seven wines we&rsquo;re actually proud of.</p>
+                <p>But honestly &mdash; you don&rsquo;t come for the wine technical sheet. You come because the day at Pinuaga feels different from any other day. The wine is just what we serve with it.</p>
+                <a href="#about" data-page="about" class="btn btn-secondary">Read the full story <span class="arrow">→</span></a>
+            </div>
+            <div class="split-image">
+                <img data-img="workers" alt="The crew during harvest">
+                <span class="caption">The crew &middot; Harvest 2024</span>
             </div>
         </div>
     </div>
 </section>
 
-<section>
+<!-- ====== WINES PREVIEW (supporting) ====== -->
+<section class="section-cream-deep">
     <div class="container">
         <div class="split split-reverse">
             <div class="split-text">
-                <span class="eyebrow">The collection</span>
+                <span class="eyebrow">If you&rsquo;re curious about the wine</span>
                 <h2>Seven wines, one land.</h2>
-                <p>From 200 Cepas — our old-vine Tempranillo, Silver at the Organic Wine Masters — to Pinuaga Rosé, fresh and fruit-driven. Labels hand-painted by the artist Miguel Ángel Muñoz Zamora.</p>
-                <p>Reds, rosé and white. All organic. All made here.</p>
+                <p>From 200 Cepas &mdash; our old-vine Tempranillo, Silver at the Organic Wine Masters &mdash; to Pinuaga Ros&eacute;, made for summer afternoons. All organic, all from native grapes, all made here. Labels hand-painted by the artist Miguel &Aacute;ngel Mu&ntilde;oz Zamora.</p>
                 <a href="#wines" data-page="wines" class="btn btn-secondary">See the collection <span class="arrow">→</span></a>
             </div>
             <div class="split-image">
                 <img data-img="bottles" alt="The Pinuaga wine collection">
-                <span class="caption">Pinuaga collection · 2024</span>
+                <span class="caption">Pinuaga collection &middot; 2024</span>
             </div>
         </div>
     </div>
 </section>
 
+<!-- ====== LIFESTYLE BREAK ====== -->
 <section class="lifestyle-feature">
     <div class="container">
         <div class="lifestyle-grid">
@@ -434,29 +518,23 @@ PAGE_HOME = """
             <div class="lifestyle-text">
                 <span class="eyebrow">For unforgettable moments</span>
                 <h2>A bottle, two glasses, a memory.</h2>
-                <p>The best Pinuaga moments don't happen in tasting rooms. They happen on terraces at sunset, on long Sunday lunches, on weekends that turn into stories.</p>
-                <a href="#visits" data-page="visits" class="btn btn-secondary">Plan your visit <span class="arrow">→</span></a>
+                <p>The best Pinuaga moments don&rsquo;t happen in tasting rooms. They happen on terraces at sunset, on long Sunday lunches, on weekends that turn into stories. Wine is a vehicle &mdash; the destination is the people you open it with.</p>
+                <a href="#visits" data-page="visits" data-scroll="book-form" class="btn btn-secondary">Plan your escape <span class="arrow">→</span></a>
             </div>
         </div>
     </div>
 </section>
 
-<section class="section-bone section-tight">
-    <div class="quote-block">
-        <blockquote>Good wine is made in the field. In the cellar we only look after it until it reaches your glass.</blockquote>
-        <cite>— The Pinuaga family</cite>
-    </div>
-</section>
-
+<!-- ====== FINAL BOOKING CTA ====== -->
 <section class="cta-banner">
     <img data-img="hero" alt="" class="cta-banner-img">
     <div class="container">
-        <span class="eyebrow">Come see us</span>
-        <h2>An hour from Madrid. A world away.</h2>
-        <p>Book a guided visit, a tasting or lunch at the winery. Small groups, personal attention.</p>
+        <span class="eyebrow">Ready to slow down?</span>
+        <h2>One hour from Madrid. Worlds away.</h2>
+        <p>Pick a date, pick an experience. We&rsquo;ll do the rest. Small groups, personal attention, the kind of day you&rsquo;ll talk about for a year.</p>
         <div class="cta-banner-buttons">
-            <a href="#visits" data-page="visits" class="btn btn-light">Book a visit <span class="arrow">→</span></a>
-            <a href="https://wa.me/34629058900?text=Hello%2C%20I%27d%20like%20to%20book%20a%20visit%20at%20Bodegas%20Pinuaga" target="_blank" class="btn btn-ghost-light">WhatsApp</a>
+            <a href="#visits" data-page="visits" data-scroll="book-form" class="btn btn-light">Book your day <span class="arrow">→</span></a>
+            <a href="https://wa.me/34629058900?text=Hello%2C%20I%27d%20like%20to%20book%20a%20day%20at%20Pinuaga" target="_blank" class="btn btn-ghost-light">Message on WhatsApp</a>
         </div>
     </div>
 </section>
@@ -568,7 +646,7 @@ PAGE_ABOUT = """
         <h2>It's best experienced in person.</h2>
         <p>Book a visit and walk the vines we've cared for across three generations.</p>
         <div class="cta-banner-buttons">
-            <a href="#visits" data-page="visits" class="btn btn-light">Book a visit <span class="arrow">→</span></a>
+            <a href="#visits" data-page="visits" data-scroll="book-form" class="btn btn-light">Book a visit <span class="arrow">→</span></a>
             <a href="#wines" data-page="wines" class="btn btn-ghost-light">See the wines</a>
         </div>
     </div>
@@ -638,7 +716,7 @@ PAGE_WINES = f"""
         <h2>The best way to know these wines is to taste them.</h2>
         <p>Book a tasting at the winery and try as many as you like, told by the people who made them.</p>
         <div class="cta-banner-buttons">
-            <a href="#visits" data-page="visits" class="btn btn-light">Book a tasting <span class="arrow">→</span></a>
+            <a href="#visits" data-page="visits" data-scroll="book-form" class="btn btn-light">Book a tasting <span class="arrow">→</span></a>
             <a href="#contact" data-page="contact" class="btn btn-ghost-light">Buy online</a>
         </div>
     </div>
@@ -678,7 +756,7 @@ PAGE_VISITS = """
                     <li style="padding: 6px 0; color: var(--wine-soft);">— Hosted by a member of the family</li>
                 </ul>
                 <p style="margin-top: 24px; font-size: 0.88rem;"><strong style="color: var(--wine); font-weight: 600;">Duration:</strong> 90 min · <strong style="color: var(--wine); font-weight: 600;">Group:</strong> 2 to 8 · <strong style="color: var(--wine); font-weight: 600;">Languages:</strong> EN · ES</p>
-                <a href="#book-form" class="btn btn-primary">Book this visit <span class="arrow">→</span></a>
+                <a href="#visits" data-page="visits" data-scroll="book-form" class="btn btn-primary">Book this visit <span class="arrow">→</span></a>
             </div>
         </div>
     </div>
@@ -703,7 +781,7 @@ PAGE_VISITS = """
                     <li style="padding: 6px 0; color: var(--wine-soft);">— Coffee and homemade dessert</li>
                 </ul>
                 <p style="margin-top: 24px; font-size: 0.88rem;"><strong style="color: var(--wine); font-weight: 600;">Duration:</strong> 3 hours · <strong style="color: var(--wine); font-weight: 600;">Group:</strong> 2 to 12 · <strong style="color: var(--wine); font-weight: 600;">Options:</strong> Vegetarian / GF</p>
-                <a href="#book-form" class="btn btn-primary">Book this visit <span class="arrow">→</span></a>
+                <a href="#visits" data-page="visits" data-scroll="book-form" class="btn btn-primary">Book this visit <span class="arrow">→</span></a>
             </div>
         </div>
     </div>
@@ -728,7 +806,7 @@ PAGE_VISITS = """
                     <li style="padding: 6px 0; color: var(--wine-soft);">— Vertical tasting of 3 vintages + the day's must</li>
                 </ul>
                 <p style="margin-top: 24px; font-size: 0.88rem;"><strong style="color: var(--wine); font-weight: 600;">When:</strong> September · <strong style="color: var(--wine); font-weight: 600;">Group:</strong> Max 10 · <strong style="color: var(--wine); font-weight: 600;">Spots:</strong> Limited</p>
-                <a href="#book-form" class="btn btn-primary">Reserve a spot <span class="arrow">→</span></a>
+                <a href="#visits" data-page="visits" data-scroll="book-form" class="btn btn-primary">Reserve a spot <span class="arrow">→</span></a>
             </div>
         </div>
     </div>
@@ -750,7 +828,7 @@ PAGE_VISITS = """
             <h2>Book your visit.</h2>
             <p>We'll confirm by email or WhatsApp in under 24 hours.</p>
         </div>
-        <div style="max-width: 720px; margin: 0 auto;">
+        <div style="max-width: 720px; margin: 0 auto;" id="bookingWrapper">
             <form class="contact-form" id="bookingForm">
                 <div class="form-row">
                     <div class="form-group"><label>Name</label><input type="text" name="name" placeholder="Your name" required></div>
@@ -824,7 +902,7 @@ PAGE_CONTACT = """
                 </a>
             </div>
 
-            <form class="contact-form" id="contactForm">
+            <div id="contactWrapper" style="display: contents;"><form class="contact-form" id="contactForm">
                 <h3>Send us a message.</h3>
                 <div class="form-row">
                     <div class="form-group"><label>Name</label><input type="text" name="name" placeholder="Your name" required></div>
@@ -953,32 +1031,95 @@ document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && modal.classList.contains('open')) closeWine();
 });
 
+const KNOWN_PAGES = ['home', 'about', 'wines', 'visits', 'contact'];
+
 window.addEventListener('popstate', () => {
-    const page = location.hash.replace('#', '') || 'home';
-    closeWine();
-    showPage(page);
+    const hash = location.hash.replace('#', '');
+    if (!hash || KNOWN_PAGES.includes(hash)) {
+        closeWine();
+        showPage(hash || 'home');
+    }
+    // otherwise it's an in-page anchor — leave browser scroll alone
 });
 
-// Initial page from hash
-const initial = location.hash.replace('#', '') || 'home';
+// Initial page from hash (only if it matches a real page)
+const initialRaw = location.hash.replace('#', '');
+const initial = KNOWN_PAGES.includes(initialRaw) ? initialRaw : 'home';
 showPage(initial, { skipScroll: true });
 
 // Forms
 const bookingForm = document.getElementById('bookingForm');
+
+function showToast(msg) {
+    const t = document.getElementById('globalToast');
+    if (!t) return;
+    t.querySelector('.toast-text').textContent = msg;
+    t.classList.add('show');
+    clearTimeout(window.__toastTimer);
+    window.__toastTimer = setTimeout(() => t.classList.remove('show'), 3800);
+}
+
+function fmtDate(d) {
+    if (!d) return '—';
+    try {
+        const dt = new Date(d);
+        return dt.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+    } catch(e) { return d; }
+}
+
 if (bookingForm) bookingForm.addEventListener('submit', function(e) {
     e.preventDefault();
     const d = Object.fromEntries(new FormData(this));
-    const subject = encodeURIComponent('Pinuaga Booking — ' + d.experience);
-    const body = encodeURIComponent('Name: ' + d.name + '\\nEmail: ' + d.email + '\\nPhone: ' + (d.phone || '—') + '\\nGuests: ' + (d.people || '—') + '\\nExperience: ' + d.experience + '\\nDate: ' + (d.date || '—') + '\\n\\n' + (d.message || ''));
-    window.location.href = 'mailto:info@bodegaspinuaga.com?subject=' + subject + '&body=' + body;
+    const firstName = (d.name || 'guest').split(' ')[0];
+    const wrap = document.getElementById('bookingWrapper');
+    if (!wrap) return;
+    wrap.innerHTML = `
+        <div class="form-success">
+            <div class="form-success-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 10 18 20 6"></polyline></svg>
+            </div>
+            <h3>Booking received, ${firstName}.</h3>
+            <p class="form-success-lede">Thanks for choosing Pinuaga. We've received your request and a member of the family will personally confirm by email or WhatsApp within 24 hours.</p>
+            <div class="form-success-summary">
+                <div class="form-success-summary-row"><span>Experience</span><span>${d.experience || '—'}</span></div>
+                <div class="form-success-summary-row"><span>Date</span><span>${fmtDate(d.date)}</span></div>
+                <div class="form-success-summary-row"><span>Guests</span><span>${d.people || '—'}</span></div>
+                <div class="form-success-summary-row"><span>Confirmation to</span><span>${d.email || '—'}</span></div>
+            </div>
+            <div class="form-success-actions">
+                <a href="#home" data-page="home" class="btn btn-secondary">Back to home</a>
+                <a href="https://wa.me/34629058900?text=Hello%2C%20I%20just%20booked%20a%20visit%20at%20Pinuaga" target="_blank" class="btn btn-primary">Message us on WhatsApp <span class="arrow">→</span></a>
+            </div>
+            <p class="form-success-note">A confirmation copy has been sent to ${d.email || 'your email'}.</p>
+        </div>
+    `;
+    showToast("Booking received — we'll confirm within 24 hours.");
+    window.scrollTo({ top: wrap.getBoundingClientRect().top + window.scrollY - 100, behavior: 'smooth' });
 });
+
 const contactForm = document.getElementById('contactForm');
 if (contactForm) contactForm.addEventListener('submit', function(e) {
     e.preventDefault();
     const d = Object.fromEntries(new FormData(this));
-    const subject = encodeURIComponent('Pinuaga — ' + d.subject);
-    const body = encodeURIComponent('Name: ' + d.name + '\\nEmail: ' + d.email + '\\nPhone: ' + (d.phone || '—') + '\\nSubject: ' + d.subject + '\\n\\n' + d.message);
-    window.location.href = 'mailto:info@bodegaspinuaga.com?subject=' + subject + '&body=' + body;
+    const firstName = (d.name || 'there').split(' ')[0];
+    const wrap = document.getElementById('contactWrapper');
+    if (!wrap) return;
+    wrap.innerHTML = `
+        <div class="form-success">
+            <div class="form-success-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 10 18 20 6"></polyline></svg>
+            </div>
+            <h3>Message sent, ${firstName}.</h3>
+            <p class="form-success-lede">We've received your message and will reply within 24 hours. The fastest way to reach us is still WhatsApp.</p>
+            <div class="form-success-actions">
+                <a href="#home" data-page="home" class="btn btn-secondary">Back to home</a>
+                <a href="https://wa.me/34629058900?text=Hello%2C%20I%20just%20sent%20a%20message%20on%20your%20website" target="_blank" class="btn btn-primary">Message us on WhatsApp <span class="arrow">→</span></a>
+            </div>
+            <p class="form-success-note">A confirmation copy has been sent to ${d.email || 'your email'}.</p>
+        </div>
+    `;
+    showToast("Message sent — we'll reply within 24 hours.");
+    window.scrollTo({ top: wrap.getBoundingClientRect().top + window.scrollY - 100, behavior: 'smooth' });
 });
 
 // Fade-up
